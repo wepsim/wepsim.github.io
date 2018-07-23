@@ -14,11 +14,11 @@
      ![screen:code](https://raw.githubusercontent.com/wepsim/wepsim/master/help/simulator/assembly003.jpg)
    6 Finally, go back to the simulator workspace, and you can execute step by step and analyze the state of the components.
      It is possible to work at assembly level or at microcode level: 
-     ![screen:simulation cpu](https://raw.githubusercontent.com/acaldero/wepsim/master/tutorials/welcome/simulation_xinstruction.gif)
+     ![screen:simulation cpu](https://raw.githubusercontent.com/acaldero/wepsim/master/help/welcome/simulation_xinstruction.gif)
 
 + Main configuration options:
 
    + From the menu, the configuration button let users to personalize several options:
-     ![screen:configuration](https://raw.githubusercontent.com/acaldero/wepsim/master/tutorials/welcome/config_usage.gif)
+     ![screen:configuration](https://raw.githubusercontent.com/acaldero/wepsim/master/help/welcome/config_usage.gif)
    + From the simulator workspace, clicking over the 'processor button' shows/hides a slider to change the CPU/CU size:
      ![screen:configuration](https://raw.githubusercontent.com/wepsim/wepsim/master/help/simulator/simulator013.jpg)
