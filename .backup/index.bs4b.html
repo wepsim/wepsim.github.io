@@ -15,16 +15,26 @@
 
     <!-- CSS -->
     <link href="bootstrap.min.css"  rel="stylesheet">
+    <link href="magnific-popup.css" rel="stylesheet" type="text/css">
+    <!-- link href="freelancer.min.css" rel="stylesheet" -->
 
-    <!-- Fonts -->
+    <!-- Custom Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
 
     <!-- JavaScript -->
     <script src="jquery.min.js"></script>
     <script src="bootstrap.min.js"></script>
     <script src="jquery.magnific-popup.min.js"></script>
+    <!-- script src="freelancer.min.js"!-- ><!-- /script!-- >
 
 </head>
 
@@ -34,48 +44,41 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-md bg-dark fixed-top text-white p-1" id="mainNav">
         <div class="container">
-	    <div class="navbar-header page-scroll">
+            <div class="navbar-header page-scroll">
 		<a type="button" aria-expanded="false" aria-label="Toggle navigation"
 		   class="navbar-toggle navbar-toggler-right text-white" 
-		   data-toggle="collapse" data-target="#navbar-collapse-2">
-		<span class="sr-only">Toggle navigation</span> <i class="fa fa-bars"></i>
+		   data-toggle="collapse" data-target="#navbar-collapse-1">
+		<span class="sr-only">WepSIM</span> <i class="fa fa-bars"></i> The Web Elemental Processor SIMulator
 		</a>
-	    </div>
-	    <div class="collapse navbar-collapse" id="navbar-collapse-2">
-		<ul class="navbar-nav ml-auto nav-fill flex-fill">
-		    <li class="nav-item m-1 mx-lg-2"><a class="nav-link text-white p-0" href="#page-top">Introduction</a></li>
-		    <li class="nav-item m-1 mx-lg-2"><a class="nav-link text-white p-0" href="#description">Description</a></li>
-		    <li class="nav-item m-1 mx-lg-2"><a class="nav-link text-white p-0" href="#getwepsim">Getting WepSIM</a></li>
-		    <li class="nav-item m-1 mx-lg-2"><a class="nav-link text-white p-0" href="#publications">Publications</a></li>
-		    <li class="nav-item m-1 mx-lg-2"><a class="nav-link text-white p-0" href="#authors">Authors</a></li>
-		</ul>
-	    </div>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-collapse-1">
+		<ul class="navbar-nav ml-auto">
+		    <li class="nav-item m-1 mx-lg-2">
+			<a class="btn btn-sm btn-primary nav-link text-white py-0 px-1" role="button"
+		           href="https://wepsim.github.io/wepsim/"><b>Access to WepSIM</b></a>
+		    </li>
+		    <li class="nav-item m-1 mx-lg-2">
+			<a class="btn btn-sm btn-info nav-link text-white py-0 px-1" role="button" 
+		           href="https://github.com/wepsim/wepsim.github.io/blob/master/doc_pwa.md"><b>Install WepSIM as PWA</b></a>
+		    </li>
+		    <li class="nav-item m-1 mx-lg-2">
+			<a class="btn btn-sm btn-info nav-link text-white py-0 px-1" role="button"
+		           href="https://github.com/wepsim/wepsim.github.io/blob/master/doc_quickstart.md"><b>Quick Start</b></a>
+		    </li>
+                </ul>
+            </div>
         </div>
+	<span class="navbar-text"><a href="http://www.gnu.org/licenses/">LGPL 3.0</a></span>
     </nav>
 
     <!-- Header -->
     <nav id="page-top" class="navbar navbar-expand-lg bg-dark text-white p-1" id="mainNav">
-        <div class="container p-0">&nbsp;</div>
+        <div class="container p-2">&nbsp;</div>
     </nav>
     <header class="masthead bg-primary text-white text-center pt-5">
-      <div class="container ">
+      <div class="container-fluid">
             <div class="row d-flex align-content-center flex-wrap">
-		    <div class="text-white mx-auto">The Web Elemental Processor SIMulator</div>
-	    </div>
-
-            <div class="row d-flex align-content-center flex-wrap">
-		    <div class="btn-group mx-auto" role="group" aria-label="quick access to wepsim, pwa, and initial docs">
-			<a class="btn btn-sm btn-info    nav-link text-white m-2 p-1" role="button"
-			   href="https://github.com/wepsim/wepsim.github.io/blob/master/doc_quickstart.md"><b>Quick Start</b></a>
-			<a class="btn btn-sm btn-info    nav-link text-white m-2 p-1" role="button" 
-			   href="https://github.com/wepsim/wepsim.github.io/blob/master/doc_pwa.md"><b>Install WepSIM as PWA</b></a>
-			<a class="btn btn-sm btn-danger  nav-link text-white m-2 p-1" role="button"
-			   href="https://wepsim.github.io/wepsim/"><b>Access to WepSIM</b></a>
-		    </div>
-	    </div>
-
-            <div class="row d-flex align-content-center flex-wrap">
-                <div class="col-12 py-5">
+                <div class="col-12 pb-5">
 
 			<div id="myCarousel" class="carousel slide" data-ride="carousel">
 			  <ol class="carousel-indicators">
@@ -406,17 +409,30 @@
         </div>
     </section>
 
+    <!-- Footer -->
+    <footer class="text-center py-5">
+	    <nav class="navbar navbar-expand-md bg-dark fixed-bottom text-white p-1" id="mainNav">
+		<div class="container">
+		    <div class="navbar-header page-scroll">
+			<a type="button" aria-expanded="false" aria-label="Toggle navigation"
+			   class="navbar-toggle navbar-toggler-right text-white" 
+			   data-toggle="collapse" data-target="#navbar-collapse-2">
+			<span class="sr-only">Toggle navigation</span> <i class="fa fa-bars"></i>
+			</a>
+		    </div>
+		    <div class="collapse navbar-collapse" id="navbar-collapse-2">
+			<ul class="navbar-nav ml-auto nav-fill flex-fill">
+			    <li class="nav-item m-1 mx-lg-2"><a class="nav-link text-white p-0" href="#page-top">Introduction</a></li>
+			    <li class="nav-item m-1 mx-lg-2"><a class="nav-link text-white p-0" href="#description">Description</a></li>
+			    <li class="nav-item m-1 mx-lg-2"><a class="nav-link text-white p-0" href="#getwepsim">Getting WepSIM</a></li>
+			    <li class="nav-item m-1 mx-lg-2"><a class="nav-link text-white p-0" href="#publications">Publications</a></li>
+			    <li class="nav-item m-1 mx-lg-2"><a class="nav-link text-white p-0" href="#authors">Authors</a></li>
+			</ul>
+		    </div>
+		</div>
+	    </nav>
+    </footer>
 
-    <!-- "License" Section -->
-    <section id="license" class="pt-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 text-center bg-dark mx-auto">
-	        <span class="text-white"><a href="http://www.gnu.org/licenses/">LGPL 3.0</a></span>
-	        </div>
-	    </div>
-	</div>
-    </section>
 
 </body>
 
