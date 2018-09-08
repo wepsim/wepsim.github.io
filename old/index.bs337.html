@@ -7,16 +7,15 @@
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="WepSIM homepage">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
     <meta name="author" content="">
 
     <title>WepSIM</title>
 
     <!-- CSS -->
     <link href="bootstrap.min.css"  rel="stylesheet">
-    <link href="magnific-popup.css" rel="stylesheet" type="text/css">
-    <!-- link href="freelancer.min.css" rel="stylesheet" -->
+    <link href="freelancer.min.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
@@ -33,172 +32,148 @@
     <!-- JavaScript -->
     <script src="jquery.min.js"></script>
     <script src="bootstrap.min.js"></script>
-    <script src="jquery.magnific-popup.min.js"></script>
-    <!-- script src="freelancer.min.js"!-- ><!-- /script!-- >
+    <script src="freelancer.min.js"></script>
 
 </head>
-
 
 <body id="page-top" class="index">
 
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg bg-dark text-white p-1" id="mainNav">
-        <div class="container p-3">&nbsp;</div>
-    </nav>
-    <nav class="navbar navbar-expand-lg bg-dark fixed-top text-white p-1" id="mainNav">
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
         <div class="container">
             <div class="navbar-header page-scroll">
-                <a      type="button" aria-expanded="false" aria-label="Toggle navigation"
-			class="navbar-toggle navbar-toggler-right text-white" 
-			data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
-                </a>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="#page-top">Homepage</a>
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-		<ul class="navbar-nav ml-auto">
-                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 text-white js-scroll-trigger" href="#page-top">Introduction</a></li>
-                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 text-white js-scroll-trigger" href="#description">Description</a></li>
-                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 text-white js-scroll-trigger" href="#getwepsim">Getting WepSIM</a></li>
-                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 text-white js-scroll-trigger" href="#publications">Publications</a></li>
-                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 text-white js-scroll-trigger" href="#authors">Authors</a></li>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden"><a href="#page-top"></a></li>
+                    <li class="page-scroll"><a href="#description">Description</a></li>
+                    <li class="page-scroll"><a href="#getwepsim">Getting WepSIM</a></li>
+                    <li class="page-scroll"><a href="#publications">Publications</a></li>
+                    <li class="page-scroll"><a href="#authors">Authors</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
     <!-- Header -->
-    <header class="masthead bg-primary text-white text-center">
-      <div class="container-fluid">
+    <header>
+        <div class="container">
             <div class="row">
-                <div class="col-12 pt-3 pb-5">
-		     <span class="skills">The Web Elemental Processor SIMulator (WepSIM)</span>
-		     <br>
-		     <a class="btn btn-info" role="button"
-		        href="https://wepsim.github.com/wepsim/"><b><center>WepSIM</center></b></a>
-		     <a class="btn btn-info" role="button" 
-		        href="https://github.com/wepsim/wepsim.github.io/blob/master/doc_pwa.md"><b>Install WepSIM as PWA</b></a>
-		     <a class="btn btn-info" role="button"
-		        href="https://github.com/wepsim/wepsim.github.io/blob/master/doc_quickstart.md"><b><center>Quick Start</center></b></a>
-		</div>
-	    </div>
-            <div class="row d-flex align-content-center flex-wrap">
-                <div class="col-12 pb-5">
-
+                <div class="col-lg-12">
 			<div id="myCarousel" class="carousel slide" data-ride="carousel">
 			  <ol class="carousel-indicators">
-			      <li data-target="#myCarousel" style="background-color: black;" data-slide-to="0" class="active"></li>
-			      <li data-target="#myCarousel" style="background-color: black;" data-slide-to="1"></li>
-			      <li data-target="#myCarousel" style="background-color: black;" data-slide-to="2"></li>
-			      <li data-target="#myCarousel" style="background-color: black;" data-slide-to="3"></li>
-			      <li data-target="#myCarousel" style="background-color: black;" data-slide-to="4"></li>
-			      <li data-target="#myCarousel" style="background-color: gray;"  data-slide-to="5"></li>
-			      <li data-target="#myCarousel" style="background-color: gray;"  data-slide-to="6"></li>
-			      <li data-target="#myCarousel" style="background-color: gray;"  data-slide-to="7"></li>
-			      <li data-target="#myCarousel" style="background-color: gray;"  data-slide-to="8"></li>
+			    <li data-target="#myCarousel" style="background-color: black;" data-slide-to="0" class="active"></li>
+			    <li data-target="#myCarousel" style="background-color: black;" data-slide-to="1"></li>
+			    <li data-target="#myCarousel" style="background-color: black;" data-slide-to="2"></li>
+			    <li data-target="#myCarousel" style="background-color: black;" data-slide-to="3"></li>
+			    <li data-target="#myCarousel" style="background-color: black;" data-slide-to="4"></li>
+			    <li data-target="#myCarousel" style="background-color: gray;"  data-slide-to="5"></li>
+			    <li data-target="#myCarousel" style="background-color: gray;"  data-slide-to="6"></li>
+			    <li data-target="#myCarousel" style="background-color: gray;"  data-slide-to="7"></li>
+			    <li data-target="#myCarousel" style="background-color: gray;"  data-slide-to="8"></li>
 			  </ol>
 
 			  <div class="carousel-inner" role="listbox">
-			    <div class="carousel-item active">
-				<img class="img-responsive w-100"
+			    <div class="item active">
+				<img class="img-responsive"
 				     src="https://raw.githubusercontent.com/wepsim/wepsim/master/help/simulator/simulator013.jpg"
-				     style="height:55vh !important;"
+				     style="height:45vh !important;"
 				     alt="wepsim screenshot 1">
-				<div class="carousel-caption d-none d-md-block bg-secondary">
-				     <h6>For each assembly instruction, students are able to see the control signals generated (microprogramming)</h6>
-				</div>
+				For each assembly instruction, students are able to see the control signals generated (microprogramming)
 			    </div>
-			    <div class="carousel-item">
+			    <div class="item">
 				<img class="img-responsive"
 				     src="https://raw.githubusercontent.com/wepsim/wepsim/master/help/simulator/simulator011.jpg"
-				     style="height:55vh !important;"
+				     style="height:45vh !important;"
 				     alt="wepsim screenshot 2">
-				<div class="carousel-caption d-none d-md-block bg-secondary">
-				     <h6>For each clock cycle, students are able to see how values are modified (microprograming)</h6>
-				</div>
+				For each clock cycle, students are able to see how values are modified (microprograming)
 			    </div>
-			    <div class="carousel-item">
+			    <div class="item">
 				<img class="img-responsive"
 				     src="https://raw.githubusercontent.com/wepsim/wepsim/master/help/simulator/simulator010.jpg"
-				     style="height:55vh !important;"
+				     style="height:45vh !important;"
 				     alt="wepsim screenshot 3">
-				<div class="carousel-caption d-none d-md-block bg-secondary">
-				     <h6>And for each assembly instruction, students are able to see how values are modified too</h6>
-				</div>
+				And for each assembly instruction, students are able to see how values are modified too
 			    </div>
-			    <div class="carousel-item">
+			    <div class="item">
 				<img class="img-responsive"
 				     src="https://raw.githubusercontent.com/wepsim/wepsim/master/help/simulator/simulator015.jpg"
-				     style="height:55vh !important;"
+				     style="height:45vh !important;"
 				     alt="wepsim screenshot 4">
-				<div class="carousel-caption d-none d-md-block bg-secondary">
-				     <h6>WepSIM comes with many examples...</h6>
-				</div>
+				WepSIM comes with many examples...
 			    </div>
-			    <div class="carousel-item">
+			    <div class="item">
 				<img class="img-responsive"
 				     src="https://raw.githubusercontent.com/wepsim/wepsim/master/help/simulator/simulator014.jpg"
-				     style="height:55vh !important;"
+				     style="height:45vh !important;"
 				     alt="wepsim screenshot 5">
-				<div class="carousel-caption d-none d-md-block bg-secondary">
-				     <h6>...And WepSIM can be easily configured</h6>
-				</div>
+				...And WepSIM can be easily configured
 			    </div>
-			    <div class="carousel-item">
+			    <div class="item">
 				<img class="img-responsive"
 				     src="https://raw.githubusercontent.com/wepsim/wepsim/master/help/simulator/simulator012.jpg"
-				     style="height:55vh !important;"
+				     style="height:45vh !important;"
 				     alt="wepsim screenshot 6">
-				<div class="carousel-caption d-none d-md-block bg-secondary">
-				     <h6>For the control unit at the CPU...</h6>
-				</div>
+				For the control unit at the CPU...
 			    </div>
-			    <div class="carousel-item">
+			    <div class="item">
 				<img class="img-responsive"
 				     src="https://raw.githubusercontent.com/wepsim/wepsim/master/help/simulator/simulator009.jpg"
-				     style="height:55vh !important;"
+				     style="height:45vh !important;"
 				     alt="wepsim screenshot 7">
-				<div class="carousel-caption d-none d-md-block bg-secondary">
-				     <h6>...and the for other elements...</h6>
-				</div>
+				...and the for other elements...
 			    </div>
-			    <div class="carousel-item">
+			    <div class="item">
 				<img class="img-responsive"
 				     src="https://raw.githubusercontent.com/wepsim/wepsim/master/help/simulator/simulator016.jpg"
-				     style="height:55vh !important;"
+				     style="height:45vh !important;"
 				     alt="wepsim screenshot 8">
-				<div class="carousel-caption d-none d-md-block bg-secondary">
-				     <h6>...students can review/change the associated value of each control signal...</h6>
-				</div>
+				...students can review/change the associated value of each control signal...
 			    </div>
-			    <div class="carousel-item">
+			    <div class="item">
 				<img class="img-responsive"
 				     src="https://raw.githubusercontent.com/wepsim/wepsim/master/help/simulator/simulator017.jpg"
-				     style="height:55vh !important;"
+				     style="height:45vh !important;"
 				     alt="wepsim screenshot 9">
-				<div class="carousel-caption d-none d-md-block bg-secondary">
-				     <h6>...And learn from the associated help how it works</h6>
-				</div>
+				...And learn from the associated help how it works
 			    </div>
 			  </div>
 
 			  <!-- Left and right controls -->
-			  <a class="left carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
-			     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-			     <span class="sr-only">Previous</span>
+			  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                            <i class="fa fa-arrow-left" aria-hidden="true">Previous</i>
+			    <span class="sr-only">Previous</span>
 			  </a>
-			  <a class="right carousel-control-next" href="#myCarousel" role="button" data-slide="next">
-			     <span class="carousel-control-next-icon" aria-hidden="true"></span>
-			     <span class="sr-only">Next</span>
+			  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                            <i class="fa fa-arrow-right" aria-hidden="true">Next</i>
+			    <span class="sr-only">Next</span>
 			  </a>
 			</div>
 
+                        <div class="intro-text" style="padding:20px 5px 5px 5px;">
+                            <span class="name">
+				    WepSIM
+				    <a class="btn btn-info" role="button" 
+				       href="https://github.com/wepsim/wepsim.github.io/blob/master/doc_pwa.md"><b>How to install</b></a>
+                                    <a class="btn btn-info" role="button"
+				       href="https://github.com/wepsim/wepsim.github.io/blob/master/doc_quickstart.md"><b><center>Quick Start</center></b></a>
+			    </span>
+                            <hr class="star-light">
+                            <span class="skills">
+				    Web Elemental Processor SIMulator
+			    </span>
+                        </div>
                 </div>
             </div>
         </div>
     </header>
 
     <!-- "description" Section -->
-    <section id="description" class="pt-5">
+    <section id="description">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -236,10 +211,10 @@
 			</div>
                 </div>
             </div>
-            <div class="row pt-3">
-		  <div class="col-sm-2">
-                    More details:
-		  </div>
+            <div class="row">
+                    <p>
+                    For more details:
+                    </p>
 		  <div class="col-sm-5">
 		    <div class="thumbnail">
 		      <div class="caption">
@@ -250,7 +225,7 @@
 		      </div>
 		    </div>
 		  </div>
-		  <div class="col-sm-2">
+		  <div class="col-sm-3">
 		    <div class="thumbnail">
 		      <div class="caption">
 			<p>
@@ -260,7 +235,7 @@
 		      </div>
 		    </div>
 		  </div>
-		  <div class="col-sm-2">
+		  <div class="col-sm-4">
 		    <div class="thumbnail">
 		      <div class="caption">
 			<p>
@@ -275,69 +250,81 @@
     </section>
 
     <!-- "getwepsim" Section -->
-    <section id="getwepsim" class="pt-5">
+    <section id="getwepsim">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2>Get WepSIM</h2><hr class="star-primary">
                 </div>
             </div>
+            <div class="row">
+		  <div class="col-sm-5">
+		    <div class="thumbnail">
+		      <img style="height:10vh" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/2000px-HTML5_logo_and_wordmark.svg.png" alt="web logo">
+		      <div class="caption">
+			<h3>WepSIM-checker<br>for Web:</h3>
+			<p><small>
+			   <a href="https://wepsim.github.io/acaldero/wepsim_checker">https://wepsim.github.io/acaldero/wepsim_checker</a><br>
+			   (Chrome 50+, Firefox 45+, Edge 30+, Safari 10+)
+                        </small></p>
+		      </div>
+		    </div>
+		  </div>
+		  <div class="col-sm-3">
+		    <div class="thumbnail">
+		      <img style="height:10vh" src="https://developer.android.com/images/brand/Android_Robot_100.png" alt="android logo">
+		      <div class="caption">
+			<h3>WepSIM<br>for Android:</h3>
+			<p><small>
+			   <a href="https://play.google.com/store/apps/details?id=es.uc3m.inf.arcos.wepsim">Google Play</a><br>
+			   (Android 5.0+)
+                        </small></p>
+		      </div>
+		    </div>
+		  </div>
+		  <div class="col-sm-4">
+		    <div class="thumbnail">
+		      <img style="height:10vh" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/2000px-HTML5_logo_and_wordmark.svg.png" alt="web logo">
+		      <div class="caption">
+			<h3>WepSIM<br>for Web:</h3>
+			<p><small>
+			   <a href="https://wepsim.github.io/wepsim/">https://wepsim.github.io/wepsim/</a><br>
+			   (Chrome 50+, Firefox 45+, ...)
+                        </small></p>
+		      </div>
+		    </div>
+		  </div>
+            </div>
+
+            <div class="row">
+		  <div class="col-sm-5">
+		    <div class="thumbnail">
+		      <img style="height:15vh" src="https://assets-cdn.github.com/images/modules/logos_page/Octocat.png" alt="github logo">
+		      <div class="caption">
+			<h3>WepSIM-checker Source:</h3>
+			<p><small>
+			<a href="https://github.com/wepsim/wepsim">https://github.com/acaldero/wepsim_checker</a>
+                        </small></p>
+		      </div>
+		    </div>
+		  </div>
+		  <div class="col-sm-7">
+		    <div class="thumbnail">
+		      <img style="height:15vh" src="https://assets-cdn.github.com/images/modules/logos_page/Octocat.png" alt="github logo">
+		      <div class="caption">
+		        <h3>WepSIM Source:</h3>
+			<p><small>
+                        <a href="https://github.com/wepsim/wepsim">https://github.com/wepsim/wepsim</a><small>
+                        </small></p>
+		      </div>
+		    </div>
+		  </div>
+            </div>
         </div>
-
-	<div class="card-columns">
-	  <div class="card">
-	    <img style="height:10vh" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/2000px-HTML5_logo_and_wordmark.svg.png" alt="web logo">
-	    <div class="card-body">
-	      <h3 class="card-title">WepSIM-checker for Web</h3>
-	      <p class="card-text">
-		   <a href="https://wepsim.github.io/acaldero/wepsim_checker">https://wepsim.github.io/acaldero/wepsim_checker</a><br>
-		   (Chrome 60+, Firefox 60+, Edge 40+, Safari 11+)
-	      </p>
-	    </div>
-	  </div>
-	  <div class="card">
-	    <img style="height:10vh" src="https://developer.android.com/images/brand/Android_Robot_100.png" alt="android logo">
-	    <div class="card-body">
-	      <h3 class="card-title">WepSIM for Android</h3>
-	      <p class="card-text">
-		   <a href="https://play.google.com/store/apps/details?id=es.uc3m.inf.arcos.wepsim">Google Play</a><br>
-		   (Android 6.0+)
-	      </p>
-	    </div>
-	  </div>
-	  <div class="card">
-	    <img style="height:10vh" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/2000px-HTML5_logo_and_wordmark.svg.png" alt="web logo">
-	    <div class="card-body">
-	      <h3 class="card-title">WepSIM for the Web</h3>
-	      <p class="card-text">
-		   <a href="https://wepsim.github.io/wepsim/">https://wepsim.github.io/wepsim/</a><br>
-		   (Chrome 60+, Firefox 60+, ...)
-	      </p>
-	    </div>
-	  </div>
-	</div>
-
-	<div class="card-columns">
-	  <div class="card">
-	    <img style="height:15vh" src="https://assets-cdn.github.com/images/modules/logos_page/Octocat.png" alt="github logo">
-	    <div class="card-body">
-	      <h3 class="card-title">WepSIM-checker Source</h3>
-	      <p class="card-text"><a href="https://github.com/wepsim/wepsim_checker">https://github.com/acaldero/wepsim_checker</a></p>
-	    </div>
-	  </div>
-	  <div class="card">
-	    <img style="height:15vh" src="https://assets-cdn.github.com/images/modules/logos_page/Octocat.png" alt="github logo">
-	    <div class="card-body">
-	      <h3 class="card-title">WepSIM-checker Source</h3>
-	      <p class="card-text"><a href="https://github.com/wepsim/wepsim">https://github.com/acaldero/wepsim</a></p>
-	    </div>
-	  </div>
-	</div>
-
     </section>
 
     <!-- "publications" Section -->
-    <section id="publications" class="pt-5">
+    <section id="publications">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -376,7 +363,7 @@
 
 
     <!-- "authors" Section -->
-    <section id="authors" class="pt-5">
+    <section id="authors">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -384,7 +371,7 @@
                 </div>
             </div>
             <p>&nbsp;</p>
-	    <div class="row text-center">
+	    <div class="row">
                 <div class="col-sm-3 col-md-3">
                       <div class="thumbnail">
                       <img src="https://wepsim.github.io/wepsim/images/author_jprieto.png" 
@@ -421,8 +408,17 @@
         </div>
     </section>
 
+
+    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+    <div class="scroll-top page-scroll hidden-sm hidden-xs hidden-lg hidden-md">
+        <a class="btn btn-primary" href="#page-top">
+            <i class="fa fa-chevron-up"></i>
+        </a>
+    </div>
+
+
     <!-- Footer -->
-    <footer class="text-center py-5">
+    <footer class="text-center">
         <div class="footer-below">
             <div class="container">
                 <div class="row">
