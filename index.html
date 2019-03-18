@@ -11,10 +11,12 @@
 
     <title>WepSIM</title>
 
-    <link href="bootstrap.min.css"  rel="stylesheet">
-    <link href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" rel="stylesheet" type="text/css" crossorigin="anonymous">
-    <script src="jquery.min.js"></script>
-    <script src="bootstrap.min.js"></script>
+    <link  href="external/bootstrap.min.css"  rel="stylesheet">
+    <link  href="external/fontawesome.css"    rel="stylesheet" type="text/css" crossorigin="anonymous">
+
+    <script src="external/jquery.min.js"></script>
+    <script src="external/bootstrap.min.js"></script>
+    <script src="external/clipboard.min.js"></script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-80849772-3"></script>
@@ -157,14 +159,15 @@
 		     <div class="card-deck">
 			  <div class="card">
 			    <div class="card-header font-weight-bold bg-warning">
-				  Critical point of view
+				  Critical point of view: evaluate solutions
 			    </div>
 			    <img class="img-responsive card-img-top mx-auto"
 			         style="max-height:15vh !important;"
 	                         src="images/compare-and-learn.jpg" alt="Compare among architectures, firmwares, and assembly programs">
 			    <div class="card-body">
 			      <h4 class="card-title">
-				  Students are able to compare two hardware, firmware, instruction sets, etc.
+				  Students are able to compare different hardware, firmware, instruction sets, etc.
+				  and to assess what are the advantages and disadvantages
 			      </h4>
 			    </div>
 			    <div class="card-footer">
@@ -176,7 +179,7 @@
 
 			  <div class="card">
 			    <div class="card-header font-weight-bold bg-warning">
-				  Integrated vision
+				  Integrated vision: from hardware to system software
 			    </div>
 			    <img class="img-responsive card-img-top mx-auto"
 			         style="max-height:15vh !important;"
@@ -206,7 +209,7 @@
 	                         src="images/wcag2-aaa.jpg" alt="WCGA 2 (AAA)">
 			    <div class="card-body">
 			      <h4 class="card-title">
-				  Improving accesibility: WCGA 2 (AAA)
+				  Improving accesibility: WCGA 2 (AAA) + Command-line alternative
 			      </h4>
 			    </div>
 			    <div class="card-footer">
@@ -411,7 +414,7 @@
 
 		  <div class="card col-sm-6 col-lg-3 p-0">
 		    <div class="card-header bg-light">
-			<h6 class="font-weight-bold">Run on Linux/MacOS/Windows<br> (with Bash+NodeJS)</h6>
+			<h6 class="font-weight-bold">Run on any platform<br> (with Bash+NodeJS)</h6>
 		    </div>
 		    <div class="card-body">
 			<h5 class="pb-4">As text-based user interface from command line:<br>
@@ -423,7 +426,7 @@
 			     src="images/tux-158547_960_720.png" alt="linux logo">
 		    </div>
 		    <div class="card-footer bg-light">
-			 Tested on Linux with Node 8.10.0+ and Bash 4.4.19+
+			 Tested on Linux with <br> Node 8.10.0+ and Bash 4.4.19+
 		    </div>
 		  </div>
 
@@ -666,73 +669,88 @@
 
 			  <div class="card">
 			    <span class="badge badge-secondary">Past Spanish Journal</span>
-			    <img class="img-responsive card-img-top w-50 mx-auto"
-                                 src="images/books-pixabay-1673578_1280.png"
-				 alt="book icon">
-			    <ul class="list-group list-group-flush my-auto h-75">
-				  <li class="list-group-item font-weight-bold" style="height:35%;">
+			    <ul class="list-group list-group-flush">
+			          <img class="img-responsive card-img-top w-25 mx-auto"
+                                       src="images/books-pixabay-1673578_1280.png"
+				       alt="book icon">
+				  <li class="list-group-item font-weight-bold h-50">
 				      <a href="http://digibug.ugr.es/bitstream/10481/41909/1/T3_N6_Revista_EAIC_2016.pdf">WepSIM: Simulador modular e interactivo de un procesador elemental para facilitar una visión integrada de la microprogramación y la programación en ensamblador</a>
 				  </li>
 				  <li class="list-group-item">
+					<button class="btn c2c p-0 float-right" data-clipboard-action="copy" data-clipboard-target="#ws16a">
+					   <img class="clippy" src="images/clippy.svg" alt="Copy to clipboard" width="13">
+					</button>
+					<small id="ws16a">
 					@article{wepsim2016a,<br>
 					  author  = {Alejandro Calderón Mateos, Félix García Carballeira, Javier Prieto Cepeda},<br>
 					  title   = {WepSIM: Simulador modular e interactivo de un procesador elemental para facilitar una visión integrada de la microprogramación y la programación en ensamblador},<br>
-					  journal = {Enseñanza y Aprendizaje de Ingeniería de Computadores. Número 6},<br>
-					  number  = 1,<br>
-					  volume  = 1,<br>
+					  journal = {Enseñanza y Aprendizaje de Ingeniería de Computadores},<br>
+					  number  = 6,
+					  volume  = 1,
 					  pages   = {0-8},<br>
-					  month   = 2,<br>
-					  year    = 2016<br>
+					  month   = 2,
+					  year    = 2016
 					}<br>
+					</small>
 				  </li>
 			    </ul>
 			  </div>
 
 			  <div class="card">
 			    <span class="badge badge-secondary">Past Spanish Conference</span>
-			    <img class="img-responsive card-img-top w-50 mx-auto"
-                                 src="images/books-pixabay-1673578_1280.png"
-				 alt="book icon">
-			    <ul class="list-group list-group-flush my-auto h-75">
-				  <li class="list-group-item font-weight-bold" style="height:35%;">
+			    <ul class="list-group list-group-flush">
+			          <img class="img-responsive card-img-top w-25 mx-auto"
+                                       src="images/books-pixabay-1673578_1280.png"
+				       alt="book icon">
+				  <li class="list-group-item font-weight-bold h-50">
 				      WepSIM: simulador integrado de microprogramación y programación en ensamblador
 				  </li>
 				  <li class="list-group-item">
-					@conference{wepsim2016,<br>
+					<button class="btn c2c p-0 float-right" data-clipboard-action="copy" data-clipboard-target="#ws16b">
+					   <img class="clippy" src="images/clippy.svg" alt="Copy to clipboard" width="13">
+					</button>
+					<small id="ws16b">
+					@conference{wepsim2016b,<br>
 					  author  = {Javier Prieto Cepeda, Félix García-Carballeira, Alejando Calderón, Saúl Alonso-Monsalve}, <br>
 					  title   = {WepSIM: simulador integrado de microprogramación y programación en ensamblador},<br>
 					  publisher = {XXVII Jornadas de Paralelismo (JP2016), Salamanca, Spain, September},<br>
                                           organization = {XXVII Jornadas de Paralelismo (JP2016), Salamanca, Spain},<br>
-					  month   = September,<br>
+					  number  = 1,
+					  volume  = 1,
 					  pages   = {0-8},<br>
-					  number  = 1,<br>
-					  volume  = 1,<br>
-					  year    = 2016<br>
+					  month   = 9,
+					  year    = 2016
 					}<br>
+					</small>
 				  </li>
 			    </ul>
 			  </div>
 
 			  <div class="card">
 			    <span class="badge badge-primary">Spanking New!</span>
-			    <img class="img-responsive card-img-top w-50 mx-auto"
-                                 src="images/books-pixabay-1673578_1280.png"
-				 alt="book icon">
-			    <ul class="list-group list-group-flush my-auto h-75">
-				  <li class="list-group-item font-weight-bold" style="height:35%;">
-					  <a href="https://ieeexplore.ieee.org/document/8662722">WepSIM: an Online Interactive Educational Simulator Integrating Microdesign, Microprogramming, and Assembly Language Programming</a>
+			    <ul class="list-group list-group-flush">
+			          <img class="img-responsive card-img-top w-25 mx-auto"
+                                       src="images/books-pixabay-1673578_1280.png"
+				       alt="book icon">
+				  <li class="list-group-item font-weight-bold h-50">
+				      <a href="https://ieeexplore.ieee.org/document/8662722">WepSIM: an Online Interactive Educational Simulator Integrating Microdesign, Microprogramming, and Assembly Language Programming</a>
 				  </li>
 				  <li class="list-group-item">
+					<button class="btn c2c p-0 float-right" data-clipboard-action="copy" data-clipboard-target="#ws19">
+					   <img class="clippy" src="images/clippy.svg" alt="Copy to clipboard" width="13">
+					</button>
+					<small id="ws19">
 					@article{wepsim2019,<br>
 					  author  = {Félix García-Carballeira and Alejando Calderon Mateos and Saul Alonso-Monsalve and Javier Prieto Cepeda}, <br>
 					  title   = {WepSIM: an Online Interactive Educational Simulator Integrating Microdesign, Microprogramming, and Assembly Language Programming},<br>
 					  journal = {IEEE Transactions on Learning Technologies},<br>
-					  number  = 1,<br>
-					  volume  = 1,<br>
+					  number  = 1,
+					  volume  = 1,
 					  pages   = {0-8},<br>
-					  month   = 2,<br>
-					  year    = 2019<br>
+					  month   = 2,
+					  year    = 2019
 					}<br>
+					</small>
 				  </li>
 			    </ul>
 			  </div>
@@ -835,6 +853,12 @@
     </nav>
 
 </body>
+
+
+<script>
+    var clipboard = new ClipboardJS('.c2c') ;
+</script>
+
 
 </html>
 
