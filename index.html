@@ -34,13 +34,13 @@
 <body>
 
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-md bg-dark fixed-top text-white p-1" id="mainNav">
+    <nav class="navbar navbar-expand-md bg-dark fixed-top text-white p-1" id="nav1">
         <div class="container">
 	    <div class="navbar-header page-scroll">
 		<a type="button" aria-expanded="false" aria-label="Toggle navigation"
 		   class="navbar-toggle navbar-toggler-right text-white btn-dark" 
 		   data-toggle="collapse" data-target="#navbar-collapse-2">
-		<span class="sr-only">Toggle navigation</span> <i class="fa fa-bars"></i>
+		<span class="sr-only">Toggle navigation</span> <span class="fa fa-bars"></span>
 		</a>
 	    </div>
 	    <div class="collapse navbar-collapse" id="navbar-collapse-2">
@@ -57,7 +57,7 @@
     </nav>
 
     <!-- Header -->
-    <nav id="page-top" class="navbar navbar-expand-lg bg-dark text-white p-1" id="mainNav">
+    <nav id="page-top" class="navbar navbar-expand-lg bg-dark text-white p-1" id="nav2">
         <div class="container p-0">&nbsp;</div>
     </nav>
     <header class="masthead bg-light text-black text-center pt-4">
@@ -65,7 +65,7 @@
             <div class="row d-flex align-content-center flex-wrap p-4">
 		    <div class="text-black m-auto"><h3>The Web Elemental Processor SIMulator</h3></div>
 		    <a class="btn btn-sm btn-primary  nav-link text-white m-auto" role="button"
-		       href="https://wepsim.github.io/wepsim/"><b>Access to WepSIM</b></a>
+		       href="https://wepsim.github.io/wepsim/"><strong>Access to WepSIM</strong></a>
 	    </div>
 
             <div class="row d-flex align-content-center flex-wrap">
@@ -275,106 +275,193 @@
 
 	    <div class="row card-deck p-4">
 
-		  <div class="card col-sm-6 col-lg-3 p-0">
-		    <div class="card-header bg-light">
-			<h6 class="font-weight-bold">WepSIM Source Code <br> on GitHub</h6>
-		    </div>
-		    <div class="card-body">
-			<h5 class="pb-4">WepSIM repository:<br>
-			<a href="https://github.com/wepsim/wepsim">https://github.com/wepsim/wepsim</a>
-			</h5>
-			<img class="img-responsive card-img-top mx-auto"
-			     style="max-height:20vh !important; max-width:10vw !important;"
-			     src="https://github.githubassets.com/images/modules/logos_page/Octocat.png" alt="github logo">
-		    </div>
-		  </div>
-
-
-		  <div class="card col-sm-6 col-lg-6 p-0">
+		  <div class="card col-sm-8 col-lg-8 p-0">
 		    <div class="card-header">
-			<h6 class="font-weight-bold"><u>Install</u> on <u>any platform</u> <br> with Google Chrome 73+</h6>
+
+			<!-- Nav tabs -->
+			<ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
+			  <li class="nav-item">
+			    <a class="nav-link p-0 m-0 active" data-toggle="tab" role="tab" 
+	                       id="chrome-tab"    href="#chrome"    aria-controls="chrome" 
+			       aria-selected="true"><h6 class="font-weight-bold"><u>Install</u> on <u>any platform</u> <br> with Google Chrome 73+</h6></a>
+			  </li>
+			  <li class="nav-item">
+			    <a class="nav-link p-0 m-0" data-toggle="tab" role="tab" 
+	                       id="safari-tab" href="#safari" aria-controls="safari" 
+			       aria-selected="false"><h6 class="font-weight-bold"><u>Install</u> on <u>iOS/MacOS</u><br> (with Apple Safari 11+)</h6></a>
+			  </li>
+			</ul>
 		    </div>
 		    <div class="card-body">
-			<h5 class="pb-4">As Progressive Web Application:</h5>
 
-			<div id="carousel-3b" class="carousel slide carousel-fade" data-ride="carousel">
-			  <ol class="carousel-indicators">
-			      <li data-target="#carousel-3b" data-slide-to="0" class="active"></li>
-			      <li data-target="#carousel-3b" data-slide-to="1"></li>
-			      <li data-target="#carousel-3b" data-slide-to="2"></li>
-			      <li data-target="#carousel-3b" data-slide-to="3"></li>
-			  </ol>
+			<!-- Tab panes -->
+			<div class="tab-content">
+			  <div class="tab-pane active" id="chrome" role="tabpanel" aria-labelledby="chrome-tab">
 
-			  <div class="carousel-inner" role="listbox">
-			    <div class="carousel-item active">
-				<center>
-				<img class="img-responsive pb-5"
-				     src="https://raw.githubusercontent.com/acaldero/wepsim/master/help/pwa/pwa_android001.jpg"
-				     style="max-height:65vh !important;"
-				     alt="wepsim screenshot android">
-				</center>
-				<div class="carousel-caption bg-dark py-3">
-				     <h6>
-				     1.- Once the <a href="https://wepsim.github.io/wepsim">https://wepsim.github.io/wepsim</a> is loaded in Chrome (Android, Windows, Linux), from the top-right corner tap on the menu icon (Chrome). 
-				     </h6>
+				<h5 class="pb-4">As Progressive Web Application:</h5>
+
+				<div id="carousel-3b" class="carousel slide carousel-fade" data-ride="carousel">
+				  <ol class="carousel-indicators">
+				      <li data-target="#carousel-3b" data-slide-to="0" class="active"></li>
+				      <li data-target="#carousel-3b" data-slide-to="1"></li>
+				      <li data-target="#carousel-3b" data-slide-to="2"></li>
+				      <li data-target="#carousel-3b" data-slide-to="3"></li>
+				  </ol>
+
+				  <div class="carousel-inner" role="listbox">
+				    <div class="carousel-item active">
+					<center>
+					<img class="img-responsive pb-5"
+					     src="https://raw.githubusercontent.com/acaldero/wepsim/master/help/pwa/pwa_android001.jpg"
+					     style="max-height:65vh !important;"
+					     alt="wepsim screenshot android">
+					</center>
+					<div class="carousel-caption bg-dark py-3">
+					     <h6>
+					     1.- Once the <a href="https://wepsim.github.io/wepsim">https://wepsim.github.io/wepsim</a> is loaded in Chrome (Android, Windows, Linux), from the top-right corner tap on the menu icon (Chrome). 
+					     </h6>
+					</div>
+				    </div>
+				    <div class="carousel-item">
+					<center>
+					<img class="img-responsive pb-5"
+					     src="https://raw.githubusercontent.com/acaldero/wepsim/master/help/pwa/pwa_android002.jpg"
+					     style="height:65vh !important;"
+					     alt="wepsim screenshot android">
+					</center>
+					<div class="carousel-caption bg-dark p-1">
+					     <h6>
+					     2.- Move within share options until 'add to home screen' option and click on it. 
+					     </h6>
+					</div>
+				    </div>
+				    <div class="carousel-item">
+					<center>
+					<img class="img-responsive pb-5"
+					     src="https://raw.githubusercontent.com/acaldero/wepsim/master/help/pwa/pwa_android003.jpg"
+					     style="height:65vh !important;"
+					     alt="wepsim screenshot android">
+					</center>
+					<div class="carousel-caption bg-dark p-1">
+					     <h6>
+					     3.- Then click in the 'add' option. 
+					     </h6>
+					</div>
+				    </div>
+				    <div class="carousel-item">
+					<center>
+					<img class="img-responsive pb-5"
+					     src="https://raw.githubusercontent.com/acaldero/wepsim/master/help/pwa/pwa_android004.jpg"
+					     style="height:65vh !important;"
+					     alt="wepsim screenshot android">
+					</center>
+					<div class="carousel-caption bg-dark p-1">
+					     <h6>
+					     4.- Finally WepSIM can be launched from the home screen icon.
+					     </h6>
+					</div>
+				    </div>
+				  </div>
+
+				  <!-- Left and right controls -->
+				  <a class="left carousel-control-prev" href="#carousel-3b" role="button" data-slide="prev">
+				     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				     <span class="sr-only">Previous</span>
+				  </a>
+				  <a class="right carousel-control-next" href="#carousel-3b" role="button" data-slide="next">
+				     <span class="carousel-control-next-icon" aria-hidden="true"></span>
+				     <span class="sr-only">Next</span>
+				  </a>
 				</div>
-			    </div>
-			    <div class="carousel-item">
-				<center>
-				<img class="img-responsive pb-5"
-				     src="https://raw.githubusercontent.com/acaldero/wepsim/master/help/pwa/pwa_android002.jpg"
-				     style="height:65vh !important;"
-				     alt="wepsim screenshot android">
-				</center>
-				<div class="carousel-caption bg-dark p-1">
-				     <h6>
-				     2.- Move within share options until 'add to home screen' option and click on it. 
-				     </h6>
-				</div>
-			    </div>
-			    <div class="carousel-item">
-				<center>
-				<img class="img-responsive pb-5"
-				     src="https://raw.githubusercontent.com/acaldero/wepsim/master/help/pwa/pwa_android003.jpg"
-				     style="height:65vh !important;"
-				     alt="wepsim screenshot android">
-				</center>
-				<div class="carousel-caption bg-dark p-1">
-				     <h6>
-				     3.- Then click in the 'add' option. 
-				     </h6>
-				</div>
-			    </div>
-			    <div class="carousel-item">
-				<center>
-				<img class="img-responsive pb-5"
-				     src="https://raw.githubusercontent.com/acaldero/wepsim/master/help/pwa/pwa_android004.jpg"
-				     style="height:65vh !important;"
-				     alt="wepsim screenshot android">
-				</center>
-				<div class="carousel-caption bg-dark p-1">
-				     <h6>
-				     4.- Finally WepSIM can be launched from the home screen icon.
-				     </h6>
-				</div>
-			    </div>
+
 			  </div>
+			  <div class="tab-pane"        id="safari" role="tabpanel" aria-labelledby="safari-tab">
 
-			  <!-- Left and right controls -->
-			  <a class="left carousel-control-prev" href="#carousel-3b" role="button" data-slide="prev">
-			     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-			     <span class="sr-only">Previous</span>
-			  </a>
-			  <a class="right carousel-control-next" href="#carousel-3b" role="button" data-slide="next">
-			     <span class="carousel-control-next-icon" aria-hidden="true"></span>
-			     <span class="sr-only">Next</span>
-			  </a>
+				<h5 class="pb-4">As Progressive Web Application:<br>
+				</h5>
+
+				<div id="carousel-3a" class="carousel slide carousel-fade" data-ride="carousel">
+				  <ol class="carousel-indicators">
+				      <li data-target="#carousel-3a" data-slide-to="0" class="active"></li>
+				      <li data-target="#carousel-3a" data-slide-to="1"></li>
+				      <li data-target="#carousel-3a" data-slide-to="2"></li>
+				      <li data-target="#carousel-3a" data-slide-to="3"></li>
+				  </ol>
+
+				  <div class="carousel-inner" role="listbox">
+				    <div class="carousel-item active">
+					<center>
+					<img class="img-responsive pb-5"
+					     src="https://raw.githubusercontent.com/acaldero/wepsim/master/help/pwa/pwa_ios001.jpg"
+					     style="max-height:50vh !important;"
+					     alt="wepsim screenshot ios">
+					</center>
+					<div class="carousel-caption bg-dark py-3">
+					     <h6>
+					     1.- Once the <a href="https://wepsim.github.io/wepsim">https://wepsim.github.io/wepsim</a> is loaded in Safari (iOS, MacOS), from the top-right corner tap on the share icon (Safari). 
+					     </h6>
+					</div>
+				    </div>
+				    <div class="carousel-item">
+					<center>
+					<img class="img-responsive pb-5"
+					     src="https://raw.githubusercontent.com/acaldero/wepsim/master/help/pwa/pwa_ios002.jpg"
+					     style="max-height:50vh !important;"
+					     alt="wepsim screenshot ios">
+					</center>
+					<div class="carousel-caption bg-dark p-1">
+					     <h6>
+					     2.- Move within share options until 'add to home screen' option and click on it. 
+					     </h6>
+					</div>
+				    </div>
+				    <div class="carousel-item">
+					<center>
+					<img class="img-responsive pb-5"
+					     src="https://raw.githubusercontent.com/acaldero/wepsim/master/help/pwa/pwa_ios003.jpg"
+					     style="max-height:50vh !important;"
+					     alt="wepsim screenshot ios">
+					</center>
+					<div class="carousel-caption bg-dark p-1">
+					     <h6>
+					     3.- Then click in the 'add' option. 
+					     </h6>
+					</div>
+				    </div>
+				    <div class="carousel-item">
+					<center>
+					<img class="img-responsive pb-5"
+					     src="https://raw.githubusercontent.com/acaldero/wepsim/master/help/pwa/pwa_ios004.jpg"
+					     style="max-height:50vh !important;"
+					     alt="wepsim screenshot ios">
+					</center>
+					<div class="carousel-caption bg-dark p-1">
+					     <h6>
+					     4.- Finally WepSIM can be launched from the home screen icon.
+					     </h6>
+					</div>
+				    </div>
+				  </div>
+
+				  <!-- Left and right controls -->
+				  <a class="left carousel-control-prev" href="#carousel-3a" role="button" data-slide="prev">
+				     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				     <span class="sr-only">Previous</span>
+				  </a>
+				  <a class="right carousel-control-next" href="#carousel-3a" role="button" data-slide="next">
+				     <span class="carousel-control-next-icon" aria-hidden="true"></span>
+				     <span class="sr-only">Next</span>
+				  </a>
+				</div>
+
+			  </div>
 			</div>
+
 		    </div>
 		  </div>
 
 
-		  <div class="card col-sm-6 col-lg-3 p-0">
+		  <div class="card col-sm-6 col-lg-4 p-0">
 		    <div class="card-header bg-light">
 			<h6 class="font-weight-bold"><u>Run</u> on <u>any platform</u> <br> with Web Browser [*]</h6>
 		    </div>
@@ -383,7 +470,7 @@
 			<a href="https://wepsim.github.io/wepsim/">https://wepsim.github.io/wepsim/</a>
 			</h5>
 
-			<img class="img-responsive card-img-top mx-auto" alt="web logo"
+			<img class="img-responsive card-img-top mx-auto d-block" alt="web logo"
 			     style="max-height:20vh !important; max-width:10vw !important;"
 			     src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/2000px-HTML5_logo_and_wordmark.svg.png"><br>
 		    </div>
@@ -397,7 +484,21 @@
 
 	    <div class="row card-deck p-4">
 
-		  <div class="card col-sm-6 col-lg-3 p-0">
+		  <div class="card col-sm-6 col-lg-4 p-0">
+		    <div class="card-header bg-light">
+			<h6 class="font-weight-bold">WepSIM Source Code <br> on GitHub</h6>
+		    </div>
+		    <div class="card-body">
+			<h5 class="pb-4">WepSIM repository:<br>
+			<a href="https://github.com/wepsim/wepsim">https://github.com/wepsim/wepsim</a>
+			</h5>
+			<img class="img-responsive card-img-top mx-auto d-block"
+			     style="max-height:20vh !important; max-width:10vw !important;"
+			     src="https://github.githubassets.com/images/modules/logos_page/Octocat.png" alt="github logo">
+		    </div>
+		  </div>
+
+		  <div class="card col-sm-6 col-lg-4 p-0">
 		    <div class="card-header bg-light">
 			<h6 class="font-weight-bold"><u>Install</u> on <u>Android</u> <br> (Android 6.0+)</h6>
 		    </div>
@@ -406,14 +507,13 @@
 			<a href="https://play.google.com/store/apps/details?id=es.uc3m.inf.arcos.wepsim">Google Play Store</a><br>
 			</h5>
 
-			<img class="img-responsive card-img-top mx-auto"
+			<img class="img-responsive card-img-top mx-auto d-block"
 			     style="max-height:20vh !important; max-width:10vw !important;"
-			     src="https://developer.android.com/images/brand/Android_Robot_100.png" alt="android logo">
+			     src="images/android-logo.png" alt="android logo">
 		    </div>
 		  </div>
 
-
-		  <div class="card col-sm-6 col-lg-3 p-0">
+		  <div class="card col-sm-6 col-lg-4 p-0">
 		    <div class="card-header bg-light">
 			<h6 class="font-weight-bold"><u>Run</u> on <u>any platform</u> <br> (with Bash+NodeJS)</h6>
 		    </div>
@@ -422,97 +522,12 @@
 			<a href="wepsim-cl.zip">wepsim-cl.zip</a><br>
 			</h5>
 
-			<img class="img-responsive card-img-top mx-auto"
+			<img class="img-responsive card-img-top mx-auto d-block"
 			     style="max-height:20vh !important; max-width:10vw !important;"
 			     src="images/tux-158547_960_720.png" alt="linux logo">
 		    </div>
 		    <div class="card-footer bg-light">
 			 Tested on Linux with <br> Node 8.10.0+ and Bash 4.4.19+
-		    </div>
-		  </div>
-
-
-		  <div class="card col-sm-6 col-lg-6 p-0">
-		    <div class="card-header">
-			<h6 class="font-weight-bold"><u>Install</u> on <u>iOS/MacOS</u><br> (with Apple Safari 11+)</h6>
-		    </div>
-		    <div class="card-body">
-			<h5 class="pb-4">As Progressive Web Application:<br>
-			</h5>
-
-			<div id="carousel-3a" class="carousel slide carousel-fade" data-ride="carousel">
-			  <ol class="carousel-indicators">
-			      <li data-target="#carousel-3a" data-slide-to="0" class="active"></li>
-			      <li data-target="#carousel-3a" data-slide-to="1"></li>
-			      <li data-target="#carousel-3a" data-slide-to="2"></li>
-			      <li data-target="#carousel-3a" data-slide-to="3"></li>
-			  </ol>
-
-			  <div class="carousel-inner" role="listbox">
-			    <div class="carousel-item active">
-				<center>
-				<img class="img-responsive pb-5"
-				     src="https://raw.githubusercontent.com/acaldero/wepsim/master/help/pwa/pwa_ios001.jpg"
-				     style="max-height:50vh !important;"
-				     alt="wepsim screenshot ios">
-				</center>
-				<div class="carousel-caption bg-dark py-3">
-				     <h6>
-				     1.- Once the <a href="https://wepsim.github.io/wepsim">https://wepsim.github.io/wepsim</a> is loaded in Safari (iOS, MacOS), from the top-right corner tap on the share icon (Safari). 
-				     </h6>
-				</div>
-			    </div>
-			    <div class="carousel-item">
-				<center>
-				<img class="img-responsive pb-5"
-				     src="https://raw.githubusercontent.com/acaldero/wepsim/master/help/pwa/pwa_ios002.jpg"
-				     style="max-height:50vh !important;"
-				     alt="wepsim screenshot ios">
-				</center>
-				<div class="carousel-caption bg-dark p-1">
-				     <h6>
-				     2.- Move within share options until 'add to home screen' option and click on it. 
-				     </h6>
-				</div>
-			    </div>
-			    <div class="carousel-item">
-				<center>
-				<img class="img-responsive pb-5"
-				     src="https://raw.githubusercontent.com/acaldero/wepsim/master/help/pwa/pwa_ios003.jpg"
-				     style="max-height:50vh !important;"
-				     alt="wepsim screenshot ios">
-				</center>
-				<div class="carousel-caption bg-dark p-1">
-				     <h6>
-				     3.- Then click in the 'add' option. 
-				     </h6>
-				</div>
-			    </div>
-			    <div class="carousel-item">
-				<center>
-				<img class="img-responsive pb-5"
-				     src="https://raw.githubusercontent.com/acaldero/wepsim/master/help/pwa/pwa_ios004.jpg"
-				     style="max-height:50vh !important;"
-				     alt="wepsim screenshot ios">
-				</center>
-				<div class="carousel-caption bg-dark p-1">
-				     <h6>
-				     4.- Finally WepSIM can be launched from the home screen icon.
-				     </h6>
-				</div>
-			    </div>
-			  </div>
-
-			  <!-- Left and right controls -->
-			  <a class="left carousel-control-prev" href="#carousel-3a" role="button" data-slide="prev">
-			     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-			     <span class="sr-only">Previous</span>
-			  </a>
-			  <a class="right carousel-control-next" href="#carousel-3a" role="button" data-slide="next">
-			     <span class="carousel-control-next-icon" aria-hidden="true"></span>
-			     <span class="sr-only">Next</span>
-			  </a>
-			</div>
 		    </div>
 		  </div>
 
@@ -663,8 +678,8 @@
 			    <div class="card-header bg-light h-25" data-toggle="collapse" data-target="#collapseA1" aria-expanded="true" aria-controls="collapseA1">
 			      <h5 class="card-title">
 			      <span class="badge badge-pill badge-primary">1</span>
-			      Load <a href="https://wepsim.github.io/wepsim">WepSIM</a> in your favorite web browser.<br>
-			      You can try our W<sup>ork</sup>I<sup>n</sup>P<sup>rogress</sup> version from <a href="https://acaldero.github.io/wepsim">https://acaldero.github.io/wepsim</a> too:
+			      Load the stable <a href="https://wepsim.github.io/wepsim">WepSIM</a> version in your favorite web browser.<br>
+			      There is also a <a href="https://acaldero.github.io/wepsim">work-in-progress version of WepSIM</a> that you can test.
 			      </h5>
 			    </div>
 			    <div id="collapseA1" class="card-body collapseA collapse show" aria-labelledby="headingA1">
