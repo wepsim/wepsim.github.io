@@ -667,10 +667,76 @@
                 </div>
             </div>
 
-	    <h5 class="pb-3">
+	    <h5 class="m-1 pb-3">
+		<ul>
+		<li>
+		Execute an WepSIM example for learning has the 
+		<span class="text-primary" data-toggle="collapse" data-target=".collapseA" 
+		      aria-expanded="true" aria-controls="collapseA">following steps</span>:<br>
+		</li>
+		</ul>
+	    </h5>
+
+            <div class="row m-1 pb-3">
+
+		  <div class="m-0 w-100">
+		    <div class="nav nav-pills nav-fill" id="v-pills-tab" role="tablist" aria-orientation="horizontal">
+		      <a class="border nav-item nav-link active" data-toggle="pill"  role="tab" aria-selected="true"
+			 id="pill0-step1-tab" href="#pill0-step1" aria-controls="pill0-step1">
+		      <span class="badge badge-pill badge-primary">1</span></a>
+		      <a class="border nav-item nav-link" data-toggle="pill"  role="tab" aria-selected="false"
+			 id="pill0-step2-tab" href="#pill0-step2" aria-controls="pill0-step2">
+		      <span class="badge badge-pill badge-primary">2</span></a>
+		      <a class="border nav-item nav-link" data-toggle="pill"  role="tab" aria-selected="false"
+			 id="pill0-step3-tab" href="#pill0-step3" aria-controls="pill0-step3">
+		      <span class="badge badge-pill badge-primary">3</span></a>
+		    </div>
+		  </div>
+
+		  <div class="m-0 border">
+		    <div class="tab-content" id="v-pills-tabContent">
+		      <div class="tab-pane show active" id="pill0-step1" role="tabpanel" aria-labelledby="pill0-step1-tab">
+			   <h5 class="m-3">
+			   Load the stable <a href="https://wepsim.github.io/wepsim">WepSIM</a> version in your favorite web browser.<br>
+			   There is also a <a href="https://acaldero.github.io/wepsim">work-in-progress version of WepSIM</a> that you can test.
+			   </h5>
+			   <img class="img-responsive p-1 w-100"
+				src="images/wepsim-initial.png"
+				alt="wepsim screenshot 1">
+		      </div>
+		      <div class="tab-pane" id="pill0-step2" role="tabpanel" aria-labelledby="pill0-step2-tab">
+			   <h5 class="m-3">
+			   Click on the Examples button to open de Examples dialog.<br>
+			   Then click on the dark blue 'title' of the example you want to work with:
+			   </h5>
+			   <img class="img-responsive p-1 w-100"
+				src="https://raw.githubusercontent.com/wepsim/wepsim/master/help/simulator/simulator015.jpg"
+				alt="wepsim screenshot 2">
+		      </div>
+		      <div class="tab-pane" id="pill0-step3" role="tabpanel" aria-labelledby="pill0-step3-tab">
+			   <h5 class="m-3">
+			   In the simulator workspace you can execute step by step and analyze the state of the components.
+			   It is possible to work at assembly level or at microcode level:
+			   </h5>
+			   <img class="img-responsive pb-1 w-100"
+			        src="https://raw.githubusercontent.com/acaldero/wepsim/master/help/welcome/simulation_xinstruction.gif"
+			        alt="wepsim screenshot 3">
+			   </h5>
+		      </div>
+		    </div>
+		  </div>
+
+	    </div>
+
+
+	    <h5 class="m-1 pb-3 pt-2">
+		<ul>
+		<li>
 		A typical session with WepSIM has the 
 		<span class="text-primary" data-toggle="collapse" data-target=".collapseA" 
 		      aria-expanded="true" aria-controls="collapseA">following steps</span>:<br>
+		</li>
+		</ul>
 	    </h5>
 
             <div class="row m-1 pb-3">
@@ -680,9 +746,6 @@
 		      <a class="border nav-item nav-link active" data-toggle="pill"  role="tab" aria-selected="true"
 			 id="pill1-step1-tab" href="#pill1-step1" aria-controls="pill1-step1">
 		      <span class="badge badge-pill badge-primary">1</span></a>
-		      <a class="border nav-item nav-link" data-toggle="pill"  role="tab" aria-selected="false"
-			 id="pill1-step2-tab" href="#pill1-step2" aria-controls="pill1-step2">
-		      <span class="badge badge-pill badge-primary">2</span></a>
 		      <a class="border nav-item nav-link" data-toggle="pill"  role="tab" aria-selected="false"
 			 id="pill1-step3-tab" href="#pill1-step3" aria-controls="pill1-step3">
 		      <span class="badge badge-pill badge-primary">3</span></a>
@@ -714,65 +777,56 @@
 		      </div>
 		      <div class="tab-pane" id="pill1-step2" role="tabpanel" aria-labelledby="pill1-step2-tab">
 			   <h5 class="m-3">
-			   Click on the Examples button to open de Examples dialog.<br>
-			   Then click on the dark blue 'title' of the example you want to work with:
-			   </h5>
-			   <img class="img-responsive p-1 w-100"
-				src="https://raw.githubusercontent.com/wepsim/wepsim/master/help/simulator/simulator015.jpg"
-				alt="wepsim screenshot 2">
-		      </div>
-		      <div class="tab-pane" id="pill1-step3" role="tabpanel" aria-labelledby="pill1-step3-tab">
-			   <h5 class="m-3">
 			   Then you could go to the microcode editor workspace:
 			   </h5>
 			   <img class="img-responsive p-1 w-100"
 			        src="https://raw.githubusercontent.com/wepsim/wepsim/master/help/simulator/firmware001.jpg"
-			        alt="wepsim screenshot 3">
+			        alt="wepsim screenshot 2">
 		      </div>
-		      <div class="tab-pane" id="pill1-step4" role="tabpanel" aria-labelledby="pill1-step4-tab">
+		      <div class="tab-pane" id="pill1-step3" role="tabpanel" aria-labelledby="pill1-step3-tab">
 			   <h5 class="m-3">
 			   You can modify the microcode (if you wish) and microcompile it:
 			   </h5>
 			   <img class="img-responsive pb-1 w-100"
 				src="https://raw.githubusercontent.com/wepsim/wepsim/master/help/simulator/firmware002.jpg"
-				alt="wepsim screenshot 4">
+				alt="wepsim screenshot 3">
 			   </h5>
 		      </div>
-		      <div class="tab-pane" id="pill1-step5" role="tabpanel" aria-labelledby="pill1-step5-tab">
+		      <div class="tab-pane" id="pill1-step4" role="tabpanel" aria-labelledby="pill1-step4-tab">
 			   <h5 class="m-3">
 			   Later, you could go to the assembly editor workspace:
 			   </h5>
 			   <img class="img-responsive pb-1 w-100"
 			        src="https://raw.githubusercontent.com/wepsim/wepsim/master/help/simulator/assembly002.jpg"
-			        alt="wepsim screenshot 5">
+			        alt="wepsim screenshot 4">
 			   </h5>
 		      </div>
-		      <div class="tab-pane" id="pill1-step6" role="tabpanel" aria-labelledby="pill1-step6-tab">
+		      <div class="tab-pane" id="pill1-step5" role="tabpanel" aria-labelledby="pill1-step5-tab">
 			   <h5 class="m-3">
 			   You can modify (if you wish) your assembly code (by using the instructions defined in the previous microcode) and compile it:
 			   </h5>
 			   <img class="img-responsive pb-1 w-100"
 				src="https://raw.githubusercontent.com/wepsim/wepsim/master/help/simulator/assembly003.jpg"
-				alt="wepsim screenshot 6">
+				alt="wepsim screenshot 5">
 			   </h5>
 		      </div>
-		      <div class="tab-pane" id="pill1-step7" role="tabpanel" aria-labelledby="pill1-step7-tab">
+		      <div class="tab-pane" id="pill1-step6" role="tabpanel" aria-labelledby="pill1-step6-tab">
 			   <h5 class="m-3">
 			   Finally, go back to the simulator workspace, and you can execute step by step and analyze the state of the components.
 			   It is possible to work at assembly level or at microcode level:
 			   </h5>
 			   <img class="img-responsive pb-1 w-100"
 			        src="https://raw.githubusercontent.com/acaldero/wepsim/master/help/welcome/simulation_xinstruction.gif"
-			        alt="wepsim screenshot 7">
+			        alt="wepsim screenshot 6">
 			   </h5>
 		      </div>
-		      <div class="tab-pane" id="pill1-step8" role="tabpanel" aria-labelledby="pill1-step8-tab">
+		      <div class="tab-pane" id="pill1-step7" role="tabpanel" aria-labelledby="pill1-step7-tab">
 			   <h5 class="m-3">
 			   Also, it is possible to compare what changes in the system at two given execution states:
 			   </h5>
 			   <img class="img-responsive pb-1 w-100"
 			        src="https://raw.githubusercontent.com/acaldero/wepsim/master/help/welcome/states_usage.gif"
-			        alt="wepsim screenshot 8">
+			        alt="wepsim screenshot 7">
 			   </h5>
 		      </div>
 		    </div>
@@ -780,9 +834,14 @@
 
 	    </div>
 
-	    <h5 class="pb-3">
+
+	    <h5 class="m-1 pb-3 pt-2">
+		<ul>
+		<li>
 		A typical session with command-line interface of WepSIM has the following
 		<span class="text-primary" data-toggle="collapse" data-target=".collapseB" aria-expanded="true" aria-controls="collapseB">possible options</span>:<br>
+		</li>
+		</ul>
 	    </h5>
 
             <div class="row m-1 pb-3">
