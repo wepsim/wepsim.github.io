@@ -667,159 +667,217 @@
                 </div>
             </div>
 
-            <div class="row">
-                <div class="col-12">
+	    <h5 class="m-1 pt-2 pb-2">
+		<ul>
+		<li>
+		Execute an WepSIM example for learning has the 
+		<span class="text-primary" data-toggle="collapse" data-target=".collapseA" 
+		      aria-expanded="true" aria-controls="collapseA">following steps</span>:<br>
+		</li>
+		</ul>
+	    </h5>
 
-                     <h5 class="pb-3">
-		 	A typical session with WepSIM has the 
-			<span class="text-primary" data-toggle="collapse" data-target=".collapseA" aria-expanded="true" aria-controls="collapseA">following steps</span>:<br>
-  	             </h5>
+            <div class="row m-1 pb-3">
 
-		     <div class="accordion" id="accordionA">
+		  <div class="m-0 w-100">
+		    <div class="nav nav-pills nav-fill" id="v-pills-tab" role="tablist" aria-orientation="horizontal">
+		      <a class="border border-secondary nav-item nav-link active" data-toggle="pill"  role="tab" aria-selected="true"
+			 id="pill0-step1-tab" href="#pill0-step1" aria-controls="pill0-step1">
+		      <span class="badge badge-pill badge-primary">1</span></a>
+		      <a class="border border-secondary nav-item nav-link" data-toggle="pill"  role="tab" aria-selected="false"
+			 id="pill0-step2-tab" href="#pill0-step2" aria-controls="pill0-step2">
+		      <span class="badge badge-pill badge-primary">2</span></a>
+		      <a class="border border-secondary nav-item nav-link" data-toggle="pill"  role="tab" aria-selected="false"
+			 id="pill0-step3-tab" href="#pill0-step3" aria-controls="pill0-step3">
+		      <span class="badge badge-pill badge-primary">3</span></a>
+		    </div>
+		  </div>
 
-			  <div class="card p-0 m-0">
-			    <div class="card-header bg-light h-25" data-toggle="collapse" data-target="#collapseA1" aria-expanded="true" aria-controls="collapseA1">
-			      <h5 class="card-title">
-			      <span class="badge badge-pill badge-primary">1</span>
-			      Load the stable <a href="https://wepsim.github.io/wepsim">WepSIM</a> version in your favorite web browser.<br>
-			      There is also a <a href="https://acaldero.github.io/wepsim">work-in-progress version of WepSIM</a> that you can test.
-			      </h5>
-			    </div>
-			    <div id="collapseA1" class="card-body collapseA collapse show" aria-labelledby="headingA1">
-			    <img class="img-responsive pb-1"
-				 src="images/wepsim-initial.png"
-				 style="max-height:65vh !important; max-width:80vw !important;"
-				 alt="wepsim screenshot 1">
-			    </div>
-			  </div>
+		  <div class="m-0 border border-secondary">
+		    <div class="tab-content" id="v-pills-tabContent">
+		      <div class="tab-pane show active" id="pill0-step1" role="tabpanel" aria-labelledby="pill0-step1-tab">
+			   <h5 class="m-3">
+			   Load the stable <a href="https://wepsim.github.io/wepsim">WepSIM</a> version in your favorite web browser.<br>
+			   There is also a <a href="https://acaldero.github.io/wepsim">work-in-progress version of WepSIM</a> that you can test.
+			   </h5>
+			   <img class="img-responsive p-1 w-100"
+				src="images/wepsim-initial.png"
+				alt="wepsim screenshot 1">
+		      </div>
+		      <div class="tab-pane" id="pill0-step2" role="tabpanel" aria-labelledby="pill0-step2-tab">
+			   <h5 class="m-3">
+			   Click on the Examples button to open de Examples dialog.<br>
+			   Then click on the dark blue 'title' of the example you want to work with:
+			   </h5>
+			   <img class="img-responsive p-1 w-100"
+				src="https://raw.githubusercontent.com/wepsim/wepsim/master/help/simulator/simulator015.jpg"
+				alt="wepsim screenshot 2">
+		      </div>
+		      <div class="tab-pane" id="pill0-step3" role="tabpanel" aria-labelledby="pill0-step3-tab">
+			   <h5 class="m-3">
+			   In the simulator workspace you can execute step by step and analyze the state of the components.
+			   It is possible to work at assembly level or at microcode level:
+			   </h5>
+			   <img class="img-responsive pb-1 w-100"
+			        src="https://raw.githubusercontent.com/acaldero/wepsim/master/help/welcome/simulation_xinstruction.gif"
+			        alt="wepsim screenshot 3">
+			   </h5>
+		      </div>
+		    </div>
+		  </div>
 
-			  <div class="card p-0 m-0">
-			    <div class="card-header bg-light h-25" data-toggle="collapse" data-target="#collapseA2" aria-expanded="true" aria-controls="collapseA2">
-			      <h5 class="card-title">
-			      <span class="badge badge-pill badge-primary">2</span>
-			      Click on the Examples button to open de Examples dialog.<br>
-			      Then click on the dark blue 'title' of the example you want to work with:
-			      </h5>
-			    </div>
-			    <div id="collapseA2" class="card-body collapseA collapse show" aria-labelledby="headingA2">
-			    <img class="img-responsive pb-1"
-				 src="https://raw.githubusercontent.com/wepsim/wepsim/master/help/simulator/simulator015.jpg"
-				 style="max-height:65vh !important; max-width:80vw !important;"
-				 alt="wepsim screenshot 2">
-			    </div>
-			  </div>
+	    </div>
 
-			  <div class="card p-0 m-0">
-			    <div class="card-header bg-light h-25" data-toggle="collapse" data-target="#collapseA3" aria-expanded="true" aria-controls="collapseA3">
-			      <h5 class="card-title">
-			      <span class="badge badge-pill badge-primary">3</span>
-			      Then you could go to the microcode editor workspace:
-			      </h5>
-			    </div>
-			    <div id="collapseA3" class="card-body collapseA collapse show" aria-labelledby="headingA3">
-			    <img class="img-responsive pb-1"
-			         src="https://raw.githubusercontent.com/wepsim/wepsim/master/help/simulator/firmware001.jpg"
-			         style="max-height:65vh !important; max-width:80vw !important;"
-			         alt="wepsim screenshot 3">
-			    </div>
-			  </div>
 
-			  <div class="card p-0 m-0">
-			    <div class="card-header bg-light h-25" data-toggle="collapse" data-target="#collapseA4" aria-expanded="true" aria-controls="collapseA4">
-			      <h5 class="card-title">
-			      <span class="badge badge-pill badge-primary">4</span>
-			      You can modify the microcode (if you wish) and microcompile it:
-			      </h5>
-			    </div>
-			    <div id="collapseA4" class="card-body collapseA collapse show" aria-labelledby="headingA4">
-			    <img class="img-responsive pb-1"
-				 src="https://raw.githubusercontent.com/wepsim/wepsim/master/help/simulator/firmware002.jpg"
-				 style="max-height:65vh !important; max-width:80vw !important;"
-				 alt="wepsim screenshot 4">
-			    </div>
-			  </div>
+	    <h5 class="m-1 pt-3 pb-2">
+		<ul>
+		<li>
+		A typical session with WepSIM has the 
+		<span class="text-primary" data-toggle="collapse" data-target=".collapseA" 
+		      aria-expanded="true" aria-controls="collapseA">following steps</span>:<br>
+		</li>
+		</ul>
+	    </h5>
 
-			  <div class="card p-0 m-0">
-			    <div class="card-header bg-light h-25" data-toggle="collapse" data-target="#collapseA5" aria-expanded="true" aria-controls="collapseA5">
-			      <h5 class="card-title">
-			      <span class="badge badge-pill badge-primary">5</span>
-			      Later, you could go to the assembly editor workspace:
-			      </h5>
-			    </div>
-			    <div id="collapseA5" class="card-body collapseA collapse show" aria-labelledby="headingA5">
-			    <img class="img-responsive pb-1"
-			         src="https://raw.githubusercontent.com/wepsim/wepsim/master/help/simulator/assembly002.jpg"
-			         style="max-height:65vh !important; max-width:80vw !important;"
-			         alt="wepsim screenshot 5">
-			    </div>
-			  </div>
+            <div class="row m-1 pb-3">
 
-			  <div class="card p-0 m-0">
-			    <div class="card-header bg-light h-25" data-toggle="collapse" data-target="#collapseA6" aria-expanded="true" aria-controls="collapseA6">
-			      <h5 class="card-title">
-			      <span class="badge badge-pill badge-primary">6</span>
-			      You can modify (if you wish) your assembly code <br>
-			      (by using the instructions defined in the previous microcode) and compile it:
-			      </h5>
-			    </div>
-			    <div id="collapseA6" class="card-body collapseA collapse show" aria-labelledby="headingA6">
-			    <img class="img-responsive pb-1"
-				 src="https://raw.githubusercontent.com/wepsim/wepsim/master/help/simulator/assembly003.jpg"
-				 style="max-height:65vh !important; max-width:80vw !important;"
-				 alt="wepsim screenshot 6">
-			    </div>
-			  </div>
+		  <div class="m-0 w-100">
+		    <div class="nav nav-pills nav-fill" id="v-pills-tab" role="tablist" aria-orientation="horizontal">
+		      <a class="border border-secondary nav-item nav-link active" data-toggle="pill"  role="tab" aria-selected="true"
+			 id="pill1-step1-tab" href="#pill1-step1" aria-controls="pill1-step1">
+		      <span class="badge badge-pill badge-primary">1</span></a>
+		      <a class="border border-secondary nav-item nav-link" data-toggle="pill"  role="tab" aria-selected="false"
+			 id="pill1-step3-tab" href="#pill1-step3" aria-controls="pill1-step3">
+		      <span class="badge badge-pill badge-primary">3</span></a>
+		      <a class="border border-secondary nav-item nav-link" data-toggle="pill"  role="tab" aria-selected="false"
+			 id="pill1-step4-tab" href="#pill1-step4" aria-controls="pill1-step4">
+		      <span class="badge badge-pill badge-primary">4</span></a>
+		      <a class="border border-secondary nav-item nav-link" data-toggle="pill"  role="tab" aria-selected="false"
+			 id="pill1-step5-tab" href="#pill1-step5" aria-controls="pill1-step5">
+		      <span class="badge badge-pill badge-primary">5</span></a>
+		      <a class="border border-secondary nav-item nav-link" data-toggle="pill"  role="tab" aria-selected="false"
+			 id="pill1-step6-tab" href="#pill1-step6" aria-controls="pill1-step6">
+		      <span class="badge badge-pill badge-primary">6</span></a>
+		      <a class="border border-secondary nav-item nav-link" data-toggle="pill"  role="tab" aria-selected="false"
+			 id="pill1-step7-tab" href="#pill1-step7" aria-controls="pill1-step7">
+		      <span class="badge badge-pill badge-primary">7</span></a>
+		    </div>
+		  </div>
 
-			  <div class="card p-0 m-0">
-			    <div class="card-header bg-light h-25" data-toggle="collapse" data-target="#collapseA7" aria-expanded="true" aria-controls="collapseA7">
-			      <h5 class="card-title">
-			      <span class="badge badge-pill badge-primary">7</span>
-			      Finally, go back to the simulator workspace, and you can execute step by step and analyze the state of the components.
-			      It is possible to work at assembly level or at microcode level:
-			      </h5>
-			    </div>
-			    <div id="collapseA7" class="card-body collapseA collapse show" aria-labelledby="headingA7">
-			    <img class="img-responsive pb-1"
-			         src="https://raw.githubusercontent.com/acaldero/wepsim/master/help/welcome/simulation_xinstruction.gif"
-			         style="max-height:65vh !important; max-width:80vw !important;"
-			         alt="wepsim screenshot 7">
-			    </div>
-			  </div>
+		  <div class="m-0 border border-secondary">
+		    <div class="tab-content" id="v-pills-tabContent">
+		      <div class="tab-pane show active" id="pill1-step1" role="tabpanel" aria-labelledby="pill1-step1-tab">
+			   <h5 class="m-3">
+			   Load the stable <a href="https://wepsim.github.io/wepsim">WepSIM</a> version in your favorite web browser.<br>
+			   There is also a <a href="https://acaldero.github.io/wepsim">work-in-progress version of WepSIM</a> that you can test.
+			   </h5>
+			   <img class="img-responsive p-1 w-100"
+				src="images/wepsim-initial.png"
+				alt="wepsim screenshot 1">
+		      </div>
+		      <div class="tab-pane" id="pill1-step2" role="tabpanel" aria-labelledby="pill1-step2-tab">
+			   <h5 class="m-3">
+			   Then you could go to the microcode editor workspace:
+			   </h5>
+			   <img class="img-responsive p-1 w-100"
+			        src="https://raw.githubusercontent.com/wepsim/wepsim/master/help/simulator/firmware001.jpg"
+			        alt="wepsim screenshot 2">
+		      </div>
+		      <div class="tab-pane" id="pill1-step3" role="tabpanel" aria-labelledby="pill1-step3-tab">
+			   <h5 class="m-3">
+			   You can modify the microcode (if you wish) and microcompile it:
+			   </h5>
+			   <img class="img-responsive pb-1 w-100"
+				src="https://raw.githubusercontent.com/wepsim/wepsim/master/help/simulator/firmware002.jpg"
+				alt="wepsim screenshot 3">
+			   </h5>
+		      </div>
+		      <div class="tab-pane" id="pill1-step4" role="tabpanel" aria-labelledby="pill1-step4-tab">
+			   <h5 class="m-3">
+			   Later, you could go to the assembly editor workspace:
+			   </h5>
+			   <img class="img-responsive pb-1 w-100"
+			        src="https://raw.githubusercontent.com/wepsim/wepsim/master/help/simulator/assembly002.jpg"
+			        alt="wepsim screenshot 4">
+			   </h5>
+		      </div>
+		      <div class="tab-pane" id="pill1-step5" role="tabpanel" aria-labelledby="pill1-step5-tab">
+			   <h5 class="m-3">
+			   You can modify (if you wish) your assembly code (by using the instructions defined in the previous microcode) and compile it:
+			   </h5>
+			   <img class="img-responsive pb-1 w-100"
+				src="https://raw.githubusercontent.com/wepsim/wepsim/master/help/simulator/assembly003.jpg"
+				alt="wepsim screenshot 5">
+			   </h5>
+		      </div>
+		      <div class="tab-pane" id="pill1-step6" role="tabpanel" aria-labelledby="pill1-step6-tab">
+			   <h5 class="m-3">
+			   Finally, go back to the simulator workspace, and you can execute step by step and analyze the state of the components.
+			   It is possible to work at assembly level or at microcode level:
+			   </h5>
+			   <img class="img-responsive pb-1 w-100"
+			        src="https://raw.githubusercontent.com/acaldero/wepsim/master/help/welcome/simulation_xinstruction.gif"
+			        alt="wepsim screenshot 6">
+			   </h5>
+		      </div>
+		      <div class="tab-pane" id="pill1-step7" role="tabpanel" aria-labelledby="pill1-step7-tab">
+			   <h5 class="m-3">
+			   Also, it is possible to compare what changes in the system at two given execution states:
+			   </h5>
+			   <img class="img-responsive pb-1 w-100"
+			        src="https://raw.githubusercontent.com/acaldero/wepsim/master/help/welcome/states_usage.gif"
+			        alt="wepsim screenshot 7">
+			   </h5>
+		      </div>
+		    </div>
+		  </div>
 
-			  <div class="card p-0 m-0">
-			    <div class="card-header bg-light h-25" data-toggle="collapse" data-target="#collapseA8" aria-expanded="true" aria-controls="collapseA8">
-			      <h5 class="card-title">
-			      <span class="badge badge-pill badge-primary">8</span>
-			      Also, it is possible to compare what changes in the system at two given execution states:
-			      </h5>
-			    </div>
-			    <div id="collapseA8" class="card-body collapseA collapse show" aria-labelledby="headingA8">
-			    <img class="img-responsive pb-1"
-			         src="https://raw.githubusercontent.com/acaldero/wepsim/master/help/welcome/states_usage.gif"
-			         style="max-height:65vh !important; max-width:80vw !important;"
-			         alt="wepsim screenshot 8">
-			    </div>
-			  </div>
+	    </div>
 
-		     </div>
 
-  	             <br>
-                     <h5 class="pb-3">
-		 	A typical session with command-line interface of WepSIM has the following
-			<span class="text-primary" data-toggle="collapse" data-target=".collapseB" aria-expanded="true" aria-controls="collapseB">possible steps</span>:<br>
-  	             </h5>
+	    <h5 class="m-1 pt-3 pb-2">
+		<ul>
+		<li>
+		A typical session with command-line interface of WepSIM has the following
+		<span class="text-primary" data-toggle="collapse" data-target=".collapseB" aria-expanded="true" aria-controls="collapseB">possible options</span>:<br>
+		</li>
+		</ul>
+	    </h5>
 
-		     <div class="accordion" id="accordionB">
+            <div class="row m-1 pb-3">
 
-			  <div class="card p-0 m-0">
-			    <div class="card-header bg-light h-25" data-toggle="collapse" data-target="#collapseB1" aria-expanded="true" aria-controls="collapseB1">
-			      <h5 class="card-title">
-			      <span class="badge badge-pill badge-primary">1</span>
-			      Run and print the final state.<br>
-			      For example, it is possible to 'run' the 'asm-ep_s1_e1.txt' assembly for the 'ep' architecture with the 'mc-ep_base.txt' microcode, and print the final state:
-			      </h5>
-			    </div>
-			    <div id="collapseB1" class="card-body collapseB collapse show" aria-labelledby="headingB1">
+		  <div class="m-0 w-100">
+		    <div class="nav nav-pills nav-fill" id="v-pills-tab" role="tablist" aria-orientation="horizontal">
+		      <a class="border border-secondary nav-item nav-link active" data-toggle="pill"  role="tab" aria-selected="true"
+			 id="pill2-step1-tab" href="#pill2-step1" aria-controls="pill2-step1">
+		      <span class="badge badge-pill badge-primary">Run</span></a>
+		      <a class="border border-secondary nav-item nav-link" data-toggle="pill"  role="tab" aria-selected="false"
+			 id="pill2-step2-tab" href="#pill2-step2" aria-controls="pill2-step2">
+		      <span class="badge badge-pill badge-primary">Step by step</span></a>
+		      <a class="border border-secondary nav-item nav-link" data-toggle="pill"  role="tab" aria-selected="false"
+			 id="pill2-step3-tab" href="#pill2-step3" aria-controls="pill2-step3">
+		      <span class="badge badge-pill badge-primary">Microstep by microstep</span></a>
+		      <a class="border border-secondary nav-item nav-link" data-toggle="pill"  role="tab" aria-selected="false"
+			 id="pill2-step4-tab" href="#pill2-step4" aria-controls="pill2-step4">
+		      <span class="badge badge-pill badge-primary">Run & check (ok)</span></a>
+		      <a class="border border-secondary nav-item nav-link" data-toggle="pill"  role="tab" aria-selected="false"
+			 id="pill2-step5-tab" href="#pill2-step5" aria-controls="pill2-step5">
+		      <span class="badge badge-pill badge-primary">Run & check (ko)</span></a>
+		      <a class="border border-secondary nav-item nav-link" data-toggle="pill"  role="tab" aria-selected="false"
+			 id="pill2-step6-tab" href="#pill2-step6" aria-controls="pill2-step6">
+		      <span class="badge border-secondary badge-pill badge-primary">Verbalized</span></a>
+		    </div>
+		  </div>
+
+		  <div class="m-0 border border-secondary">
+		    <div class="tab-content" id="v-pills-tabContent">
+		      <div class="tab-pane show active" id="pill2-step1" role="tabpanel" aria-labelledby="pill2-step1-tab">
+			   <h5 class="m-3">
+			   Run and print the final state.<br>
+			   <br>
+			   For example: 'run' the 'asm-ep_s1_e1.txt' assembly for the 'ep' architecture with the 'mc-ep_base.txt' microcode, and print the final state:
+			   </h5>
+<div class="m-2 border">
 <kbd>
 	./wepsim_node.sh run ep ./examples/microcode/mc-ep_base.txt ./examples/assembly/asm-ep_s1_e1.txt
 </kbd>
@@ -830,18 +888,15 @@
 	screen><br>
 	register R2 = 0x2; register R3 = 0x1; register R5 = 0x1; register R29 = 0xffff; register PC = 0x8018; memory 0x8000 = 0x8400002; memory 0x8004 = 0x8600001; memory 0x8008 = 0xa21809; memory 0x800c = 0x8400002; memory 0x8010 = 0x8600001; memory 0x8014 = 0xa2180a;<br>
 </samp>
-			    </div>
-			  </div>
-
-			  <div class="card p-0 m-0">
-			    <div class="card-header bg-light h-25" data-toggle="collapse" data-target="#collapseB2" aria-expanded="true" aria-controls="collapseB2">
-			      <h5 class="card-title">
-			      <span class="badge badge-pill badge-primary">2</span>
-			      Run step by step and print the modified elements on each step.<br>
-			      For example, it is also possible to 'run' 'step by step' the 'asm-ep-S1E1.txt' assembly for the 'ep' architecture with the 'mc-ep_base.txt' microcode, and print for each assembly instruction the state elements that modify its value:
-			      </h5>
-			    </div>
-			    <div id="collapseB2" class="card-body collapseB collapse show" aria-labelledby="headingB2">
+</div>
+		      </div>
+		      <div class="tab-pane" id="pill2-step2" role="tabpanel" aria-labelledby="pill2-step2-tab">
+			   <h5 class="m-3">
+			   Run step by step and print the modified elements on each step.<br>
+			   <br>
+			   For example: 'run' 'step by step' the 'asm-ep-S1E1.txt' assembly for the 'ep' architecture with the 'mc-ep_base.txt' microcode, and print for each assembly instruction the state elements that modify its value:
+			   </h5>
+<div class="m-2 border">
 <kbd>
 	./wepsim_node.sh stepbystep ep ./examples/microcode/mc-ep_base.txt ./examples/assembly/asm-ep_s1_e1.txt
 </kbd>
@@ -855,18 +910,15 @@
 	pc(0x8008):	add $5 $2 $3:			register R5 = 0x3; register PC = 0x800c<br>
 	...<br>
 </samp>
-			    </div>
-			  </div>
-
-			  <div class="card p-0 m-0">
-			    <div class="card-header bg-light h-25" data-toggle="collapse" data-target="#collapseB3" aria-expanded="true" aria-controls="collapseB3">
-			      <h5 class="card-title">
-			      <span class="badge badge-pill badge-primary">3</span>
-			      Run microstep by microstep and print the modified elements on each step.<br>
-			      For example, you can 'run' 'microstep by microstep' the 'asm-ep_s1_e1.txt' assembly for the 'ep' architecture with the 'mc-ep_base.txt' microcode, and print for each microinstruction the state elementes that modify its value:
-			      </h5>
-			    </div>
-			    <div id="collapseB3" class="card-body collapseB collapse show" aria-labelledby="headingB3">
+</div>
+		      </div>
+		      <div class="tab-pane" id="pill2-step3" role="tabpanel" aria-labelledby="pill2-step3-tab">
+			   <h5 class="m-3">
+			   Run microstep by microstep and print the modified elements on each step.<br>
+			   <br>
+			   For example: 'run' 'microstep by microstep' the 'asm-ep_s1_e1.txt' assembly for the 'ep' architecture with the 'mc-ep_base.txt' microcode, and print for each microinstruction the state elementes that modify its value:
+			   </h5>
+<div class="m-2 border">
 <kbd>
 	./wepsim_node.sh microstepbymicrostep  ep ./examples/microcode/mc-ep_base.txt ./examples/assembly/asm-ep_s1_e1.txt
 </kbd>
@@ -882,18 +934,15 @@
 	micropc(0x53):	SE OFFSET=0 SIZE=10000 T3 LC MR=0 SELC=10101 A0 B C=0:			register R2 = 0x2; register R29 = 0xffff<br>
 	...<br>
 </samp>
-			    </div>
-			  </div>
-
-			  <div class="card p-0 m-0">
-			    <div class="card-header bg-light h-25" data-toggle="collapse" data-target="#collapseB4" aria-expanded="true" aria-controls="collapseB4">
-			      <h5 class="card-title">
-			      <span class="badge badge-pill badge-primary">4</span>
-			      Run and check the final state (ok).<br>
-			      For example, you can check if the state at the end of the execution is the same as the one stored on file 'cl-ep_s1_e1.txt'. You can 'run' the 'asm-ep_s1_e1.txt' assembly for the 'ep' architecture with the 'mc-ep_base.txt' microcode (and if it matchs the expected state then the output is going to be):
-			      </h5>
-			    </div>
-			    <div id="collapseB4" class="card-body collapseB collapse show" aria-labelledby="headingB4">
+</div>
+		      </div>
+		      <div class="tab-pane" id="pill2-step4" role="tabpanel" aria-labelledby="pill2-step4-tab">
+			   <h5 class="m-3">
+			   Run and check that state at the end of the execution is the same as the one stored on a file.<br>
+			   <br>
+			   For example: 'run' the 'asm-ep_s1_e1.txt' assembly for the 'ep' architecture with the 'mc-ep_base.txt' microcode (and if it matchs the expected state then the output is going to be):
+			   </h5>
+<div class="m-2 border">
 <kbd>
 	./wepsim_node.sh check ep ./examples/microcode/mc-ep_base.txt ./examples/assembly/asm-ep_s1_e1.txt ./examples/checklist/cl-ep_s1_e1.txt
 </kbd>
@@ -904,18 +953,15 @@
 	screen><br>
 	OK: Execution: no error reported<br>
 </samp>
-			    </div>
-			  </div>
-
-			  <div class="card p-0 m-0">
-			    <div class="card-header bg-light h-25" data-toggle="collapse" data-target="#collapseB5" aria-expanded="true" aria-controls="collapseB5">
-			      <h5 class="card-title">
-			      <span class="badge badge-pill badge-primary">5</span>
-			      Run and check the final state (ko).<br>
-			      For example, you can check if the state at the end of the execution is the same as the one stored on file 'cl-ep_s1_e1.txt'. You can 'run' the 'asm-ep_s1_e1.txt' assembly for the 'ep' architecture with the 'mc-ep_base.txt' microcode (and if it fails to match the expected state then the output is going to be):
-			      </h5>
-			    </div>
-			    <div id="collapseB5" class="card-body collapseB collapse show" aria-labelledby="headingB5">
+</div>
+		      </div>
+		      <div class="tab-pane" id="pill2-step5" role="tabpanel" aria-labelledby="pill2-step5-tab">
+			   <h5 class="m-3">
+			   Run and check that state at the end of the execution is not the same as the one stored on a file.<br>
+			   <br>
+			   For example: 'run' the 'asm-ep_s1_e1.txt' assembly for the 'ep' architecture with the 'mc-ep_base.txt' microcode (and if it fails to match the expected state then the output is going to be):
+			   </h5>
+<div class="m-2 border">
 <kbd>
 	./wepsim_node.sh check ep ./examples/microcode/mc-ep_base.txt ./examples/assembly/asm-ep_s1_e1.txt ./examples/checklist/cl-ep_s1_e2.txt
 </kbd>
@@ -927,17 +973,13 @@
 	ERROR: Execution: different results: cpu[R1]='0' (expected '0xf'), cpu[R2]='0x2' (expected '0xf'), memory[0x1000]='0' (expected '0xa07ff0f'), memory[0x1004]='0' (expected '0x10061'), memory[0x1008]='0' (expected '0x7ffff'), memory[0x100c]='0' (expected '0x61000a'), memory[0x1010]='0' (expected '0xf'), 
 	...<br>
 </samp>
-			    </div>
-			  </div>
-
-			  <div class="card p-0 m-0">
-			    <div class="card-header bg-light h-25" data-toggle="collapse" data-target="#collapseB6" aria-expanded="true" aria-controls="collapseB6">
-			      <h5 class="card-title">
-			      <span class="badge badge-pill badge-primary">6</span>
+</div>
+		      </div>
+		      <div class="tab-pane" id="pill2-step6" role="tabpanel" aria-labelledby="pill2-step6-tab">
+			   <h5 class="m-3">
 			      And least but not less, it is possible to execute microstep by microstep but with a more descriptive output:
-			      </h5>
-			    </div>
-			    <div id="collapseB6" class="card-body collapseB collapse show" aria-labelledby="headingB6">
+			   </h5>
+<div class="m-2 border">
 <kbd>
 	./wepsim_node.sh microstepverbalized ep ./examples/microcode/mc-ep_base.txt ./examples/assembly/asm-ep_s1_e1.txt
 </kbd>
@@ -948,13 +990,12 @@
 	screen> <br>
 	Micropc at 0x0.	Activated signals are: T2 C0. Associated actions are: Copy from Program Counter Register to Internal Bus value 0x8000. Load from Internal Bus to Memory Address Register value 0x8000. <br>
 	Micropc at 0x1.	Activated signals are: TA R BW M1 C1. Associated actions are: Copy from Memory Address Register to Address Bus value 0x8000. Try to read a word from memory at address 0x8000 with value 8400002. Select the full Word. Copy from from Memory to Input of Memory Data Register value 0x8400002. Load from Input of Memory Data Register to Memory Data Register value 0x8400002. <br>
-	Micropc at 0x2.	Activated signals are: M2 C2 T1 C3. Associated actions are: Copy to Input of Program Counter Program Counter Register plus four with result 0x8004. Load from Input of Program Counter to Program Counter Register value 0x8004. Copy from Memory Data Register to Internal Bus value 0x8400002. Load from Internal Bus to Instruction Register value 0x8400002. Decode instruction. <br>
 	...<br>
 </samp>
-			    </div>
-			  </div>
+</div>
+		      </div>
 
-		     </div>
+	    </div>
 
         </div>
     </section>
