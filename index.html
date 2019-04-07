@@ -45,12 +45,40 @@
 	    </div>
 	    <div class="collapse navbar-collapse" id="navbar-collapse-2">
 		<ul class="navbar-nav ml-auto nav-fill flex-fill">
-		    <li class="nav-item m-1 mx-lg-2"><a class="nav-link text-white p-0" href="#page-top">Introduction</a></li>
-		    <li class="nav-item m-1 mx-lg-2"><a class="nav-link text-white p-0" href="#description">Description</a></li>
-		    <li class="nav-item m-1 mx-lg-2"><a class="nav-link text-white p-0" href="#getwepsim">Getting WepSIM</a></li>
-		    <li class="nav-item m-1 mx-lg-2"><a class="nav-link text-white p-0" href="#gettingstarted">Getting Started</a></li>
-		    <li class="nav-item m-1 mx-lg-2"><a class="nav-link text-white p-0" href="#publications">Publications</a></li>
-		    <li class="nav-item m-1 mx-lg-2"><a class="nav-link text-white p-0" href="#authors">Authors</a></li>
+		    <li class="nav-item m-1 mx-lg-2">
+                    <a class="nav-link text-white p-0" href="#page-top">Introduction</a>
+                    </li>
+		    <li class="nav-item m-1 mx-lg-2">
+                    <a class="nav-link text-white p-0" href="#description">Description</a>
+                    </li>
+		    <li class="nav-item m-1 mx-lg-2 dropdown">
+                    <a class="nav-link text-white p-0 dropdown-toggle" 
+		       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                       href="#">Getting WepSIM</a>
+			    <div class="dropdown-menu">
+			      <a class="dropdown-item" href="#getwepsim_run">Run</a>
+			      <a class="dropdown-item" href="#getwepsim_install">Install</a>
+			      <div class="dropdown-divider"></div>
+			      <a class="dropdown-item" href="#getwepsim_source">Source</a>
+			    </div>
+                    </li>
+		    <li class="nav-item m-1 mx-lg-2 dropdown">
+                    <a class="nav-link text-white p-0 dropdown-toggle" 
+		       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                       href="#">Getting Started</a>
+			    <div class="dropdown-menu">
+			      <a class="dropdown-item" href="#gettingstarted_example">Learn with an Example</a>
+			      <a class="dropdown-item" href="#gettingstarted_lab">Steps of a typical session</a>
+			      <div class="dropdown-divider"></div>
+			      <a class="dropdown-item" href="#gettingstarted_cl">Command Line options</a>
+			    </div>
+                    </li>
+		    <li class="nav-item m-1 mx-lg-2">
+                    <a class="nav-link text-white p-0" href="#publications">Publications</a>
+                    </li>
+		    <li class="nav-item m-1 mx-lg-2">
+                    <a class="nav-link text-white p-0" href="#authors">Authors</a>
+                    </li>
 		</ul>
 	    </div>
         </div>
@@ -279,6 +307,7 @@
 
 	   <ul>
 
+            <a name="getwepsim_run" id="getwepsim_run"></a>
 	    <h5 class="px-0 py-2 m-0">
 		<li>You could <u>run</u> WepSIM <span class="rounded text-dark bg-light">from command-line or any modern Web Browser</span>:</li>
 	    </h5>
@@ -324,6 +353,7 @@
 	    </div>
 
 
+            <a name="getwepsim_install" id="getwepsim_install"></a>
 	    <h5 class="px-0 py-2 m-0">
 		<li>You can <u>install</u> WepSIM <span class="rounded text-dark bg-light">as a progressive web application</span>:</li>
 	    </h5>
@@ -534,6 +564,7 @@
 	    </div>
 
 
+            <a name="getwepsim_source" id="getwepsim_source"></a>
 	    <h5 class="px-0 pt-4 pb-2 m-0">
 		<li>You can view the WepSIM Source Code <span class="rounded text-dark bg-light">in the GitHub repository</span>:</li>
 	    </h5>
@@ -574,6 +605,7 @@
 
 	    <ul>
 
+            <a name="gettingstarted_example" id="gettingstarted_example">
 	    <h5 class="m-1 pt-2 pb-3">
 		<li>To learn with some WepSIM example, please follow these <span class="rounded text-white bg-primary">these steps</span>:</li>
 	    </h5>
@@ -629,6 +661,7 @@
 	    </div>
 
 
+            <a name="gettingstarted_lab" id="gettingstarted_lab">
 	    <h5 class="m-1 pt-3 pb-3">
 		<li>
 		You can modify an existing example or build your own.
@@ -725,6 +758,7 @@
 	    </div>
 
 
+            <a name="gettingstarted_cl" id="gettingstarted_cl">
 	    <h5 class="m-1 pt-3 pb-3">
 		<li>A typical session with command-line interface of WepSIM has the following <span class="rounded text-white bg-primary">possible options</span>:</li>
 	    </h5>
