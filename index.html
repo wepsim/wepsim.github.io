@@ -1184,36 +1184,38 @@
                 </div>
             </div>
 
-            <div class="row">
+	    <nav class="nav nav-pills nav-justified">
+		  <a href="#"
+		     class="nav-item nav-link mx-2 border border-secondary"
+		     onclick="var site = 'https://acaldero.github.io/wepsim/ws_dist/wepsim-classic.html?' + 
+					    'example=13&' + 
+					    'simulator=assembly:register_file&' + 
+					    'notify=false&' + 
+					    'checkpoint=https://acaldero.github.io/wepsim.github.io/external/tutorial_1.txt';
+			      var context1 = document.getElementById('iframe1');
+			      context1.src = site;
+			      return false;">1.- Load Threads Example</a>
 
-                <div class="col-10 p-2">
+		  <!-- https://stackoverflow.com/questions/1600488/calling-javascript-function-in-iframe -->
+		  <a href="#"
+		     class="nav-item nav-link mx-2 border border-secondary"
+		     onclick="var context1 = document.getElementById('iframe1').contentWindow;
+			      context1.simcore_execute_program(1, 1024, 10240);
+			      return false;">2.- Run</a>
+
+		  <a href="#"
+		     class="nav-item nav-link mx-2 border border-secondary"
+		     onclick="return false;">2.- ...</a>
+            </nav>
+
+            <div class="row">
+                <div class="col-12 p-2">
 			<div class="embed-responsive embed-responsive-4by3">
 		        <iframe class="w-100 border border-secondary embed-responsive-item"
 		                id="iframe1"
 				src=""></iframe>
 			</div>
                 </div>
-                <div class="col-2 p-2">
-			<ul class="list-group border border-secondary h-75" id="list-tab" role="tablist">
-			  <a href="#" 
-		             class="list-group-item list-group-item-action my-3 border border-secondary "
-			     onclick="var site = 'https://acaldero.github.io/wepsim/ws_dist/wepsim-classic.html?' + 
-						    'example=13&' + 
-						    'simulator=assembly:register_file&' + 
-						    'notify=false&' + 
-						    'checkpoint=https://acaldero.github.io/wepsim.github.io/external/tutorial_1.txt';
-			              var context1 = document.getElementById('iframe1');
-				      context1.src = site;
-			              return false;">1.- Load Threads Example</a>
-			  <!-- https://stackoverflow.com/questions/1600488/calling-javascript-function-in-iframe -->
-			  <a href="#" 
-		             class="list-group-item list-group-item-action my-3 border border-secondary "
-			     onclick="var context1 = document.getElementById('iframe1').contentWindow;
-			              context1.simcore_execute_program(1, 1024, 10240);
-			              return false;">2.- Run</a>
-			</ul>
-                </div>
-
             </div>
 
         </div>
