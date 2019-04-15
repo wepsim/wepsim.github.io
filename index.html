@@ -1202,19 +1202,15 @@
 						    'simulator=assembly:register_file&' + 
 						    'notify=false&' + 
 						    'checkpoint=https://acaldero.github.io/wepsim.github.io/external/tutorial_1.txt';
-				      var obj1 = $('#iframe1');
-				      obj1[0].src = site;
-			              return false;">1.- Threads</a>
+			              var context1 = document.getElementById('iframe1');
+				      context1.src = site;
+			              return false;">1.- Load Threads Example</a>
+			  <!-- https://stackoverflow.com/questions/1600488/calling-javascript-function-in-iframe -->
 			  <a href="#" 
 		             class="list-group-item list-group-item-action my-3 border border-secondary "
-			     onclick="var site = 'https://acaldero.github.io/wepsim/ws_dist/wepsim-classic.html?' + 
-						    'example=9&' + 
-						    'simulator=assembly:register_file&' + 
-						    'notify=false&' + 
-						    'checkpoint=https://acaldero.github.io/wepsim.github.io/external/tutorial_1.txt';
-				      var obj1 = $('#iframe1');
-				      obj1[0].src = site;
-			              return false;">2.- System Calls</a>
+			     onclick="var context1 = document.getElementById('iframe1').contentWindow;
+			              context1.simcore_execute_program(1, 1024, 10240);
+			              return false;">2.- Run</a>
 			</ul>
                 </div>
 
