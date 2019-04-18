@@ -1174,6 +1174,57 @@
     </section>
 
 
+    <!-- "example_of_tutorial" Section -->
+    <section id="example_of_tutorial" class="pt-5 pb-5">
+        <div class="container p-0">
+
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h2>One more thing: example of Tutorial with WepSIM</h2><hr class="star-primary">
+                </div>
+            </div>
+
+	    <nav class="nav nav-pills nav-justified">
+		  <a href="#"
+		     class="nav-item nav-link mx-2 border border-secondary"
+		     onclick="var ws_base     = 'https://acaldero.github.io/wepsim/' ;
+		              var chkptn_base = 'https://acaldero.github.io/wepsim.github.io/' ;
+	                      //ws_base     = 'http://localhost/wepsim/' ;
+	                      //chkptn_base = 'http://localhost/wepsim.github.io-acaldero/';
+			      var context1 = document.getElementById('iframe1');
+			      context1.src = ws_base + '/ws_dist/wepsim-classic.html?' + 
+					     'notify=false&' + 
+					     'simulator=assembly:screen&' + 
+					     'checkpoint=' + chkptn_base + '/external/tutorial_1.txt' ;
+			      return false;">Step 1.- Load Example</a>
+
+		  <!-- https://stackoverflow.com/questions/1600488/calling-javascript-function-in-iframe -->
+		  <a href="#example_of_tutorial"
+		     class="nav-item nav-link mx-2 border border-secondary"
+		     onclick="var context1 = document.getElementById('iframe1').contentWindow;
+			      context1.simcore_execute_program(1, 1024, 10240);
+			      return false;">Step 2.- Run</a>
+
+		  <a href="#"
+		     class="nav-item nav-link mx-2 border border-secondary"
+		     onclick="var context1 = document.getElementById('iframe1').contentWindow;
+			      context1.simcore_reset();
+			      return false;">Step 3.- Reset</a>
+            </nav>
+
+            <div class="row">
+                <div class="col-12 py-2 px-0">
+			<div class="embed-responsive embed-responsive-4by3">
+		        <iframe class="w-100 border border-secondary embed-responsive-item"
+		                id="iframe1" src=""></iframe>
+			</div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
     <!-- "License" -->
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
 	 <span class="text-white mr-auto">&copy; 2015-2019</span>
