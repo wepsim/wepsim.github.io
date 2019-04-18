@@ -1189,8 +1189,14 @@
 		     class="nav-item nav-link mx-2 border border-secondary"
 		     onclick="var ws_base     = 'https://acaldero.github.io/wepsim/' ;
 		              var chkptn_base = 'https://acaldero.github.io/wepsim.github.io/' ;
-	                      //ws_base     = 'http://localhost/wepsim/' ;
-	                      //chkptn_base = 'http://localhost/wepsim.github.io-acaldero/';
+	                      // 
+	                      // + for testing wepsim repository:
+		              // ws_base     = 'https://wepsim.github.io/wepsim/' ;
+		              // chkptn_base = 'https://wepsim.github.io/wepsim.github.io/' ;
+	                      // + for testing localhost:
+	                         ws_base     = 'http://localhost/wepsim/' ;
+	                         chkptn_base = 'http://localhost/wepsim.github.io-acaldero/';
+	                      // 
 			      var context1 = document.getElementById('iframe1');
 			      context1.src = ws_base + '/ws_dist/wepsim-classic.html?' + 
 					     'notify=false&' + 
@@ -1202,13 +1208,13 @@
 		  <a href="#example_of_tutorial"
 		     class="nav-item nav-link mx-2 border border-secondary"
 		     onclick="var context1 = document.getElementById('iframe1').contentWindow;
-			      context1.simcore_execute_program(1, 1024, 10240);
+			      context1.wsweb_execution_run();
 			      return false;">Step 2.- Run</a>
 
 		  <a href="#"
 		     class="nav-item nav-link mx-2 border border-secondary"
 		     onclick="var context1 = document.getElementById('iframe1').contentWindow;
-			      context1.simcore_reset();
+			      context1.wsweb_execution_reset();
 			      return false;">Step 3.- Reset</a>
             </nav>
 
@@ -1216,7 +1222,7 @@
                 <div class="col-12 py-2 px-0">
 			<div class="embed-responsive embed-responsive-4by3">
 		        <iframe class="w-100 border border-secondary embed-responsive-item"
-		                id="iframe1" src=""></iframe>
+		                id="iframe1" src="external/tutorial_1.html"></iframe>
 			</div>
                 </div>
             </div>
