@@ -1177,25 +1177,24 @@
 	    <nav class="nav nav-pills nav-justified">
 		  <a href="#"
 		     class="nav-item nav-link mx-2 border border-secondary"
-		     onclick="var ws_base  = 'https://acaldero.github.io/wepsim/' ;
-			      var context1 = document.getElementById('iframe1');
-			      context1.src = ws_base + '/ws_dist/wepsim-classic.html?' + 
-					     'notify=false&' + 
-					     'checkpoint=' + ws_base + '/examples/checkpoint/tutorial_1.txt' ;
-			      return false;">Step 1.- Load Example</a>
+		     onclick="var context1 = document.getElementById('iframe1');
+	 		            context1.src = 'https://wepsim.github.io/wepsim/ws_dist/wepsim-classic.html?' + 
+					                       'notify=false&' + 
+		   			                     'checkpoint=https://wepsim.github.io/wepsim/examples/checkpoint/tutorial_1.txt' ;
+			            return false;">Step 1.- Load Example</a>
 
 		  <!-- https://stackoverflow.com/questions/1600488/calling-javascript-function-in-iframe -->
 		  <a href="#example_of_tutorial"
 		     class="nav-item nav-link mx-2 border border-secondary"
 		     onclick="var context1 = document.getElementById('iframe1').contentWindow;
-			      context1.wsweb_record_play();
-			      return false;">Step 2.- Run</a>
+			            context1.wsweb_record_play();
+			            return false;">Step 2.- Run</a>
 
 		  <a href="#"
 		     class="nav-item nav-link mx-2 border border-secondary"
 		     onclick="var context1 = document.getElementById('iframe1').contentWindow;
-			      context1.wsweb_execution_reset();
-			      return false;">Step 3.- Reset</a>
+			            context1.wsweb_execution_reset();
+			            return false;">Step 3.- Reset</a>
             </nav>
 
             <div class="row">
