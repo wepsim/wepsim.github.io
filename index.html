@@ -326,7 +326,7 @@
 		    </div>
 		    <div class="card-body">
 			<h5 class="pb-4">As text-based user interface:
-			<a href="https://github.com/acaldero/wepsim/releases/download/v2.0.6/wepsim-206.zip">wepsim-cl.zip</a>
+			<a href="https://github.com/acaldero/wepsim/releases/download/v2.0.6/wepsim-2.0.6.zip">wepsim-cl.zip</a>
 			</h5>
 
 			<img class="img-responsive card-img-top mx-auto d-block"
@@ -1177,29 +1177,33 @@
 	    <nav class="nav nav-pills nav-justified">
 		  <a href="#"
 		     class="nav-item nav-link mx-2 border border-secondary"
-		     onclick="var context1 = document.getElementById('iframe1');
-	 		            context1.src = 'https://wepsim.github.io/wepsim/ws_dist/wepsim-classic.html?' + 
-					                       'notify=false&' + 
-		   			                     'checkpoint=https://wepsim.github.io/wepsim/examples/checkpoint/tutorial_1.txt' ;
-			            return false;">Step 1.- Load Example</a>
+		     onclick="var ws_base  = 'https://acaldero.github.io/wepsim/' ;
+			      var context1 = document.getElementById('iframe1');
+			      context1.src = ws_base + '/ws_dist/wepsim-classic.html?' + 
+					     'notify=false&' + 
+					     'checkpoint=' + ws_base + '/examples/checkpoint/tutorial_1.txt' ;
+			      return false;">Step 1.- Load Example</a>
 
 		  <!-- https://stackoverflow.com/questions/1600488/calling-javascript-function-in-iframe -->
 		  <a href="#example_of_tutorial"
 		     class="nav-item nav-link mx-2 border border-secondary"
 		     onclick="var context1 = document.getElementById('iframe1').contentWindow;
-			            context1.wsweb_record_play();
-			            return false;">Step 2.- Run</a>
+			      context1.wsweb_record_play();
+                              context1.wsweb_recordbar_toggle();
+			      return false;">Step 2.- Run</a>
 
 		  <a href="#"
 		     class="nav-item nav-link mx-2 border border-secondary"
 		     onclick="var context1 = document.getElementById('iframe1').contentWindow;
-			            context1.wsweb_execution_reset();
-			            return false;">Step 3.- Reset</a>
+			      context1.wsweb_execution_reset();
+                              context1.wsweb_record_off();
+                              context1.wsweb_recordbar_close();
+			      return false;">Step 3.- Reset</a>
             </nav>
 
             <div class="row">
                 <div class="col-12 py-2 px-0">
-			<div class="embed-responsive embed-responsive-4by3">
+			<div class="embed-responsive embed-responsive-16by9">
 		        <iframe class="w-100 border border-secondary embed-responsive-item"
 		                id="iframe1" src="tutorial_welcome.html"></iframe>
 			</div>
