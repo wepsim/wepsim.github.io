@@ -1163,41 +1163,53 @@
 
             <div class="row">
                 <div class="col-12 text-center">
-                    <h2>One more thing: the WepSIM control API (WepSIM 2.0.6+)</h2><hr class="star-primary">
+                    <h2>One more thing: new API and functionality</h2><hr class="star-primary">
                 </div>
             </div>
 
             <a name="example_of_tutorial1" id="example_of_tutorial1"></a>
 	    <h5 class="px-0 py-2 m-0">
-		<li>You could <u>control</u> an WepSIM instance with the new WepSIM control API (JavaScript).</li>
-		<li>It could be used for building an interactive tutorial with WepSIM, for example:</li>
+		<li>WepSIM 2.0.6+ now includes new API and functionality:<br> for recording the important interaction with WepSIM and for checkpointing.</li>
+		<li>They can be combined for building an interactive tutorial with WepSIM, for example:</li>
 	    </h5>
 	    <br/>
 
 	    <nav class="nav nav-pills nav-justified">
 		  <a href="#"
 		     class="nav-item nav-link mx-2 border border-secondary"
-		     onclick="var ws_base  = 'https://acaldero.github.io/wepsim/' ;
-			      var context1 = document.getElementById('iframe1');
-			      context1.src = ws_base + '/ws_dist/wepsim-classic.html?' + 
-					     'notify=false&' + 
-					     'checkpoint=' + ws_base + '/examples/checkpoint/tutorial_2.txt' ;
+		     onclick="try {
+			         var context1 = document.getElementById('iframe1');
+                                 var ws_base  = 'https://acaldero.github.io/wepsim/';
+			         context1.src = ws_base + '/ws_dist/wepsim-classic.html?' + 
+					        'notify=false&' + 
+					        'checkpoint=' + ws_base + '/examples/checkpoint/tutorial_2.txt';
+                              } catch (e) {
+                                 alert(e) ;
+                              }
 			      return false;">Step 1.- Load Example</a>
 
 		  <!-- https://stackoverflow.com/questions/1600488/calling-javascript-function-in-iframe -->
 		  <a href="#example_of_tutorial"
 		     class="nav-item nav-link mx-2 border border-secondary"
-		     onclick="var context1 = document.getElementById('iframe1').contentWindow;
-                              context1.wsweb_recordbar_show();
-			      context1.wsweb_record_play();
-			      return false;">Step 2.- Run</a>
+		     onclick="try {
+			         var context1 = document.getElementById('iframe1').contentWindow;
+                                 context1.wsweb_recordbar_show();
+			         context1.wsweb_record_play();
+                              } catch (e) {
+                                 alert(e) ;
+                              }
+			      return false;">Step 2.- Run Example</a>
 
 		  <a href="#"
 		     class="nav-item nav-link mx-2 border border-secondary"
-		     onclick="var context1 = document.getElementById('iframe1').contentWindow;
-			      context1.wsweb_execution_reset();
-                              context1.wsweb_record_off();
-                              context1.wsweb_recordbar_close();
+		     onclick="try {
+			         var context1 = document.getElementById('iframe1').contentWindow;
+			         context1.wsweb_execution_reset();
+                                 context1.wsweb_record_off();
+                                 context1.wsweb_recordbar_close();
+                              } catch (e) {
+                                 alert(e) ;
+                              }
 			      return false;">Step 3.- Reset</a>
             </nav>
 
@@ -1205,6 +1217,7 @@
                 <div class="col-12 py-2 px-0">
 			<div class="embed-responsive embed-responsive-16by9">
 		        <iframe class="w-100 border border-secondary embed-responsive-item"
+		                style="overflow: auto!important; -webkit-overflow-scrolling: touch!important;"
 		                id="iframe1" src="tutorial_welcome.html"></iframe>
 			</div>
                 </div>
