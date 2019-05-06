@@ -1184,11 +1184,13 @@
 
             <a name="example_of_tutorial1" id="example_of_tutorial1"></a>
 	    <h5 class="px-0 py-2 m-0">
-		<li>WepSIM 2.0.6+ now includes new API and functionality:<br> for recording the important interaction with WepSIM and for checkpointing.</li>
-		<li>They can be combined for building an interactive tutorial with WepSIM, for example:</li>
+		<ul class="m-0">
+		<li>WepSIM 2.0.6+ can be used for building interactive tutorials, for example:</li>
+		</ul>
 	    </h5>
 	    <br/>
 
+	    <!-- JavaScript based on: https://stackoverflow.com/questions/1600488/calling-javascript-function-in-iframe -->
 	    <nav class="nav nav-pills nav-justified">
 		  <a href="#"
 		     class="nav-item nav-link mx-2 border border-secondary"
@@ -1203,17 +1205,27 @@
 				  }
 			      return false;">Step 1.- Load Example</a>
 
-		  <!-- https://stackoverflow.com/questions/1600488/calling-javascript-function-in-iframe -->
-		  <a href="#example_of_tutorial"
+		  <a href="#"
 		     class="nav-item nav-link mx-2 border border-secondary"
 		     onclick="try {
 			              var context1 = document.getElementById('iframe1').contentWindow;
                                       context1.wsweb_recordbar_show();
-			              context1.wsweb_record_play();
+			              context1.wsweb_record_playInterval(0, 35);
 				  } catch (e) {
 					 alert(e) ;
 				  }
-			       return false;">Step 2.- Run Example</a>
+			       return false;">Step 2.a.- Demo execution</a>
+
+		  <a href="#"
+		     class="nav-item nav-link mx-2 border border-secondary"
+		     onclick="try {
+			              var context1 = document.getElementById('iframe1').contentWindow;
+                                      context1.wsweb_recordbar_show();
+			              context1.wsweb_record_playInterval(36, 72);
+				  } catch (e) {
+					 alert(e) ;
+				  }
+			       return false;">Step 2.b.- Demo execution speed</a>
 
 		  <a href="#"
 		     class="nav-item nav-link mx-2 border border-secondary"
@@ -1230,7 +1242,9 @@
 
             <div class="row">
                 <div class="col-12 py-2 px-0">
-			<div class="embed-responsive embed-responsive-16by9">
+			<div class="embed-responsive embed-responsive-16by9"
+		             style="overflow: auto!important; -webkit-overflow-scrolling: touch!important;"
+	                     id="idiv1">
 		        <iframe class="w-100 border border-secondary embed-responsive-item"
 		                style="overflow: auto!important; -webkit-overflow-scrolling: touch!important;"
 		                id="iframe1" src="tutorial_welcome.html"></iframe>
