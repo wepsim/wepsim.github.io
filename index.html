@@ -5,9 +5,9 @@
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport"    content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="WepSIM homepage">
-    <meta name="author" content="WepSIM authors">
+    <meta name="author"      content="WepSIM authors">
 
     <title>WepSIM</title>
 
@@ -49,7 +49,7 @@
                     <a class="nav-link text-white p-0" href="#page-top">Introduction</a>
                     </li>
 		    <li class="nav-item m-1 mx-lg-2">
-                    <a class="nav-link text-white p-0" href="#description">Description</a>
+                    <a class="nav-link text-white p-0" href="#advantages">Advantages</a>
                     </li>
 		    <li class="nav-item m-1 mx-lg-2 dropdown">
                     <a class="nav-link text-white p-0 dropdown-toggle" 
@@ -180,14 +180,22 @@
         </div>
     </header>
 
-    <!-- "description" Section -->
-    <section id="description" class="pt-5">
+    <!-- "advantages" Section -->
+    <section id="advantages" class="pt-5">
         <div class="container">
             <div class="row">
                 <div class="col-12 text-center">
-                    <h2>Description</h2><hr class="star-primary">
+                    <h2>Advantages</h2><hr class="star-primary">
                 </div>
             </div>
+
+	   <ul>
+
+            <a name="advantages_multidimension" id="advantages_multidimension"></a>
+	    <h5 class="px-0 py-2 m-0">
+		<li>From near NAND to almost tetris (from circuits to assembly code):</li>
+	    </h5>
+
             <div class="row">
                 <div class="col-12">
 
@@ -236,7 +244,12 @@
 		     </div>
                 </div>
 
-                <div class="col-12 pt-3">
+            <a name="advantages_learnonthego" id="advantages_learnonthego"></a>
+	    <h5 class="px-0 pt-4 m-0">
+		<li>Better accesibility, Better interactivity, Better mobility:</li>
+	    </h5>
+
+                <div class="col-12 pt-2">
 		     <div class="card-deck">
 			  <div class="card">
 			    <div class="card-header font-weight-bold bg-primary text-white">
@@ -295,6 +308,8 @@
 		     </div>
                 </div>
 
+	   </ul>
+
             </div>
         </div>
     </section>
@@ -315,14 +330,14 @@
 
             <a name="getwepsim_run" id="getwepsim_run"></a>
 	    <h5 class="px-0 py-2 m-0">
-		<li>You could <u>run</u> WepSIM <span class="rounded text-dark bg-light">from command-line or any modern Web Browser</span>:</li>
+		<li>You could <u>run</u> WepSIM <span class="rounded text-dark bg-light">from text-based command-line or any modern Web Browser</span>:</li>
 	    </h5>
 
 	    <div class="row card-deck pt-2 pb-4">
 
 		  <div class="card col-sm-6 p-0">
 		    <div class="card-header bg-light">
-			<h6 class="font-weight-bold"><u>Run</u> on <u>any platform</u> (with Bash+NodeJS)</h6>
+			<h6 class="font-weight-bold"><u>Run</u> on <u>any platform</u> with Bash+NodeJS [**]</h6>
 		    </div>
 		    <div class="card-body">
 			<h5 class="pb-4">As text-based user interface:
@@ -334,7 +349,7 @@
 			     src="images/tux-158547_960_720.png" alt="linux logo">
 		    </div>
 		    <div class="card-footer bg-light">
-			 Tested on Linux with <br> Node 8.10.0+ and Bash 4.4.19+
+			 [**] Tested on Linux with <br> Node 8.10.0+ and Bash 4.4.19+
 		    </div>
 		  </div>
 
@@ -352,7 +367,7 @@
 			     src="images/html5_logo.png">
 		    </div>
 		    <div class="card-footer bg-light">
-			 [*] Google Chrome 60+, Mozilla Firefox 60+, Microsoft Edge 40+, Apple Safari 11+
+			 [*] Tested with Google Chrome 60+, Mozilla Firefox 60+, <br> Microsoft Edge 40+, Apple Safari 11+
 		    </div>
 		  </div>
 
@@ -1169,53 +1184,67 @@
 
             <a name="example_of_tutorial1" id="example_of_tutorial1"></a>
 	    <h5 class="px-0 py-2 m-0">
-		<li>WepSIM 2.0.6+ now includes new API and functionality:<br> for recording the important interaction with WepSIM and for checkpointing.</li>
-		<li>They can be combined for building an interactive tutorial with WepSIM, for example:</li>
+		<ul class="m-0">
+		<li>WepSIM 2.0.6+ can be used for building interactive tutorials, for example:</li>
+		</ul>
 	    </h5>
 	    <br/>
 
+	    <!-- JavaScript based on: https://stackoverflow.com/questions/1600488/calling-javascript-function-in-iframe -->
 	    <nav class="nav nav-pills nav-justified">
 		  <a href="#"
 		     class="nav-item nav-link mx-2 border border-secondary"
 		     onclick="try {
-			                   var context1 = document.getElementById('iframe1');
-                         var ws_base  = 'https://wepsim.github.io/wepsim/';
-			                   context1.src = ws_base + '/ws_dist/wepsim-classic.html?' + 
-					                              'notify=false&' + 
-					                              'checkpoint=' + ws_base + '/examples/checkpoint/tutorial_2.txt';
-                      } catch (e) {
-                         alert(e) ;
-                      }
-			           return false;">Step 1.- Load Example</a>
-
-		  <!-- https://stackoverflow.com/questions/1600488/calling-javascript-function-in-iframe -->
-		  <a href="#example_of_tutorial"
-		     class="nav-item nav-link mx-2 border border-secondary"
-		     onclick="try {
-			                   var context1 = document.getElementById('iframe1').contentWindow;
-                         context1.wsweb_recordbar_show();
-			                   context1.wsweb_record_play();
-                      } catch (e) {
-                         alert(e) ;
-                      }
-			            return false;">Step 2.- Run Example</a>
+			             var context1 = document.getElementById('iframe1');
+                                     var ws_base  = 'https://acaldero.github.io/wepsim/';
+			             context1.src = ws_base + '/ws_dist/wepsim-classic.html?' + 
+					            'notify=false&' + 
+					            'checkpoint=' + ws_base + '/examples/checkpoint/tutorial_2.txt';
+				  } catch (e) {
+				     alert(e) ;
+				  }
+			      return false;">Step 1.- Load Example</a>
 
 		  <a href="#"
 		     class="nav-item nav-link mx-2 border border-secondary"
 		     onclick="try {
-			                   var context1 = document.getElementById('iframe1').contentWindow;
-			                   context1.wsweb_execution_reset();
-                         context1.wsweb_record_off();
-                         context1.wsweb_recordbar_close();
-                      } catch (e) {
-                         alert(e) ;
-                      }
-			            return false;">Step 3.- Reset</a>
+			              var context1 = document.getElementById('iframe1').contentWindow;
+                                      context1.wsweb_recordbar_show();
+			              context1.wsweb_record_playInterval(0, 35);
+				  } catch (e) {
+					 alert(e) ;
+				  }
+			       return false;">Step 2.a.- Demo execution</a>
+
+		  <a href="#"
+		     class="nav-item nav-link mx-2 border border-secondary"
+		     onclick="try {
+			              var context1 = document.getElementById('iframe1').contentWindow;
+                                      context1.wsweb_recordbar_show();
+			              context1.wsweb_record_playInterval(36, 72);
+				  } catch (e) {
+					 alert(e) ;
+				  }
+			       return false;">Step 2.b.- Demo execution speed</a>
+
+		  <a href="#"
+		     class="nav-item nav-link mx-2 border border-secondary"
+		     onclick="try {
+			              var context1 = document.getElementById('iframe1').contentWindow;
+			              context1.wsweb_execution_reset();
+				      context1.wsweb_record_off();
+				      context1.wsweb_recordbar_close();
+			          } catch (e) {
+				     alert(e) ;
+			          }
+			      return false;">Step 3.- Reset</a>
             </nav>
 
             <div class="row">
                 <div class="col-12 py-2 px-0">
-			<div class="embed-responsive embed-responsive-16by9">
+			<div class="embed-responsive embed-responsive-16by9"
+		             style="overflow: auto!important; -webkit-overflow-scrolling: touch!important;"
+	                     id="idiv1">
 		        <iframe class="w-100 border border-secondary embed-responsive-item"
 		                style="overflow: auto!important; -webkit-overflow-scrolling: touch!important;"
 		                id="iframe1" src="tutorial_welcome.html"></iframe>
