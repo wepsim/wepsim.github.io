@@ -48,18 +48,25 @@
 		    <li class="nav-item m-1 mx-lg-2">
                     <a class="nav-link text-white p-0" href="#page-top">Introduction</a>
                     </li>
-		    <li class="nav-item m-1 mx-lg-2">
-                    <a class="nav-link text-white p-0" href="#advantages">Advantages</a>
+
+		    <li class="nav-item m-1 mx-lg-2 dropdown">
+                    <a class="nav-link text-white p-0 dropdown-toggle" 
+		       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                       href="#">Advantages</a>
+			    <div class="dropdown-menu">
+			      <a class="dropdown-item" href="#advantages_multidimension">From near NAND to almost tetris</a>
+			      <a class="dropdown-item" href="#advantages_learnonthego">Better learn-on-the-go</a>
+			    </div>
                     </li>
 		    <li class="nav-item m-1 mx-lg-2 dropdown">
                     <a class="nav-link text-white p-0 dropdown-toggle" 
 		       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
                        href="#">Getting WepSIM</a>
 			    <div class="dropdown-menu">
-			      <a class="dropdown-item" href="#getwepsim_run">Run</a>
-			      <a class="dropdown-item" href="#getwepsim_install">Install</a>
+			      <a class="dropdown-item" href="#getwepsim_run">Run without install</a>
+			      <a class="dropdown-item" href="#getwepsim_install">Install WepSIM</a>
 			      <div class="dropdown-divider"></div>
-			      <a class="dropdown-item" href="#getwepsim_source">Source</a>
+			      <a class="dropdown-item" href="#getwepsim_source">Source Code</a>
 			    </div>
                     </li>
 		    <li class="nav-item m-1 mx-lg-2 dropdown">
@@ -79,7 +86,7 @@
 	               href="#">Publications</a>
 			    <div class="dropdown-menu">
 			      <a class="dropdown-item" href="#publications_2019">2019</a>
-			      <a class="dropdown-item" href="#publications_201x">2018-</a>
+			      <a class="dropdown-item" href="#publications_201x">2018-20..</a>
 			    </div>
                     </li>
 		    <li class="nav-item m-1 mx-lg-2">
@@ -202,43 +209,49 @@
 		     <div class="card-deck">
 			  <div class="card">
 			    <div class="card-header font-weight-bold bg-warning">
-				  + Critical point of view: evaluating alternatives
-			    </div>
-			    <img class="img-responsive card-img-top mx-auto"
-			         style="max-height:15vh !important;"
-	                         src="images/compare-and-learn-2.png" alt="Compare among architectures, firmwares, and assembly programs">
-			    <div class="card-body">
-			      <h4 class="card-title">
-				  Students are able to compare different hardware, firmware, instruction sets, etc.
-				  and to assess what are the advantages and disadvantages
-			      </h4>
-			    </div>
-			    <div class="card-footer">
-				 Different hardware architecure could be used in WepSIM, 
-				 and for each one, several firmwares (instruction sets) can be defined.
-				 So different assembly programs can be designed, coded, tested, and compared.<br>
-			    </div>
-			  </div>
-
-			  <div class="card">
-			    <div class="card-header font-weight-bold bg-warning">
 				  + Integrated vision: from hardware to system software
 			    </div>
 			    <img class="img-responsive card-img-top mx-auto"
 			         style="max-height:15vh !important;"
 	                         src="images/hw_and_sw-2.png" alt="Integrated vision of how hardware and software interplays">
 			    <div class="card-body">
-			      <h4 class="card-title">
-				  Students gain an integrated vision of how hardware and software interplays through microprogramming and assembly programming
-			      </h4>
+			      <h5 class="card-title">
+				  Students gain an integrated vision of how hardware and software interplays through microprogramming and assembly programming. <br>
+				  <a href="https://wepsim.github.io/wepsim/ws_dist/wepsim-classic.html?mode=ep&example=8&simulator=assembly:screen">Interrupts</a>, 
+				  <a href="https://wepsim.github.io/wepsim/ws_dist/wepsim-classic.html?mode=ep&example=10&simulator=assembly:screen">exceptions</a>, 
+				  <a href="https://wepsim.github.io/wepsim/ws_dist/wepsim-classic.html?mode=ep&example=9&simulator=assembly:register_file">system calls</a>, 
+				  <a href="https://wepsim.github.io/wepsim/ws_dist/wepsim-classic.html?mode=ep&example=13&simulator=assembly:screen">threads</a>, 
+				  etc. are include in <a href="#gettingstarted_example">the initial Examples</a>.
+			      </h5>
 			    </div>
-			    <div class="card-footer">
+			    <div class="card-footer d-none">
 				 <a href="https://wepsim.github.io/wepsim/ws_dist/wepsim-classic.html?mode=ep&example=8&simulator=assembly:screen">Interrupts</a>, 
 				 <a href="https://wepsim.github.io/wepsim/ws_dist/wepsim-classic.html?mode=ep&example=10&simulator=assembly:screen">exceptions</a>, 
 				 <a href="https://wepsim.github.io/wepsim/ws_dist/wepsim-classic.html?mode=ep&example=9&simulator=assembly:register_file">system calls</a>, 
 				 <a href="https://wepsim.github.io/wepsim/ws_dist/wepsim-classic.html?mode=ep&example=13&simulator=assembly:screen">threads</a>, 
 				 etc. are include in Examples.
 			         WepSIM can be used as a complementary tool while teaching Computer Architecture, Operating Systems, etc.
+			    </div>
+			  </div>
+
+			  <div class="card">
+			    <div class="card-header font-weight-bold bg-warning">
+				  + Critical point of view: evaluating alternatives
+			    </div>
+			    <img class="img-responsive card-img-top mx-auto"
+			         style="max-height:15vh !important;"
+	                         src="images/compare-and-learn-2.png" alt="Compare among architectures, firmwares, and assembly programs">
+			    <div class="card-body">
+			      <h5 class="card-title">
+				  Students are able to compare different hardware, firmware, instruction sets, etc.
+				  and to assess what are the advantages and disadvantages.  <br>
+				  Students can solve new challenges, and <a href="#gettingstarted_lab">work in new situations</a>.
+			      </h5>
+			    </div>
+			    <div class="card-footer d-none">
+				 Different hardware architecure could be used in WepSIM, 
+				 and for each one, several firmwares (instruction sets) can be defined.
+				 So different assembly programs can be designed, coded, tested, and compared.<br>
 			    </div>
 			  </div>
 		     </div>
@@ -259,11 +272,13 @@
 			         style="max-height:15vh !important;"
 	                         src="images/wcag2-aaa.jpg" alt="WCGA 2 (AAA)">
 			    <div class="card-body">
-			      <h4 class="card-title">
-				  Improving accesibility: WCGA 2 (AAA). And command-line alternative
-			      </h4>
+			      <h5 class="card-title">
+				  WepSIM passes the WCAG 2.0 (Level AAA) at the 
+				  <a href="https://achecker.ca/checker/index.php">Web Accessibility Checker</a>. <br>
+				  There is an improved command-line text-based version too.
+			      </h5>
 			    </div>
-			    <div class="card-footer">
+			    <div class="card-footer d-none">
 				 WepSIM passes the WCAG 2.0 (Level AAA) at the 
 				 <a href="https://achecker.ca/checker/index.php">Web Accessibility Checker</a>.
 				 Along with an improved command-line version, more users can use it with less problems.
@@ -278,11 +293,12 @@
 			         style="max-height:15vh !important;"
 	                         src="images/fire-check.jpg" alt="Compare among architectures, firmwares, and assembly programs">
 			    <div class="card-body">
-			      <h4 class="card-title">
-				  Students can explorer how an example works, and easily check "What will happen if I change..." too
-			      </h4>
+			      <h5 class="card-title">
+				  Students can easily check "What will happen if I change...".<br>
+				  For example, try to activate two tri-states signals and see what happens.
+			      </h5>
 			    </div>
-			    <div class="card-footer">
+			    <div class="card-footer d-none">
 			          It is a very valuable complement of a good exercises book. <br>
 				  For example, students can activate two tri-states signals and see what happens.
 			    </div>
@@ -296,11 +312,12 @@
 			         style="max-height:15vh !important;"
 	                         src="images/tablet-313002_1920.jpg" alt="Mobility thanks to WepSIM">
 			    <div class="card-body">
-			      <h4 class="card-title">
-				  Student can use WepSIM in tablets, smartphones, etc. inside and outside class hours
-			      </h4>
+			      <h5 class="card-title">
+				  WepSIM is flexible: It can be used in tablets, smartphones, etc. 
+				  It can be used in regular classes, while travelling on bus, etc.
+			      </h5>
 			    </div>
-			    <div class="card-footer">
+			    <div class="card-footer d-none">
 				  It is more flexible for students to practice. <br>
 				  For example, WepSIM allows the students to learn while travelling on subway, or on bus.
 			    </div>
@@ -1185,7 +1202,7 @@
             <a name="example_of_tutorial1" id="example_of_tutorial1"></a>
 	    <h5 class="px-0 py-2 m-0">
 		<ul class="m-0">
-		<li>WepSIM 2.0.6+ can be used for building interactive tutorials, for example:</li>
+		<li>WepSIM can be used for building interactive tutorials, for example:</li>
 		</ul>
 	    </h5>
 	    <br/>
@@ -1203,7 +1220,7 @@
 				  } catch (e) {
 				     alert(e) ;
 				  }
-			      return false;">Step 1.- Load Example</a>
+			      return false;">Step 1.- Load Tutorial</a>
 
 		  <a href="#"
 		     class="nav-item nav-link mx-2 border border-secondary"
@@ -1214,7 +1231,7 @@
 				  } catch (e) {
 					 alert(e) ;
 				  }
-			       return false;">Step 2.a.- Demo execution</a>
+			       return false;">Step 2.a.- execution in WepSIM (steps 0 to 35)</a>
 
 		  <a href="#"
 		     class="nav-item nav-link mx-2 border border-secondary"
@@ -1225,7 +1242,7 @@
 				  } catch (e) {
 					 alert(e) ;
 				  }
-			       return false;">Step 2.b.- Demo execution speed</a>
+			       return false;">Step 2.b.- execution speed in WepSIM (steps 36 to 72)</a>
 
 		  <a href="#"
 		     class="nav-item nav-link mx-2 border border-secondary"
