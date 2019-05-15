@@ -814,21 +814,12 @@
 
 		  <div class="m-0 w-100">
 		    <div class="nav nav-pills nav-fill" id="v-pills-tab3" role="tablist" aria-orientation="horizontal">
-		      <a class="rounded border border-secondary nav-item nav-link active" data-toggle="pill"  role="tab" aria-selected="true"
-			 id="pill2-step1-tab" href="#pill2-step1" aria-controls="pill2-step1">
-		      <span class="text-white bg-primary rounded p-1">Run</span></a>
-		      <a class="rounded border border-secondary nav-item nav-link" data-toggle="pill"  role="tab" aria-selected="false"
+		      <a class="rounded border border-secondary nav-item nav-link active" data-toggle="pill"  role="tab" aria-selected="false"
 			 id="pill2-step2-tab" href="#pill2-step2" aria-controls="pill2-step2">
 		      <span class="text-white bg-primary rounded p-1">Step by step</span></a>
 		      <a class="rounded border border-secondary nav-item nav-link" data-toggle="pill"  role="tab" aria-selected="false"
 			 id="pill2-step3-tab" href="#pill2-step3" aria-controls="pill2-step3">
 		      <span class="text-white bg-primary rounded p-1">Microstep by microstep</span></a>
-		      <a class="rounded border border-secondary nav-item nav-link" data-toggle="pill"  role="tab" aria-selected="false"
-			 id="pill2-step4-tab" href="#pill2-step4" aria-controls="pill2-step4">
-		      <span class="text-white bg-primary rounded p-1">Run & check (ok)</span></a>
-		      <a class="rounded border border-secondary nav-item nav-link" data-toggle="pill"  role="tab" aria-selected="false"
-			 id="pill2-step5-tab" href="#pill2-step5" aria-controls="pill2-step5">
-		      <span class="text-white bg-primary rounded p-1">Run & check (ko)</span></a>
 		      <a class="rounded border border-secondary nav-item nav-link" data-toggle="pill"  role="tab" aria-selected="false"
 			 id="pill2-step6-tab" href="#pill2-step6" aria-controls="pill2-step6">
 		      <span class="text-white bg-primary rounded p-1">Verbalized</span></a>
@@ -837,22 +828,7 @@
 
 		  <div class="m-0 border border-secondary">
 		    <div class="tab-content" id="v-pills-tabContent">
-		      <div class="tab-pane show active" id="pill2-step1" role="tabpanel" aria-labelledby="pill2-step1-tab">
-			   <h5 class="m-3">
-			   Run and print the final state.<br>
-			   <br>
-			   For example: 'run' the 'asm-ep_s1_e1.txt' assembly for the 'ep' architecture with the 'mc-ep_base.txt' microcode, and print the final state:
-			   </h5>
-<div class="m-2 border">
-<kbd class="w-100" style="display:block;">
-	./wepsim_node.sh run ep ./examples/microcode/mc-ep_base.txt ./examples/assembly/asm-ep_s1_e1.txt
-</kbd>
-<samp class="pt-3">
-	register R2 = 0x2; register R3 = 0x1; register R5 = 0x1; register R29 = 0xffff; register PC = 0x8018; memory 0x8000 = 0x8400002; memory 0x8004 = 0x8600001; memory 0x8008 = 0xa21809; memory 0x800c = 0x8400002; memory 0x8010 = 0x8600001; memory 0x8014 = 0xa2180a;<br>
-</samp>
-</div>
-		      </div>
-		      <div class="tab-pane" id="pill2-step2" role="tabpanel" aria-labelledby="pill2-step2-tab">
+		      <div class="tab-pane show active" id="pill2-step2" role="tabpanel" aria-labelledby="pill2-step2-tab">
 			   <h5 class="m-3">
 			   Run step by step and print the modified elements on each step.<br>
 			   <br>
@@ -890,37 +866,6 @@
 </samp>
 </div>
 		      </div>
-		      <div class="tab-pane" id="pill2-step4" role="tabpanel" aria-labelledby="pill2-step4-tab">
-			   <h5 class="m-3">
-			   Run and check that state at the end of the execution is the same as the one stored on a file.<br>
-			   <br>
-			   For example: 'run' the 'asm-ep_s1_e1.txt' assembly for the 'ep' architecture with the 'mc-ep_base.txt' microcode (and if it matchs the expected state then the output is going to be):
-			   </h5>
-<div class="m-2 border">
-<kbd class="w-100" style="display:block;">
-	./wepsim_node.sh check ep ./examples/microcode/mc-ep_base.txt ./examples/assembly/asm-ep_s1_e1.txt ./examples/checklist/cl-ep_s1_e1.txt
-</kbd>
-<samp class="pt-3">
-	OK: Execution: no error reported<br>
-</samp>
-</div>
-		      </div>
-		      <div class="tab-pane" id="pill2-step5" role="tabpanel" aria-labelledby="pill2-step5-tab">
-			   <h5 class="m-3">
-			   Run and check that state at the end of the execution is not the same as the one stored on a file.<br>
-			   <br>
-			   For example: 'run' the 'asm-ep_s1_e1.txt' assembly for the 'ep' architecture with the 'mc-ep_base.txt' microcode (and if it fails to match the expected state then the output is going to be):
-			   </h5>
-<div class="m-2 border">
-<kbd class="w-100" style="display:block;">
-	./wepsim_node.sh check ep ./examples/microcode/mc-ep_base.txt ./examples/assembly/asm-ep_s1_e1.txt ./examples/checklist/cl-ep_s1_e2.txt
-</kbd>
-<samp class="pt-3">
-	ERROR: Execution: different results: cpu[R1]='0' (expected '0xf'), cpu[R2]='0x2' (expected '0xf'), memory[0x1000]='0' (expected '0xa07ff0f'), memory[0x1004]='0' (expected '0x10061'), memory[0x1008]='0' (expected '0x7ffff'), memory[0x100c]='0' (expected '0x61000a'), memory[0x1010]='0' (expected '0xf'), 
-	...<br>
-</samp>
-</div>
-		      </div>
 		      <div class="tab-pane" id="pill2-step6" role="tabpanel" aria-labelledby="pill2-step6-tab">
 			   <h5 class="m-3">
 			      And least but not less, it is possible to execute microstep by microstep but with a more descriptive output (and from a checkpoint too):
@@ -941,6 +886,136 @@
 	          </div>
 
 	    </div>
+
+
+            <a name="gettingstarted_cl2" id="gettingstarted_cl2"></a>
+	    <h5 class="m-1 pt-3 pb-3">
+		<li>WepSIM command-line interface <span class="rounded text-white bg-primary">possible options</span> used for checking the expected result:</li>
+	    </h5>
+
+            <div class="row m-1 pb-3">
+
+		  <div class="m-0 w-100">
+		    <div class="nav nav-pills nav-fill" id="v-pills-tab3b" role="tablist" aria-orientation="horizontal">
+		      <a class="rounded border border-secondary nav-item nav-link active" data-toggle="pill"  role="tab" aria-selected="true"
+			 id="pill3-step1-tab" href="#pill3-step1" aria-controls="pill3-step1">
+		      <span class="text-white bg-primary rounded p-1">Run</span></a>
+		      <a class="rounded border border-secondary nav-item nav-link" data-toggle="pill"  role="tab" aria-selected="false"
+			 id="pill3-step4-tab" href="#pill3-step4" aria-controls="pill3-step4">
+		      <span class="text-white bg-primary rounded p-1">Run & check (ok)</span></a>
+		      <a class="rounded border border-secondary nav-item nav-link" data-toggle="pill"  role="tab" aria-selected="false"
+			 id="pill3-step5-tab" href="#pill3-step5" aria-controls="pill3-step5">
+		      <span class="text-white bg-primary rounded p-1">Run & check (ko)</span></a>
+		    </div>
+		  </div>
+
+		  <div class="m-0 border border-secondary">
+		    <div class="tab-content" id="v-pills-tabContent">
+		      <div class="tab-pane show active" id="pill3-step1" role="tabpanel" aria-labelledby="pill3-step1-tab">
+			   <h5 class="m-3">
+			   Run and print the final state.<br>
+			   <br>
+			   For example: 'run' the 'asm-ep_s1_e1.txt' assembly for the 'ep' architecture with the 'mc-ep_base.txt' microcode, and print the final state:
+			   </h5>
+<div class="m-2 border">
+<kbd class="w-100" style="display:block;">
+	./wepsim_node.sh run ep ./examples/microcode/mc-ep_base.txt ./examples/assembly/asm-ep_s1_e1.txt
+</kbd>
+<samp class="pt-3">
+	register R2 = 0x2; register R3 = 0x1; register R5 = 0x1; register R29 = 0xffff; register PC = 0x8018; memory 0x8000 = 0x8400002; memory 0x8004 = 0x8600001; memory 0x8008 = 0xa21809; memory 0x800c = 0x8400002; memory 0x8010 = 0x8600001; memory 0x8014 = 0xa2180a;<br>
+</samp>
+</div>
+		      </div>
+		      <div class="tab-pane" id="pill3-step2" role="tabpanel" aria-labelledby="pill3-step2-tab">
+			   <h5 class="m-3">
+			   Run step by step and print the modified elements on each step.<br>
+			   <br>
+			   For example: 'run' 'step by step' the 'asm-ep-S1E1.txt' assembly for the 'ep' architecture with the 'mc-ep_base.txt' microcode, and print for each assembly instruction the state elements that modify its value:
+			   </h5>
+<div class="m-2 border">
+<kbd class="w-100" style="display:block;">
+	./wepsim_node.sh stepbystep ep ./examples/microcode/mc-ep_base.txt ./examples/assembly/asm-ep_s1_e1.txt
+</kbd>
+<samp class="pt-3">
+	pc(0x8000):	li $2 2:			register R2 = 0x2; register R29 = 0xffff; register PC = 0x8004<br>
+	pc(0x8004):	li $3 1:			register R3 = 0x1; register PC = 0x8008<br>
+	pc(0x8008):	add $5 $2 $3:			register R5 = 0x3; register PC = 0x800c<br>
+	...<br>
+</samp>
+</div>
+		      </div>
+		      <div class="tab-pane" id="pill3-step3" role="tabpanel" aria-labelledby="pill3-step3-tab">
+			   <h5 class="m-3">
+			   Run microstep by microstep and print the modified elements on each step.<br>
+			   <br>
+			   For example: 'run' 'microstep by microstep' the 'asm-ep_s1_e1.txt' assembly for the 'ep' architecture with the 'mc-ep_base.txt' microcode, and print for each microinstruction the state elementes that modify its value:
+			   </h5>
+<div class="m-2 border">
+<kbd class="w-100" style="display:block;">
+	./wepsim_node.sh microstepbymicrostep  ep ./examples/microcode/mc-ep_base.txt ./examples/assembly/asm-ep_s1_e1.txt
+</kbd>
+<samp class="pt-3">
+	micropc(0x0):	T2 C0:<br>
+	micropc(0x1):	TA R BW=11 M1 C1:<br>
+	micropc(0x2):	M2 C2 T1 C3:			register PC = 0x8004<br>
+	micropc(0x3):	A0 B=0 C=0:<br>
+	micropc(0x53):	SE OFFSET=0 SIZE=10000 T3 LC MR=0 SELC=10101 A0 B C=0:			register R2 = 0x2; register R29 = 0xffff<br>
+	...<br>
+</samp>
+</div>
+		      </div>
+		      <div class="tab-pane" id="pill3-step4" role="tabpanel" aria-labelledby="pill3-step4-tab">
+			   <h5 class="m-3">
+			   Run and check that state at the end of the execution is the same as the one stored on a file.<br>
+			   <br>
+			   For example: 'run' the 'asm-ep_s1_e1.txt' assembly for the 'ep' architecture with the 'mc-ep_base.txt' microcode (and if it matchs the expected state then the output is going to be):
+			   </h5>
+<div class="m-2 border">
+<kbd class="w-100" style="display:block;">
+	./wepsim_node.sh check ep ./examples/microcode/mc-ep_base.txt ./examples/assembly/asm-ep_s1_e1.txt ./examples/checklist/cl-ep_s1_e1.txt
+</kbd>
+<samp class="pt-3">
+	OK: Execution: no error reported<br>
+</samp>
+</div>
+		      </div>
+		      <div class="tab-pane" id="pill3-step5" role="tabpanel" aria-labelledby="pill3-step5-tab">
+			   <h5 class="m-3">
+			   Run and check that state at the end of the execution is not the same as the one stored on a file.<br>
+			   <br>
+			   For example: 'run' the 'asm-ep_s1_e1.txt' assembly for the 'ep' architecture with the 'mc-ep_base.txt' microcode (and if it fails to match the expected state then the output is going to be):
+			   </h5>
+<div class="m-2 border">
+<kbd class="w-100" style="display:block;">
+	./wepsim_node.sh check ep ./examples/microcode/mc-ep_base.txt ./examples/assembly/asm-ep_s1_e1.txt ./examples/checklist/cl-ep_s1_e2.txt
+</kbd>
+<samp class="pt-3">
+	ERROR: Execution: different results: cpu[R1]='0' (expected '0xf'), cpu[R2]='0x2' (expected '0xf'), memory[0x1000]='0' (expected '0xa07ff0f'), memory[0x1004]='0' (expected '0x10061'), memory[0x1008]='0' (expected '0x7ffff'), memory[0x100c]='0' (expected '0x61000a'), memory[0x1010]='0' (expected '0xf'), 
+	...<br>
+</samp>
+</div>
+		      </div>
+		      <div class="tab-pane" id="pill3-step6" role="tabpanel" aria-labelledby="pill3-step6-tab">
+			   <h5 class="m-3">
+			      And least but not less, it is possible to execute microstep by microstep but with a more descriptive output (and from a checkpoint too):
+			   </h5>
+<div class="m-2 border">
+<kbd class="w-100" style="display:block;">
+        ./wepsim_node.sh microstepverbalized checkpoint ./examples/checkpoint/tutorial_1.txt
+</kbd>
+<samp class="pt-3">
+	Micropc at 0x0. Activated signals are: A0 B C. Associated actions are: Set bit 1 of A0A1 to value 0. Copy from Output of MUX C to A1 value 0x0. Copy from INT to Output of MUX C value 0x0 (copied 1 bits from bit 0). MADDR is 5.<br>
+	Micropc at 0x1. Activated signals are: T2 C0. Associated actions are: Copy from Program Counter Register to Internal Bus value 0x8000. Load from Internal Bus to Memory Address Register value 0x8000.<br>
+	Micropc at 0x3. Activated signals are: M2 C2 T1 C3. Associated actions are: Copy to Input of Program Counter Program Counter Register plus four with result 0x8004. Load from Input of Program Counter to Program Counter Register value 0x8004.<br>
+	...<br>
+</samp>
+</div>
+		      </div>
+	            </div>
+	          </div>
+
+	    </div>
+
 
 
 	    <a name="gettingstarted_capi" id="gettingstarted_capi"></a>
@@ -988,11 +1063,9 @@
 		    </nav>
 
 		    <div class="col-12 py-2 px-0">
-				<div class="embed-responsive embed-responsive-16by9"
-				     style="overflow: auto!important; -webkit-overflow-scrolling: touch!important;"
-				     id="idiv1">
+				<div id="idiv1" style="overflow: auto!important; -webkit-overflow-scrolling: touch!important;">
 				<iframe class="w-100 border border-secondary embed-responsive-item"
-					style="overflow: auto!important; -webkit-overflow-scrolling: touch!important;"
+					style="overflow: auto!important; -webkit-overflow-scrolling: touch!important; height:100vh; position:relative"
 					id="iframe1" 
 					src="https://acaldero.github.io/wepsim/ws_dist/wepsim-classic.html?notify=false&checkpoint=https://acaldero.github.io/wepsim/examples/checkpoint/tutorial_2.txt"></iframe>
 				</div>
@@ -1039,9 +1112,9 @@
 				      <a href="https://ieeexplore.ieee.org/document/8662722">WepSIM: an Online Interactive Educational Simulator Integrating Microdesign, Microprogramming, and Assembly Language Programming</a>
 				  </li>
 				  <li class="list-group-item">
-					<button class="btn c2c p-0 float-right" data-clipboard-action="copy" data-clipboard-target="#ws19">
-					   <span data-toggle="tooltip" data-placement="bottom" title="Copy to clipboard">
-					   <img class="clippy" src="images/clippy.svg" alt="Copy to clipboard" width="13">
+					<button class="btn c2c p-0 float-right border border-secondary px-2" data-clipboard-action="copy" data-clipboard-target="#ws19">
+					   <span data-toggle="tooltip" data-placement="bottom" title="Copy bibtex to clipboard">
+					   <em class="fa fa-quote-right"></em>&nbsp;Cite
                                            </span>
 					</button>
 					<small id="ws19">
@@ -1086,9 +1159,9 @@
 				      <a href="wepsim-manual.pdf">WepSIM Handbook (Spanish)</a>
 				  </li>
 				  <li class="list-group-item">
-					<button class="btn c2c p-0 float-right" data-clipboard-action="copy" data-clipboard-target="#ws16a">
-					   <span data-toggle="tooltip" data-placement="bottom" title="Copy to clipboard">
-					   <img class="clippy" src="images/clippy.svg" alt="Copy to clipboard" width="13">
+					<button class="btn c2c p-0 float-right border border-secondary px-2" data-clipboard-action="copy" data-clipboard-target="#ws16a">
+					   <span data-toggle="tooltip" data-placement="bottom" title="Copy bibtex to clipboard">
+					   <em class="fa fa-quote-right"></em>&nbsp;Cite
                                            </span>
 					</button>
 					<small id="ws16a">
@@ -1116,9 +1189,9 @@
 				      <a href="http://digibug.ugr.es/bitstream/10481/41909/1/T3_N6_Revista_EAIC_2016.pdf">WepSIM: Simulador modular e interactivo de un procesador elemental para facilitar una visión integrada de la microprogramación y la programación en ensamblador</a>
 				  </li>
 				  <li class="list-group-item">
-					<button class="btn c2c p-0 float-right" data-clipboard-action="copy" data-clipboard-target="#ws16b">
-					   <span data-toggle="tooltip" data-placement="bottom" title="Copy to clipboard">
-					   <img class="clippy" src="images/clippy.svg" alt="Copy to clipboard" width="13">
+					<button class="btn c2c p-0 float-right border border-secondary px-2" data-clipboard-action="copy" data-clipboard-target="#ws16b">
+					   <span data-toggle="tooltip" data-placement="bottom" title="Copy bibtex to clipboard">
+					   <em class="fa fa-quote-right"></em>&nbsp;Cite
                                            </span>
 					</button>
 					<small id="ws16b">
@@ -1147,9 +1220,9 @@
 				      WepSIM: simulador integrado de microprogramación y programación en ensamblador
 				  </li>
 				  <li class="list-group-item">
-					<button class="btn c2c p-0 float-right" data-clipboard-action="copy" data-clipboard-target="#ws16c">
-					   <span data-toggle="tooltip" data-placement="bottom" title="Copy to clipboard">
-					   <img class="clippy" src="images/clippy.svg" alt="Copy to clipboard" width="13">
+					<button class="btn c2c p-0 float-right border border-secondary px-2" data-clipboard-action="copy" data-clipboard-target="#ws16c">
+					   <span data-toggle="tooltip" data-placement="bottom" title="Copy bibtex to clipboard">
+					   <em class="fa fa-quote-right"></em>&nbsp;Cite
                                            </span>
 					</button>
 					<small id="ws16c">
