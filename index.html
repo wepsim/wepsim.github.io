@@ -81,7 +81,8 @@
 			       <a class="dropdown-item" href="#gettingstarted_lab">Steps of a typical session</a>
 			       <div class="dropdown-divider"></div>
 		               <h6 class="dropdown-header px-1 text-secondary">Command-line</h6>
-			       <a class="dropdown-item" href="#gettingstarted_cl">Typical command options</a>
+			       <a class="dropdown-item" href="#gettingstarted_cl">Options for executing</a>
+			       <a class="dropdown-item" href="#gettingstarted_cl2">Options for checking</a>
 			       <div class="dropdown-divider"></div>
 		               <h6 class="dropdown-header px-1 text-secondary">Control API</h6>
 			       <a class="dropdown-item" href="#gettingstarted_capi">Example of Tutorial</a>
@@ -654,7 +655,7 @@
 
             <a name="gettingstarted_example" id="gettingstarted_example"></a>
 	    <h5 class="m-1 pt-2 pb-3">
-		<li>To learn with some WepSIM example, please follow these <span class="rounded text-white bg-primary">these steps</span>:</li>
+		<li>To learn with some WepSIM example, please follow <span class="rounded text-white bg-primary">these steps</span>:</li>
 	    </h5>
 
             <div class="row m-1 pb-3">
@@ -826,15 +827,15 @@
 		    </div>
 		  </div>
 
-		  <div class="m-0 border border-secondary">
+		  <div class="m-0 border">
 		    <div class="tab-content" id="v-pills-tabContent">
 		      <div class="tab-pane show active" id="pill2-step2" role="tabpanel" aria-labelledby="pill2-step2-tab">
 			   <h5 class="m-3">
-			   Run step by step and print the modified elements on each step.<br>
+			   <strong>Goal</strong>: Run step by step and print the modified elements on each step.<br>
 			   <br>
-			   For example: 'run' 'step by step' the 'asm-ep-S1E1.txt' assembly for the 'ep' architecture with the 'mc-ep_base.txt' microcode, and print for each assembly instruction the state elements that modify its value:
+			   <strong>For example</strong>: 'run step by step' the 'asm-ep-S1E1.txt' assembly for the 'ep' architecture with the 'mc-ep_base.txt' microcode, and print for each assembly instruction the state elements that modify its value:
 			   </h5>
-<div class="m-2 border">
+<div class="m-2 border border-secondary">
 <kbd class="w-100" style="display:block;">
 	./wepsim_node.sh stepbystep ep ./examples/microcode/mc-ep_base.txt ./examples/assembly/asm-ep_s1_e1.txt
 </kbd>
@@ -848,11 +849,11 @@
 		      </div>
 		      <div class="tab-pane" id="pill2-step3" role="tabpanel" aria-labelledby="pill2-step3-tab">
 			   <h5 class="m-3">
-			   Run microstep by microstep and print the modified elements on each step.<br>
+			   <strong>Goal</strong>: Run microstep by microstep and print the modified elements on each step.<br>
 			   <br>
-			   For example: 'run' 'microstep by microstep' the 'asm-ep_s1_e1.txt' assembly for the 'ep' architecture with the 'mc-ep_base.txt' microcode, and print for each microinstruction the state elementes that modify its value:
+			   <strong>For example</strong>: 'run microstep by microstep' the 'asm-ep_s1_e1.txt' assembly for the 'ep' architecture with the 'mc-ep_base.txt' microcode, and print for each microinstruction the state elementes that modify its value:
 			   </h5>
-<div class="m-2 border">
+<div class="m-2 border border-secondary">
 <kbd class="w-100" style="display:block;">
 	./wepsim_node.sh microstepbymicrostep  ep ./examples/microcode/mc-ep_base.txt ./examples/assembly/asm-ep_s1_e1.txt
 </kbd>
@@ -868,9 +869,11 @@
 		      </div>
 		      <div class="tab-pane" id="pill2-step6" role="tabpanel" aria-labelledby="pill2-step6-tab">
 			   <h5 class="m-3">
-			      And least but not less, it is possible to execute microstep by microstep but with a more descriptive output (and from a checkpoint too):
+			   <strong>Goal</strong>: Run microstep by microstep from a checkpoint and with a more descriptive output.<br>
+			   <br>
+			   <strong>For example</strong>: 'run microstep by microstep' the assembly and microcode from checkpoint 'tutorial_1.txt', and print for each microinstruction the state elementes that modify its value:
 			   </h5>
-<div class="m-2 border">
+<div class="m-2 border border-secondary">
 <kbd class="w-100" style="display:block;">
         ./wepsim_node.sh microstepverbalized checkpoint ./examples/checkpoint/tutorial_1.txt
 </kbd>
@@ -897,7 +900,7 @@
 
 		  <div class="m-0 w-100">
 		    <div class="nav nav-pills nav-fill" id="v-pills-tab3b" role="tablist" aria-orientation="horizontal">
-		      <a class="rounded border border-secondary nav-item nav-link active" data-toggle="pill"  role="tab" aria-selected="true"
+		      <a class="rounded border nav-item nav-link active" data-toggle="pill"  role="tab" aria-selected="true"
 			 id="pill3-step1-tab" href="#pill3-step1" aria-controls="pill3-step1">
 		      <span class="text-white bg-primary rounded p-1">Run</span></a>
 		      <a class="rounded border border-secondary nav-item nav-link" data-toggle="pill"  role="tab" aria-selected="false"
@@ -909,15 +912,15 @@
 		    </div>
 		  </div>
 
-		  <div class="m-0 border border-secondary">
+		  <div class="m-0 border">
 		    <div class="tab-content" id="v-pills-tabContent">
 		      <div class="tab-pane show active" id="pill3-step1" role="tabpanel" aria-labelledby="pill3-step1-tab">
 			   <h5 class="m-3">
-			   Run and print the final state.<br>
+			   <strong>Goal</strong>: Run and print the final state.<br>
 			   <br>
-			   For example: 'run' the 'asm-ep_s1_e1.txt' assembly for the 'ep' architecture with the 'mc-ep_base.txt' microcode, and print the final state:
+			   <strong>For example</strong>: 'run' the 'asm-ep_s1_e1.txt' assembly for the 'ep' architecture with the 'mc-ep_base.txt' microcode, and print the final state:
 			   </h5>
-<div class="m-2 border">
+<div class="m-2 border border-secondary">
 <kbd class="w-100" style="display:block;">
 	./wepsim_node.sh run ep ./examples/microcode/mc-ep_base.txt ./examples/assembly/asm-ep_s1_e1.txt
 </kbd>
@@ -928,11 +931,11 @@
 		      </div>
 		      <div class="tab-pane" id="pill3-step2" role="tabpanel" aria-labelledby="pill3-step2-tab">
 			   <h5 class="m-3">
-			   Run step by step and print the modified elements on each step.<br>
+			   <strong>Goal</strong>: Run step by step and print the modified elements on each step.<br>
 			   <br>
-			   For example: 'run' 'step by step' the 'asm-ep-S1E1.txt' assembly for the 'ep' architecture with the 'mc-ep_base.txt' microcode, and print for each assembly instruction the state elements that modify its value:
+			   <strong>For example</strong>: 'run' 'step by step' the 'asm-ep-S1E1.txt' assembly for the 'ep' architecture with the 'mc-ep_base.txt' microcode, and print for each assembly instruction the state elements that modify its value:
 			   </h5>
-<div class="m-2 border">
+<div class="m-2 border border-secondary">
 <kbd class="w-100" style="display:block;">
 	./wepsim_node.sh stepbystep ep ./examples/microcode/mc-ep_base.txt ./examples/assembly/asm-ep_s1_e1.txt
 </kbd>
@@ -946,11 +949,11 @@
 		      </div>
 		      <div class="tab-pane" id="pill3-step3" role="tabpanel" aria-labelledby="pill3-step3-tab">
 			   <h5 class="m-3">
-			   Run microstep by microstep and print the modified elements on each step.<br>
+			   <strong>Goal</strong>: Run microstep by microstep and print the modified elements on each step.<br>
 			   <br>
-			   For example: 'run' 'microstep by microstep' the 'asm-ep_s1_e1.txt' assembly for the 'ep' architecture with the 'mc-ep_base.txt' microcode, and print for each microinstruction the state elementes that modify its value:
+			   <strong>For example</strong>: 'run' 'microstep by microstep' the 'asm-ep_s1_e1.txt' assembly for the 'ep' architecture with the 'mc-ep_base.txt' microcode, and print for each microinstruction the state elementes that modify its value:
 			   </h5>
-<div class="m-2 border">
+<div class="m-2 border border-secondary">
 <kbd class="w-100" style="display:block;">
 	./wepsim_node.sh microstepbymicrostep  ep ./examples/microcode/mc-ep_base.txt ./examples/assembly/asm-ep_s1_e1.txt
 </kbd>
@@ -966,11 +969,11 @@
 		      </div>
 		      <div class="tab-pane" id="pill3-step4" role="tabpanel" aria-labelledby="pill3-step4-tab">
 			   <h5 class="m-3">
-			   Run and check that state at the end of the execution is the same as the one stored on a file.<br>
+			   <strong>Goal</strong>: Run and check that state at the end of the execution is the same as the one stored on a file.<br>
 			   <br>
-			   For example: 'run' the 'asm-ep_s1_e1.txt' assembly for the 'ep' architecture with the 'mc-ep_base.txt' microcode (and if it matchs the expected state then the output is going to be):
+			   <strong>For example</strong>: 'run' the 'asm-ep_s1_e1.txt' assembly for the 'ep' architecture with the 'mc-ep_base.txt' microcode (and if it matchs the expected state then the output is going to be):
 			   </h5>
-<div class="m-2 border">
+<div class="m-2 border border-secondary">
 <kbd class="w-100" style="display:block;">
 	./wepsim_node.sh check ep ./examples/microcode/mc-ep_base.txt ./examples/assembly/asm-ep_s1_e1.txt ./examples/checklist/cl-ep_s1_e1.txt
 </kbd>
@@ -981,11 +984,11 @@
 		      </div>
 		      <div class="tab-pane" id="pill3-step5" role="tabpanel" aria-labelledby="pill3-step5-tab">
 			   <h5 class="m-3">
-			   Run and check that state at the end of the execution is not the same as the one stored on a file.<br>
+			   <strong>Goal</strong>: Run and check that state at the end of the execution is not the same as the one stored on a file.<br>
 			   <br>
-			   For example: 'run' the 'asm-ep_s1_e1.txt' assembly for the 'ep' architecture with the 'mc-ep_base.txt' microcode (and if it fails to match the expected state then the output is going to be):
+			   <strong>For example</strong>: 'run' the 'asm-ep_s1_e1.txt' assembly for the 'ep' architecture with the 'mc-ep_base.txt' microcode (and if it fails to match the expected state then the output is going to be):
 			   </h5>
-<div class="m-2 border">
+<div class="m-2 border border-secondary">
 <kbd class="w-100" style="display:block;">
 	./wepsim_node.sh check ep ./examples/microcode/mc-ep_base.txt ./examples/assembly/asm-ep_s1_e1.txt ./examples/checklist/cl-ep_s1_e2.txt
 </kbd>
@@ -1048,7 +1051,7 @@
 					  } catch (e) {
 						 alert(e) ;
 					  }
-				       return false;"><em class="fas fa-info"></em>&nbsp; How to execute an example</a>
+				       return false;"><em class="fas fa-info"></em>&nbsp; How to execute an example (1...34)</a>
 
 			  <a href="#"
 			     class="nav-item nav-link mx-2 border border-secondary"
@@ -1059,7 +1062,7 @@
 					  } catch (e) {
 						 alert(e) ;
 					  }
-				       return false;"><em class="fas fa-info"></em>&nbsp;How to configure the execution speed</a>
+				       return false;"><em class="fas fa-info"></em>&nbsp;How to use the execution speed (35...72)</a>
 		    </nav>
 
 		    <div class="col-12 py-2 px-0">
