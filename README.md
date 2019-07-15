@@ -1,11 +1,13 @@
-# WepSIM Home Page
+# WepSIM Simulator
 
-+ WepSIM Simulator:
+### WepSIM (online)
+   * https://wepsim.github.io/wepsim
 
-   * Online:      https://wepsim.github.io/wepsim
-   * Information: https://wepsim.github.io/
-   * Source code: https://github.com/wepsim/wepsim
-   * License for WepSIM project: GNU Lesser General Public License version 3
+### WepSIM Information
+   * https://wepsim.github.io/
 
-![screen:wepsim_simulator_013](https://raw.githubusercontent.com/wepsim/wepsim/master/help/simulator/simulator013.jpg)
+### WepSIM Source code
+   * https://github.com/wepsim/wepsim
+   * License: GNU Lesser General Public License version 3
 
+![screen:wepsim_simulator_013](https://raw.githubusercontent.com/wepsim/wepsim/master/images/simulator/simulator013.jpg)
