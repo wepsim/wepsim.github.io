@@ -5,7 +5,9 @@
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport"    content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport"    content="user-scalable=yes, initial-scale=1,
+                             width=device-width,
+                             maximum-scale=2.5, minimum-scale=.5" />
     <meta name="description" content="WepSIM homepage">
     <meta name="author"      content="WepSIM authors">
 
@@ -27,6 +29,8 @@
       gtag('js', new Date());
       gtag('config', 'UA-80849772-3');
     </script>
+
+    <meta name="google-site-verification" content="gbIx0pN_mlbiXYFvWz9h251qfap7r2W4yMRkS2tVCS4" />
 
 </head>
 
@@ -122,7 +126,8 @@
             <div class="row d-flex align-content-center flex-wrap">
                 <div class="col-12 pt-2 pb-5">
 
-			<div id="carousel-1" class="carousel slide carousel-fade" data-ride="carousel">
+			<div id="carousel-1" class="carousel slide carousel-fade"
+                             data-ride="carousel" aria-label="carousel of 4 gif to introduce WepSIM">
 			  <ol class="carousel-indicators">
 			      <li data-target="#carousel-1" data-slide-to="0" class="active"></li>
 			      <li data-target="#carousel-1" data-slide-to="1"></li>
@@ -449,7 +454,8 @@
 
 				<h5 class="pb-4">As Progressive Web Application:</h5>
 
-				<div id="carousel-3b" class="carousel slide carousel-fade" data-ride="carousel">
+				<div id="carousel-3b" class="carousel slide carousel-fade"
+                                     data-ride="carousel" aria-label="carousel of gifs to introduce PWA">
 				  <ol class="carousel-indicators">
 				      <li data-target="#carousel-3b" data-slide-to="0" class="active"></li>
 				      <li data-target="#carousel-3b" data-slide-to="1"></li>
@@ -529,7 +535,8 @@
 				<h5 class="pb-4">As Progressive Web Application:<br>
 				</h5>
 
-				<div id="carousel-3a" class="carousel slide carousel-fade" data-ride="carousel">
+				<div id="carousel-3a" class="carousel slide carousel-fade"
+                                     data-ride="carousel" aria-label="carousel of gifs to introduce PWA">
 				  <ol class="carousel-indicators">
 				      <li data-target="#carousel-3a" data-slide-to="0" class="active"></li>
 				      <li data-target="#carousel-3a" data-slide-to="1"></li>
@@ -1103,9 +1110,12 @@
 
 		    <div class="col-12 py-2 px-0">
 				<div id="idiv1" style="overflow: auto!important; -webkit-overflow-scrolling: touch!important;">
+
 				<iframe class="w-100 border border-secondary embed-responsive-item"
 					style="overflow: auto!important; -webkit-overflow-scrolling: touch!important; height:100vh; position:relative"
-					id="iframe1" 
+					title="Embedded WepSIM"
+					aria-hidden="true"
+					id="iframe1"
 					src="https://acaldero.github.io/wepsim/ws_dist/wepsim-compact.html?notify=false&checkpoint=https://acaldero.github.io/wepsim/examples/checkpoint/tutorial_2.txt"></iframe>
 				</div>
 		    </div>
