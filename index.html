@@ -5,7 +5,9 @@
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport"    content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport"    content="user-scalable=yes, initial-scale=1,
+                             width=device-width,
+                             maximum-scale=2.5, minimum-scale=.5" />
     <meta name="description" content="WepSIM homepage">
     <meta name="author"      content="WepSIM authors">
 
@@ -27,6 +29,8 @@
       gtag('js', new Date());
       gtag('config', 'UA-80849772-3');
     </script>
+
+    <meta name="google-site-verification" content="gbIx0pN_mlbiXYFvWz9h251qfap7r2W4yMRkS2tVCS4" />
 
 </head>
 
@@ -122,7 +126,8 @@
             <div class="row d-flex align-content-center flex-wrap">
                 <div class="col-12 pt-2 pb-5">
 
-			<div id="carousel-1" class="carousel slide carousel-fade" data-ride="carousel">
+			<div id="carousel-1" class="carousel slide carousel-fade"
+                             data-ride="carousel" aria-label="carousel of 4 gif to introduce WepSIM">
 			  <ol class="carousel-indicators">
 			      <li data-target="#carousel-1" data-slide-to="0" class="active"></li>
 			      <li data-target="#carousel-1" data-slide-to="1"></li>
@@ -133,12 +138,12 @@
 			  <div class="carousel-inner" role="listbox">
 			    <div class="carousel-item active" data-interval="20000">
 				<center>
-				<img class="img-responsive pb-5"
+				<img class="img-responsive pb-5 mb-3"
 				     src="https://raw.githubusercontent.com/wepsim/wepsim/master/images/welcome/simulation_xinstruction.gif"
 				     style="max-height:65vh !important; max-width:90vw !important;"
 				     alt="wepsim screenshot 2">
 				</center>
-				<div class="carousel-caption bg-dark p-1">
+				<div class="carousel-caption bg-dark p-1 w-75">
 				     <h6>Students are able to see how values are modified
 					     for each clock cycle (at microprograming level),
 				         and for each assembly instruction (at assembly level) too</h6>
@@ -146,12 +151,12 @@
 			    </div>
 			    <div class="carousel-item" data-interval="12000">
 				<center>
-				<img class="img-responsive pb-5"
+				<img class="img-responsive pb-5 mb-3"
 				     src="https://raw.githubusercontent.com/wepsim/wepsim/master/images/welcome/change_signal_value.gif"
 				     style="max-height:65vh !important; max-width:90vw !important;"
 				     alt="wepsim screenshot 1">
 				</center>
-				<div class="carousel-caption bg-dark p-1">
+				<div class="carousel-caption bg-dark p-1 w-75">
 				     <h6>For each control signals students can explorer how it works,
 					 they could change its associated values, and
 				         they could check  the associated help</h6>
@@ -159,23 +164,23 @@
 			    </div>
 			    <div class="carousel-item" data-interval="8000">
 				<center>
-				<img class="img-responsive pb-5"
+				<img class="img-responsive pb-5 mb-3"
 				     src="https://raw.githubusercontent.com/wepsim/wepsim/master/images/welcome/example_usage.gif"
 				     style="max-height:65vh !important; max-width:90vw !important;"
 				     alt="wepsim screenshot 4">
 				</center>
-				<div class="carousel-caption bg-dark p-1">
+				<div class="carousel-caption bg-dark p-1 w-75">
 				     <h6>WepSIM comes with several examples...</h6>
 				</div>
 			    </div>
 			    <div class="carousel-item" data-interval="7000">
 				<center>
-				<img class="img-responsive pb-5"
+				<img class="img-responsive pb-5 mb-3"
 				     src="https://raw.githubusercontent.com/wepsim/wepsim/master/images/welcome/config_usage.gif"
 				     style="max-height:65vh !important; max-width:90vw !important;"
 				     alt="wepsim screenshot 7">
 				</center>
-				<div class="carousel-caption bg-dark p-1">
+				<div class="carousel-caption bg-dark p-1 w-75">
 				     <h6>...And WepSIM can be easily configured</h6>
 				</div>
 			    </div>
@@ -360,7 +365,7 @@
 		<li>You could <u>run</u> WepSIM <span class="rounded text-dark bg-light">from text-based command-line or any modern Web Browser</span>:</li>
 	    </h5>
 
-	    <div class="row card-deck pt-2 pb-4">
+	    <div class="row card-deck pt-2 pb-4 mx-0">
 
 		  <div class="card col-sm-6 p-0 border-secondary">
 		    <div class="card-header bg-light">
@@ -414,12 +419,13 @@
 		    </div>
 		    <div class="card-body">
 			<h5 class="pb-4">WepSIM on
-			<a href="https://play.google.com/store/apps/details?id=es.uc3m.inf.arcos.wepsim">Google Play Store</a><br>
+			<a href="https://play.google.com/store/apps/details?id=es.uc3m.inf.arcos.wepsim">Google Play Store</a>:<br>
 			</h5>
 
 			<img class="img-responsive card-img-top mx-auto d-block"
-			     style="max-height:25vh !important; max-width:10vw !important;"
-			     src="images/android-logo.png" alt="android logo">
+			     style="max-height:35vh !important; max-width:25vw !important;"
+			     src="images/google-play-wepsim.png" alt="google play screenshot">
+
 		    </div>
 		  </div>
 
@@ -449,7 +455,8 @@
 
 				<h5 class="pb-4">As Progressive Web Application:</h5>
 
-				<div id="carousel-3b" class="carousel slide carousel-fade" data-ride="carousel">
+				<div id="carousel-3b" class="carousel slide carousel-fade"
+                                     data-ride="carousel" aria-label="carousel of gifs to introduce PWA">
 				  <ol class="carousel-indicators">
 				      <li data-target="#carousel-3b" data-slide-to="0" class="active"></li>
 				      <li data-target="#carousel-3b" data-slide-to="1"></li>
@@ -460,7 +467,7 @@
 				  <div class="carousel-inner" role="listbox">
 				    <div class="carousel-item active">
 					<center>
-					<img class="img-responsive pb-5"
+					<img class="img-responsive pb-5 mb-3"
 					     src="https://raw.githubusercontent.com/wepsim/wepsim/master/images/pwa/pwa_android001.jpg"
 					     style="max-height:65vh !important;"
 					     alt="wepsim screenshot android">
@@ -473,12 +480,12 @@
 				    </div>
 				    <div class="carousel-item">
 					<center>
-					<img class="img-responsive pb-5"
+					<img class="img-responsive pb-5 mb-3"
 					     src="https://raw.githubusercontent.com/wepsim/wepsim/master/images/pwa/pwa_android002.jpg"
 					     style="height:65vh !important;"
 					     alt="wepsim screenshot android">
 					</center>
-					<div class="carousel-caption bg-dark p-1">
+					<div class="carousel-caption bg-dark p-1 w-75">
 					     <h6>
 					     2.- Move within share options until 'add to home screen' option and click on it.
 					     </h6>
@@ -486,12 +493,12 @@
 				    </div>
 				    <div class="carousel-item">
 					<center>
-					<img class="img-responsive pb-5"
+					<img class="img-responsive pb-5 mb-3"
 					     src="https://raw.githubusercontent.com/wepsim/wepsim/master/images/pwa/pwa_android003.jpg"
 					     style="height:65vh !important;"
 					     alt="wepsim screenshot android">
 					</center>
-					<div class="carousel-caption bg-dark p-1">
+					<div class="carousel-caption bg-dark p-1 w-75">
 					     <h6>
 					     3.- Then click in the 'add' option.
 					     </h6>
@@ -499,12 +506,12 @@
 				    </div>
 				    <div class="carousel-item">
 					<center>
-					<img class="img-responsive pb-5"
+					<img class="img-responsive pb-5 mb-3"
 					     src="https://raw.githubusercontent.com/wepsim/wepsim/master/images/pwa/pwa_android004.jpg"
 					     style="height:65vh !important;"
 					     alt="wepsim screenshot android">
 					</center>
-					<div class="carousel-caption bg-dark p-1">
+					<div class="carousel-caption bg-dark p-1 w-75">
 					     <h6>
 					     4.- Finally WepSIM can be launched from the home screen icon.
 					     </h6>
@@ -514,11 +521,11 @@
 
 				  <!-- Left and right controls -->
 				  <a class="left carousel-control-prev" href="#carousel-3b" role="button" data-slide="prev">
-				     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+			             <span class="carousel-control-prev-icon" aria-hidden="true" style="filter:invert(100%);"></span>
 				     <span class="sr-only">Previous</span>
 				  </a>
 				  <a class="right carousel-control-next" href="#carousel-3b" role="button" data-slide="next">
-				     <span class="carousel-control-next-icon" aria-hidden="true"></span>
+			             <span class="carousel-control-next-icon" aria-hidden="true" style="filter:invert(100%);"></span>
 				     <span class="sr-only">Next</span>
 				  </a>
 				</div>
@@ -529,7 +536,8 @@
 				<h5 class="pb-4">As Progressive Web Application:<br>
 				</h5>
 
-				<div id="carousel-3a" class="carousel slide carousel-fade" data-ride="carousel">
+				<div id="carousel-3a" class="carousel slide carousel-fade"
+                                     data-ride="carousel" aria-label="carousel of gifs to introduce PWA">
 				  <ol class="carousel-indicators">
 				      <li data-target="#carousel-3a" data-slide-to="0" class="active"></li>
 				      <li data-target="#carousel-3a" data-slide-to="1"></li>
@@ -540,7 +548,7 @@
 				  <div class="carousel-inner" role="listbox">
 				    <div class="carousel-item active">
 					<center>
-					<img class="img-responsive pb-5"
+					<img class="img-responsive pb-5 mb-3"
 					     src="https://raw.githubusercontent.com/wepsim/wepsim/master/images/pwa/pwa_ios001.jpg"
 					     style="max-height:50vh !important;"
 					     alt="wepsim screenshot ios">
@@ -553,12 +561,12 @@
 				    </div>
 				    <div class="carousel-item">
 					<center>
-					<img class="img-responsive pb-5"
+					<img class="img-responsive pb-5 mb-3"
 					     src="https://raw.githubusercontent.com/wepsim/wepsim/master/images/pwa/pwa_ios002.jpg"
 					     style="max-height:50vh !important;"
 					     alt="wepsim screenshot ios">
 					</center>
-					<div class="carousel-caption bg-dark p-1">
+					<div class="carousel-caption bg-dark p-1 w-75">
 					     <h6>
 					     2.- Move within share options until 'add to home screen' option and click on it.
 					     </h6>
@@ -566,12 +574,12 @@
 				    </div>
 				    <div class="carousel-item">
 					<center>
-					<img class="img-responsive pb-5"
+					<img class="img-responsive pb-5 mb-3"
 					     src="https://raw.githubusercontent.com/wepsim/wepsim/master/images/pwa/pwa_ios003.jpg"
 					     style="max-height:50vh !important;"
 					     alt="wepsim screenshot ios">
 					</center>
-					<div class="carousel-caption bg-dark p-1">
+					<div class="carousel-caption bg-dark p-1 w-75">
 					     <h6>
 					     3.- Then click in the 'add' option.
 					     </h6>
@@ -579,12 +587,12 @@
 				    </div>
 				    <div class="carousel-item">
 					<center>
-					<img class="img-responsive pb-5"
+					<img class="img-responsive pb-5 mb-3"
 					     src="https://raw.githubusercontent.com/wepsim/wepsim/master/images/pwa/pwa_ios004.jpg"
 					     style="max-height:50vh !important;"
 					     alt="wepsim screenshot ios">
 					</center>
-					<div class="carousel-caption bg-dark p-1">
+					<div class="carousel-caption bg-dark p-1 w-75">
 					     <h6>
 					     4.- Finally WepSIM can be launched from the home screen icon.
 					     </h6>
@@ -594,11 +602,11 @@
 
 				  <!-- Left and right controls -->
 				  <a class="left carousel-control-prev" href="#carousel-3a" role="button" data-slide="prev">
-				     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+			             <span class="carousel-control-prev-icon" aria-hidden="true" style="filter:invert(100%);"></span>
 				     <span class="sr-only">Previous</span>
 				  </a>
 				  <a class="right carousel-control-next" href="#carousel-3a" role="button" data-slide="next">
-				     <span class="carousel-control-next-icon" aria-hidden="true"></span>
+			             <span class="carousel-control-next-icon" aria-hidden="true" style="filter:invert(100%);"></span>
 				     <span class="sr-only">Next</span>
 				  </a>
 				</div>
@@ -1103,8 +1111,11 @@
 
 		    <div class="col-12 py-2 px-0">
 				<div id="idiv1" style="overflow: auto!important; -webkit-overflow-scrolling: touch!important;">
+
 				<iframe class="w-100 border border-secondary embed-responsive-item"
 					style="overflow: auto!important; -webkit-overflow-scrolling: touch!important; height:100vh; position:relative"
+					title="Embedded WepSIM"
+					aria-hidden="true"
 					id="iframe1" 
 					src="https://wepsim.github.io/wepsim/ws_dist/wepsim-classic.html?notify=false&checkpoint=https://wepsim.github.io/wepsim/examples/checkpoint/tutorial_2.txt"></iframe>
 				</div>
