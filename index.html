@@ -232,18 +232,18 @@
 			    <div class="card-body">
 			      <h5 class="card-title">
 				  Students gain an integrated vision of how hardware and software interplays through microprogramming and assembly programming. <br>
-				  <a href="https://wepsim.github.io/wepsim/ws_dist/wepsim-classic.html?mode=ep&example=27&simulator=assembly:screen">Interrupts</a>,
-				  <a href="https://wepsim.github.io/wepsim/ws_dist/wepsim-classic.html?mode=ep&example=29&simulator=assembly:screen">exceptions</a>,
-				  <a href="https://wepsim.github.io/wepsim/ws_dist/wepsim-classic.html?mode=ep&example=28&simulator=assembly:register_file">system calls</a>,
-				  <a href="https://wepsim.github.io/wepsim/ws_dist/wepsim-classic.html?mode=ep&example=32&simulator=assembly:screen">threads</a>,
+				  <a href="https://wepsim.github.io/wepsim/ws_dist/wepsim-classic.html?mode=ep&examples_set=Default&example=8&simulator=assembly:screen">Interrupts</a>,
+				  <a href="https://wepsim.github.io/wepsim/ws_dist/wepsim-classic.html?mode=ep&examples_set=Default&example=28&simulator=assembly:screen">exceptions</a>,
+				  <a href="https://wepsim.github.io/wepsim/ws_dist/wepsim-classic.html?mode=ep&examples_set=Default&example=9&simulator=assembly:register_file">system calls</a>,
+				  <a href="https://wepsim.github.io/wepsim/ws_dist/wepsim-classic.html?mode=ep&examples_set=Default&example=13&simulator=assembly:screen">threads</a>,
 				  etc. are include in <a href="#gettingstarted_example">the initial Examples</a>.
 			      </h5>
 			    </div>
 			    <div class="card-footer d-none">
-				 <a href="https://wepsim.github.io/wepsim/ws_dist/wepsim-classic.html?mode=ep&example=27&simulator=assembly:screen">Interrupts</a>,
-				 <a href="https://wepsim.github.io/wepsim/ws_dist/wepsim-classic.html?mode=ep&example=29&simulator=assembly:screen">exceptions</a>,
-				 <a href="https://wepsim.github.io/wepsim/ws_dist/wepsim-classic.html?mode=ep&example=28&simulator=assembly:register_file">system calls</a>,
-				 <a href="https://wepsim.github.io/wepsim/ws_dist/wepsim-classic.html?mode=ep&example=32&simulator=assembly:screen">threads</a>,
+				 <a href="https://wepsim.github.io/wepsim/ws_dist/wepsim-classic.html?mode=ep&examples_set=Default&example=8&simulator=assembly:screen">Interrupts</a>,
+				 <a href="https://wepsim.github.io/wepsim/ws_dist/wepsim-classic.html?mode=ep&examples_set=Default&example=28&simulator=assembly:screen">exceptions</a>,
+				 <a href="https://wepsim.github.io/wepsim/ws_dist/wepsim-classic.html?mode=ep&examples_set=Default&example=9&simulator=assembly:register_file">system calls</a>,
+				 <a href="https://wepsim.github.io/wepsim/ws_dist/wepsim-classic.html?mode=ep&examples_set=Default&example=13&simulator=assembly:screen">threads</a>,
 				 etc. are include in Examples.
 			         WepSIM can be used as a complementary tool while teaching Computer Architecture, Operating Systems, etc.
 			    </div>
@@ -399,7 +399,7 @@
 			     src="images/html5_logo.png">
 		    </div>
 		    <div class="card-footer bg-light">
-			 [*] Tested with Google Chrome 75+, Mozilla Firefox 70+, <br> Microsoft Edge 18362+, Apple Safari 12+
+			 [*] Tested with Google Chrome 80+, Mozilla Firefox 75+, <br> Edge Chromium 83+, Apple Safari 12+
 		    </div>
 		  </div>
 
@@ -627,7 +627,7 @@
 
 	    <div class="row card-deck p-2">
 
-		  <div class="card col-sm-12 col-lg-6 p-0 border-secondary">
+		  <div class="card col-sm-12 col-lg-8 p-0 mx-auto border-secondary">
 		    <div class="card-header bg-light">
 			<h6 class="font-weight-bold">WepSIM Source Code on GitHub</h6>
 		    </div>
@@ -663,7 +663,37 @@
 
             <a name="gettingstarted_example" id="gettingstarted_example"></a>
 	    <h5 class="m-1 pt-2 pb-3">
-		<li>To learn with some WepSIM example, please follow <span class="rounded text-primary font-weight-bold">these steps</span>:</li>
+		<li>WepSIM comes with some interesting examples (<span class="rounded text-primary font-weight-bold">click to load the example</span> and then press 'Run'):</li>
+	    </h5>
+
+            <div class="row m-1 pb-3">
+<ul>
+<li>
+<a class="btn btn-outline-primary py-0 my-1 text-dark font-weight-bold" href="https://wepsim.github.io/wepsim/ws_dist/wepsim-classic.html?mode=ep&example=6&simulator=assembly:register_file">BitOps: Split a IEEE754 floating point value into its parts (sign, exponent, mantissa).</a>
+</li>
+
+<li>
+<a class="btn btn-outline-primary py-0 my-1 text-dark font-weight-bold" href="https://wepsim.github.io/wepsim/ws_dist/wepsim-classic.html?mode=ep&example=3&simulator=assembly:register_file">Vector: Given a vector, compute the sum of its elements.</a>
+</li>
+
+<li>
+<a class="btn btn-outline-primary py-0 my-1 text-dark font-weight-bold" href="https://wepsim.github.io/wepsim/ws_dist/wepsim-classic.html?mode=ep&example=7&simulator=assembly:register_file">Matrix: Count the zero elements in a matrix of integer values.</a>
+</li>
+
+<li>
+<a class="btn btn-outline-primary py-0 my-1 text-dark font-weight-bold" href="https://wepsim.github.io/wepsim/ws_dist/wepsim-classic.html?mode=ep&example=13&simulator=assembly:screen">Round-Robin: Two threads, one prints 'a' letter and the other prints 'b' in a round-robin fashion.</a>
+</li>
+
+<li>
+<a class="btn btn-outline-primary py-0 my-1 text-dark font-weight-bold" href="https://acaldero.github.io/wepsim/ws_dist/?mode=ep&example=29&simulator=assembly:screen">System events: Floating point exception (0/0), system call (print-string), and an interrupt (0 every 900 clock cycles).</a>
+</li>
+<li>...</li>
+</ul>
+	    </div>
+
+
+	    <h5 class="m-1 pt-2 pb-3">
+		<li>To load and use the WepSIM examples, please follow <span class="rounded text-primary font-weight-bold">these steps</span>:</li>
 	    </h5>
 
             <div class="row m-1 pb-3">
