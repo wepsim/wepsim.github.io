@@ -241,7 +241,10 @@ int main ( int argc, char *argv[] )
 }
 ```
 
-This program has a **sumav** routine that receives two arguments: the number of elements of an integer vector and the start direction of that integer vector. The routine returns in $v0 the sum of the numbers contained in the vector passed by argument. There is also a **main** routine that takes care of calling the **sumav routine** and ending the program. Note the registers used in the convention for argument passing on this RISC-V are described on page 5 of this statement.
+This program has a **sumav** routine that receives two arguments: the number of elements of an integer vector and the start direction of that integer vector.
+The routine returns the sum of the numbers contained in the vector passed by argument. 
+There is also a **main** routine that takes care of calling the **sumav** routine and ending the program.
+Note the registers used in the convention for argument passing on this RISC-V are described at the end of Exercise 1.
 
 The results of this exercise must be indicated both, the part of the memory corresponding to this exercise and in the file associated with the requested functionality.
 
