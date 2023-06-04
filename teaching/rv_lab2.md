@@ -23,20 +23,93 @@ This laboratory consists of 2 exercises that you can develop and test in <a href
  
 The company we are work with request you to **design, implement and test** a new instruction set similar to the RISC-V instruction set, using the WepSIM simulator. Instructions are listed in Table 1. The instructions will be encoded in 32 bits.
 
-| **Instruction**      |   **Format**                                                           |  **Associated functionality**      | **Status register**  |
-|----------------------|------------------------------------------------------------------------|------------------------------------|----------------------|
-| lui RRE1, U32        | CO (31-26): 010010<br>RRE1 (25-21)<br>U32  (63-32)                     | BR[RRE1] ← U32                     | Not updated          |
-| sw RRE1, (RRE2)      | CO (31-26): 010000<br>RRE1 (25-21)<br>RRE2 (20-16)                     | Memory[RRE1] ← BR[RRE2]            | Not updated          |
-| lw RRE1, (RRE2)      | CO (31-26): 010011<br>RRE1 (25-21)<br>RRE2 (20-16)                     | BR[RRE1] ←Memory[RRE2]             | Not updated          |
-| add RRE1, RRE2, RRE3 | CO (31-26): 011000<br>RRE1 (25-21)<br>RRE2 (20-16)<br>RRE3 (15-11)<br> | BR[RRE1]  ← BR[RRE2]  + BR[RRE3]   | Updated              |
-| addi RRE1, RRE2, S16 | CO (31-26): 011010<br>RRE1 (25-21)<br>RRE2 (20-16)<br>S16 (15-0)       | BR[RRE1] ←BR[RRE2] +S16            | Updated              |
-| neg RRE1, RRE2       | CO (31-26): 011011<br>RRE1 (25-21)<br>RRE2 (20-16)                     | BR[RRE1]  ← 0 -  RRE2              | Updated              |
-| bnz S16              | CO (31-26): 110011<br>S16  (15-0)                                      | IF (SR. Z)<br>PC ← PC + S16        | Not updated          |
-| beq RRE1, RRE2, S10  | CO (31-26): 110100<br>RRE1 (25-21)<br>RRE2 (20-16)<br>S10 (9-0)        | IF (RRE1  x RRE2)<br>PC ← PC + S10 | Not updated          | 
-| jto RRE1 U16         | CO (31-26): 100001<br>RRE1 (25-21)<br>U16 (15-0)                       | BR[RRE1] ← PC<br>PC ← U16          | Not updated          | 
-| jr RRE1              | CO (31-26): 100010<br>RRE1 (25-21)                                     | PC ← BR[RRE1]                      | Not updated          |
-| halt                 | CO (31-26): 100011                                                     | PC ← 0x00<br>SR ← 0x00             | Not updated          |
-|  |  |  |  |
+<table style="border: 1px solid black; border-collapse: collapse; border-style: dotted" cellpadding="5">
+<tr    style="border: 1px solid black; border-collapse: collapse; border-style: dotted">
+<th> Instruction </th>
+<th> Format </th>
+<th> Associated functionality </th>
+<th> Status register </td>
+</tr>
+
+<tr style="border: 1px solid black; border-collapse: collapse; border-style: dotted">
+<td style="border: 1px solid black; border-collapse: collapse; border-style: dotted">  lui RRE1, U32 </td>
+<td style="border: 1px solid black; border-collapse: collapse; border-style: dotted">  CO (31-26): 010010<br>RRE1 (25-21)<br>U32 (63-32) </td>
+<td style="border: 1px solid black; border-collapse: collapse; border-style: dotted">  BR[RRE1] ← U32 </td>
+<td style="border: 1px solid black; border-collapse: collapse; border-style: dotted">  Not updated </td>
+</tr>
+
+<tr style="border: 1px solid black; border-collapse: collapse; border-style: dotted">
+<td style="border: 1px solid black; border-collapse: collapse; border-style: dotted">  sw RRE1, (RRE2) </td>
+<td style="border: 1px solid black; border-collapse: collapse; border-style: dotted">  CO (31-26): 010000<br>RRE1 (25-21)<br>RRE2 (20-16) </td>
+<td style="border: 1px solid black; border-collapse: collapse; border-style: dotted">  Memory[RRE1] ← BR[RRE2] </td>
+<td style="border: 1px solid black; border-collapse: collapse; border-style: dotted">  Not updated </td>
+</tr>
+
+<tr style="border: 1px solid black; border-collapse: collapse; border-style: dotted">
+<td style="border: 1px solid black; border-collapse: collapse; border-style: dotted">  lw RRE1, (RRE2)      </td>
+<td style="border: 1px solid black; border-collapse: collapse; border-style: dotted">  CO (31-26): 010011<br>RRE1 (25-21)<br>RRE2 (20-16) </td>
+<td style="border: 1px solid black; border-collapse: collapse; border-style: dotted">  BR[RRE1] ←Memory[RRE2] </td>
+<td style="border: 1px solid black; border-collapse: collapse; border-style: dotted">  Not updated </td>
+</tr>
+
+<tr style="border: 1px solid black; border-collapse: collapse; border-style: dotted">
+<td style="border: 1px solid black; border-collapse: collapse; border-style: dotted">  add RRE1, RRE2, RRE3 </td>
+<td style="border: 1px solid black; border-collapse: collapse; border-style: dotted">  CO (31-26): 011000<br>RRE1 (25-21)<br>RRE2 (20-16)<br>RRE3 (15-11)<br> </td>
+<td style="border: 1px solid black; border-collapse: collapse; border-style: dotted">  BR[RRE1]  ← BR[RRE2]  + BR[RRE3]   </td>
+<td style="border: 1px solid black; border-collapse: collapse; border-style: dotted">  Updated </td>
+</tr>
+
+<tr style="border: 1px solid black; border-collapse: collapse; border-style: dotted">
+<td style="border: 1px solid black; border-collapse: collapse; border-style: dotted">  addi RRE1, RRE2, S16 </td>
+<td style="border: 1px solid black; border-collapse: collapse; border-style: dotted">  CO (31-26): 011010<br>RRE1 (25-21)<br>RRE2 (20-16)<br>S16 (15-0) </td>
+<td style="border: 1px solid black; border-collapse: collapse; border-style: dotted">  BR[RRE1] ←BR[RRE2] +S16 </td>
+<td style="border: 1px solid black; border-collapse: collapse; border-style: dotted">  Updated </td>
+</tr>
+
+<tr style="border: 1px solid black; border-collapse: collapse; border-style: dotted">
+<td style="border: 1px solid black; border-collapse: collapse; border-style: dotted">  neg RRE1, RRE2 </td>
+<td style="border: 1px solid black; border-collapse: collapse; border-style: dotted">  CO (31-26): 011011<br>RRE1 (25-21)<br>RRE2 (20-16) </td>
+<td style="border: 1px solid black; border-collapse: collapse; border-style: dotted">  BR[RRE1]  ← 0 -  RRE2 </td>
+<td style="border: 1px solid black; border-collapse: collapse; border-style: dotted">  Updated </td>
+</tr>
+
+<tr style="border: 1px solid black; border-collapse: collapse; border-style: dotted">
+<td style="border: 1px solid black; border-collapse: collapse; border-style: dotted">  bnz S16 </td>
+<td style="border: 1px solid black; border-collapse: collapse; border-style: dotted">  CO (31-26): 110011<br>S16  (15-0) </td>
+<td style="border: 1px solid black; border-collapse: collapse; border-style: dotted">  IF (SR. Z)<br>PC ← PC + S16 </td>
+<td style="border: 1px solid black; border-collapse: collapse; border-style: dotted">  Not updated </td>
+</tr>
+
+<tr style="border: 1px solid black; border-collapse: collapse; border-style: dotted">
+<td style="border: 1px solid black; border-collapse: collapse; border-style: dotted">  beq RRE1, RRE2, S10  </td>
+<td style="border: 1px solid black; border-collapse: collapse; border-style: dotted">  CO (31-26): 110100<br>RRE1 (25-21)<br>RRE2 (20-16)<br>S10 (9-0) </td>
+<td style="border: 1px solid black; border-collapse: collapse; border-style: dotted">  IF (RRE1  x RRE2)<br>PC ← PC + S10 </td>
+<td style="border: 1px solid black; border-collapse: collapse; border-style: dotted">  Not updated </td>
+</tr>
+
+<tr style="border: 1px solid black; border-collapse: collapse; border-style: dotted">
+<td style="border: 1px solid black; border-collapse: collapse; border-style: dotted">  jto RRE1 U16 </td>
+<td style="border: 1px solid black; border-collapse: collapse; border-style: dotted">  CO (31-26): 100001<br>RRE1 (25-21)<br>U16 (15-0) </td>
+<td style="border: 1px solid black; border-collapse: collapse; border-style: dotted">  BR[RRE1] ← PC<br>PC ← U16 </td>
+<td style="border: 1px solid black; border-collapse: collapse; border-style: dotted">  Not updated </td>
+</tr>
+
+<tr style="border: 1px solid black; border-collapse: collapse; border-style: dotted">
+<td style="border: 1px solid black; border-collapse: collapse; border-style: dotted">  jr RRE1 </td>
+<td style="border: 1px solid black; border-collapse: collapse; border-style: dotted">  CO (31-26): 100010<br>RRE1 (25-21) </td>
+<td style="border: 1px solid black; border-collapse: collapse; border-style: dotted">  PC ← BR[RRE1] </td>
+<td style="border: 1px solid black; border-collapse: collapse; border-style: dotted">  Not updated </td>
+</tr>
+
+<tr style="border: 1px solid black; border-collapse: collapse; border-style: dotted">
+<td style="border: 1px solid black; border-collapse: collapse; border-style: dotted">  halt </td>
+<td style="border: 1px solid black; border-collapse: collapse; border-style: dotted">  CO (31-26): 100011 </td>
+<td style="border: 1px solid black; border-collapse: collapse; border-style: dotted">  PC ← 0x00<br>SR ← 0x00 </td>
+<td style="border: 1px solid black; border-collapse: collapse; border-style: dotted">  Not updated </td>
+</tr>
+</table>
+</html>
+
 <br>
 <html><center><em>Table 1.- RISC-V-like instruction set</em></center></html>
 
@@ -52,20 +125,85 @@ The values "S16/S10" indicate that sign extension must be made while in "U16" no
 
 The following is the mapping between RISC-V registers and WepSIM registers. This association must be indicated in the register section of the microcode of the requested instructions.
 
-| **RV (raw)** | **RV (hl)** | **WepSIM Registry** |  **Meaning**             |
-|--------------|-------------|---------------------|--------------------------|
-| x0           | zero        | R0                  | Contains a zero          |
-| x1           | ra          | R1                  | Call Return vAddress     |
-| x2           | sp          | R2                  | Stack pointer            | 
-| x3           | gp          | R3                  | Global pointer           |
-| x4           | tp          | R4                  | Thread pointer           | 
-| x5 ... x7    | t0 ... t2   | R5 ... R7           | Temporary Records (1/2)  | 
-| x8           | fp          | R8                  | Stack frame              |
-| x9           | s1          | R9                  | Record saved             |
-| x10 ... x11  | a0 ... a1   | R10 ... R11         | Argument for functions (1/2) and return values | 
-| x12 ... x17  | a2 ... a7   | R12 ... R17         | Function Argument (2/2)  | 
-| x18 ... x27  | s2 ... s11  | R18 ... R27         | Registers saved          |
-| x28... x31   | t3 ... t6   | R28 ... R31         | Temporary Records (1/2)  | 
+<table style="border: 1px solid black; border-collapse: collapse; border-style: dotted" cellpadding="5">
+<tr>
+<th colspan="2"> RISC-V </th>
+<th> WepSIM register </th>
+<th> Meaning </th>
+</tr>
+<tr style="border: 1px solid black; border-collapse: collapse; border-style: dotted">
+<td style="border: 1px solid black; border-collapse: collapse; border-style: dotted"> x0 </td>
+<td style="border: 1px solid black; border-collapse: collapse; border-style: dotted"> zero </td>
+<td style="border: 1px solid black; border-collapse: collapse; border-style: dotted"> R0 </td>
+<td style="border: 1px solid black; border-collapse: collapse; border-style: dotted"> Contains a zero </td>
+</tr>
+<tr style="border: 1px solid black; border-collapse: collapse; border-style: dotted">
+<td style="border: 1px solid black; border-collapse: collapse; border-style: dotted"> x1 </td>
+<td style="border: 1px solid black; border-collapse: collapse; border-style: dotted"> ra </td>
+<td style="border: 1px solid black; border-collapse: collapse; border-style: dotted"> R1 </td>
+<td style="border: 1px solid black; border-collapse: collapse; border-style: dotted"> Call Return vAddress     </td>
+</tr>
+<tr style="border: 1px solid black; border-collapse: collapse; border-style: dotted">
+<td style="border: 1px solid black; border-collapse: collapse; border-style: dotted">  x2 </td>
+<td style="border: 1px solid black; border-collapse: collapse; border-style: dotted">  sp </td>
+<td style="border: 1px solid black; border-collapse: collapse; border-style: dotted">  R2 </td>
+<td style="border: 1px solid black; border-collapse: collapse; border-style: dotted">  Stack pointer </td>
+</tr>
+<tr style="border: 1px solid black; border-collapse: collapse; border-style: dotted">
+<td style="border: 1px solid black; border-collapse: collapse; border-style: dotted">  x3 </td>
+<td style="border: 1px solid black; border-collapse: collapse; border-style: dotted">  gp </td>
+<td style="border: 1px solid black; border-collapse: collapse; border-style: dotted">  R3 </td>
+<td style="border: 1px solid black; border-collapse: collapse; border-style: dotted">  Global pointer </td>
+</tr>
+<tr style="border: 1px solid black; border-collapse: collapse; border-style: dotted">
+<td style="border: 1px solid black; border-collapse: collapse; border-style: dotted">  x4 </td>
+<td style="border: 1px solid black; border-collapse: collapse; border-style: dotted">  tp </td>
+<td style="border: 1px solid black; border-collapse: collapse; border-style: dotted">  R4 </td>
+<td style="border: 1px solid black; border-collapse: collapse; border-style: dotted">  Thread pointer </td>
+</tr>
+<tr style="border: 1px solid black; border-collapse: collapse; border-style: dotted">
+<td style="border: 1px solid black; border-collapse: collapse; border-style: dotted">  x5 ... x7 </td>
+<td style="border: 1px solid black; border-collapse: collapse; border-style: dotted">  t0 ... t2       </td>
+<td style="border: 1px solid black; border-collapse: collapse; border-style: dotted">  R5 ... R7 </td>
+<td style="border: 1px solid black; border-collapse: collapse; border-style: dotted">  Temporary Records (1/2)  </td>
+</tr>
+<tr style="border: 1px solid black; border-collapse: collapse; border-style: dotted">
+<td style="border: 1px solid black; border-collapse: collapse; border-style: dotted">  x8 </td>
+<td style="border: 1px solid black; border-collapse: collapse; border-style: dotted">  fp </td>
+<td style="border: 1px solid black; border-collapse: collapse; border-style: dotted">  R8 </td>
+<td style="border: 1px solid black; border-collapse: collapse; border-style: dotted">  Stack frame </td>
+</tr>
+<tr style="border: 1px solid black; border-collapse: collapse; border-style: dotted">
+<td style="border: 1px solid black; border-collapse: collapse; border-style: dotted">  x9 </td>
+<td style="border: 1px solid black; border-collapse: collapse; border-style: dotted">  s1 </td>
+<td style="border: 1px solid black; border-collapse: collapse; border-style: dotted">  R9 </td>
+<td style="border: 1px solid black; border-collapse: collapse; border-style: dotted">  Record saved </td>
+</tr>
+<tr style="border: 1px solid black; border-collapse: collapse; border-style: dotted">
+<td style="border: 1px solid black; border-collapse: collapse; border-style: dotted">  x10 ... x11 </td>
+<td style="border: 1px solid black; border-collapse: collapse; border-style: dotted">  a0 ... a1 </td>
+<td style="border: 1px solid black; border-collapse: collapse; border-style: dotted">  R10 ... R11 </td>
+<td style="border: 1px solid black; border-collapse: collapse; border-style: dotted">  Argument for functions (1/2) and return values </td>
+</tr>
+<tr style="border: 1px solid black; border-collapse: collapse; border-style: dotted">
+<td style="border: 1px solid black; border-collapse: collapse; border-style: dotted">  x12 ... x17 </td>
+<td style="border: 1px solid black; border-collapse: collapse; border-style: dotted">  a2 ... a7 </td>
+<td style="border: 1px solid black; border-collapse: collapse; border-style: dotted">  R12 ... R17 </td>
+<td style="border: 1px solid black; border-collapse: collapse; border-style: dotted">  Function Argument (2/2)  </td>
+</tr>
+<tr style="border: 1px solid black; border-collapse: collapse; border-style: dotted">
+<td style="border: 1px solid black; border-collapse: collapse; border-style: dotted">  x18 ... x27 </td>
+<td style="border: 1px solid black; border-collapse: collapse; border-style: dotted">  s2 ... s11 </td>
+<td style="border: 1px solid black; border-collapse: collapse; border-style: dotted">  R18 ... R27 </td>
+<td style="border: 1px solid black; border-collapse: collapse; border-style: dotted">  Registers saved </td>
+</tr>
+<tr style="border: 1px solid black; border-collapse: collapse; border-style: dotted">
+<td style="border: 1px solid black; border-collapse: collapse; border-style: dotted">  x28... x31 </td>
+<td style="border: 1px solid black; border-collapse: collapse; border-style: dotted">  t3 ... t6 </td>
+<td style="border: 1px solid black; border-collapse: collapse; border-style: dotted">  R28 ... R31 </td>
+<td style="border: 1px solid black; border-collapse: collapse; border-style: dotted">  Temporary Records (1/2)  </td>
+</tr>
+</table>
 <br>
 <html><center><em>Table 2.- RISC-V registers</em></center></html>
 
