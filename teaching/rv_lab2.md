@@ -23,6 +23,7 @@ This laboratory consists of 2 exercises that you can develop and test in <a href
  
 The company we are work with request you to **design, implement and test** a new instruction set similar to the RISC-V instruction set, using the WepSIM simulator. Instructions are listed in Table 1. The instructions will be encoded in 32 bits.
 
+<html>
 <table style="border: 1px solid black; border-collapse: collapse; border-style: dotted" cellpadding="5">
 <tr    style="border: 1px solid black; border-collapse: collapse; border-style: dotted">
 <th> Instruction </th>
@@ -30,77 +31,66 @@ The company we are work with request you to **design, implement and test** a new
 <th> Associated functionality </th>
 <th> Status register </td>
 </tr>
-
 <tr style="border: 1px solid black; border-collapse: collapse; border-style: dotted">
 <td style="border: 1px solid black; border-collapse: collapse; border-style: dotted">  lui RRE1, U32 </td>
 <td style="border: 1px solid black; border-collapse: collapse; border-style: dotted">  CO (31-26): 010010<br>RRE1 (25-21)<br>U32 (63-32) </td>
 <td style="border: 1px solid black; border-collapse: collapse; border-style: dotted">  BR[RRE1] ← U32 </td>
 <td style="border: 1px solid black; border-collapse: collapse; border-style: dotted">  Not updated </td>
 </tr>
-
 <tr style="border: 1px solid black; border-collapse: collapse; border-style: dotted">
 <td style="border: 1px solid black; border-collapse: collapse; border-style: dotted">  sw RRE1, (RRE2) </td>
 <td style="border: 1px solid black; border-collapse: collapse; border-style: dotted">  CO (31-26): 010000<br>RRE1 (25-21)<br>RRE2 (20-16) </td>
 <td style="border: 1px solid black; border-collapse: collapse; border-style: dotted">  Memory[RRE1] ← BR[RRE2] </td>
 <td style="border: 1px solid black; border-collapse: collapse; border-style: dotted">  Not updated </td>
 </tr>
-
 <tr style="border: 1px solid black; border-collapse: collapse; border-style: dotted">
 <td style="border: 1px solid black; border-collapse: collapse; border-style: dotted">  lw RRE1, (RRE2)      </td>
 <td style="border: 1px solid black; border-collapse: collapse; border-style: dotted">  CO (31-26): 010011<br>RRE1 (25-21)<br>RRE2 (20-16) </td>
 <td style="border: 1px solid black; border-collapse: collapse; border-style: dotted">  BR[RRE1] ←Memory[RRE2] </td>
 <td style="border: 1px solid black; border-collapse: collapse; border-style: dotted">  Not updated </td>
 </tr>
-
 <tr style="border: 1px solid black; border-collapse: collapse; border-style: dotted">
 <td style="border: 1px solid black; border-collapse: collapse; border-style: dotted">  add RRE1, RRE2, RRE3 </td>
 <td style="border: 1px solid black; border-collapse: collapse; border-style: dotted">  CO (31-26): 011000<br>RRE1 (25-21)<br>RRE2 (20-16)<br>RRE3 (15-11)<br> </td>
 <td style="border: 1px solid black; border-collapse: collapse; border-style: dotted">  BR[RRE1]  ← BR[RRE2]  + BR[RRE3]   </td>
 <td style="border: 1px solid black; border-collapse: collapse; border-style: dotted">  Updated </td>
 </tr>
-
 <tr style="border: 1px solid black; border-collapse: collapse; border-style: dotted">
 <td style="border: 1px solid black; border-collapse: collapse; border-style: dotted">  addi RRE1, RRE2, S16 </td>
 <td style="border: 1px solid black; border-collapse: collapse; border-style: dotted">  CO (31-26): 011010<br>RRE1 (25-21)<br>RRE2 (20-16)<br>S16 (15-0) </td>
 <td style="border: 1px solid black; border-collapse: collapse; border-style: dotted">  BR[RRE1] ←BR[RRE2] +S16 </td>
 <td style="border: 1px solid black; border-collapse: collapse; border-style: dotted">  Updated </td>
 </tr>
-
 <tr style="border: 1px solid black; border-collapse: collapse; border-style: dotted">
 <td style="border: 1px solid black; border-collapse: collapse; border-style: dotted">  neg RRE1, RRE2 </td>
 <td style="border: 1px solid black; border-collapse: collapse; border-style: dotted">  CO (31-26): 011011<br>RRE1 (25-21)<br>RRE2 (20-16) </td>
 <td style="border: 1px solid black; border-collapse: collapse; border-style: dotted">  BR[RRE1]  ← 0 -  RRE2 </td>
 <td style="border: 1px solid black; border-collapse: collapse; border-style: dotted">  Updated </td>
 </tr>
-
 <tr style="border: 1px solid black; border-collapse: collapse; border-style: dotted">
 <td style="border: 1px solid black; border-collapse: collapse; border-style: dotted">  bnz S16 </td>
 <td style="border: 1px solid black; border-collapse: collapse; border-style: dotted">  CO (31-26): 110011<br>S16  (15-0) </td>
 <td style="border: 1px solid black; border-collapse: collapse; border-style: dotted">  IF (SR. Z)<br>PC ← PC + S16 </td>
 <td style="border: 1px solid black; border-collapse: collapse; border-style: dotted">  Not updated </td>
 </tr>
-
 <tr style="border: 1px solid black; border-collapse: collapse; border-style: dotted">
 <td style="border: 1px solid black; border-collapse: collapse; border-style: dotted">  beq RRE1, RRE2, S10  </td>
 <td style="border: 1px solid black; border-collapse: collapse; border-style: dotted">  CO (31-26): 110100<br>RRE1 (25-21)<br>RRE2 (20-16)<br>S10 (9-0) </td>
 <td style="border: 1px solid black; border-collapse: collapse; border-style: dotted">  IF (RRE1  x RRE2)<br>PC ← PC + S10 </td>
 <td style="border: 1px solid black; border-collapse: collapse; border-style: dotted">  Not updated </td>
 </tr>
-
 <tr style="border: 1px solid black; border-collapse: collapse; border-style: dotted">
 <td style="border: 1px solid black; border-collapse: collapse; border-style: dotted">  jto RRE1 U16 </td>
 <td style="border: 1px solid black; border-collapse: collapse; border-style: dotted">  CO (31-26): 100001<br>RRE1 (25-21)<br>U16 (15-0) </td>
 <td style="border: 1px solid black; border-collapse: collapse; border-style: dotted">  BR[RRE1] ← PC<br>PC ← U16 </td>
 <td style="border: 1px solid black; border-collapse: collapse; border-style: dotted">  Not updated </td>
 </tr>
-
 <tr style="border: 1px solid black; border-collapse: collapse; border-style: dotted">
 <td style="border: 1px solid black; border-collapse: collapse; border-style: dotted">  jr RRE1 </td>
 <td style="border: 1px solid black; border-collapse: collapse; border-style: dotted">  CO (31-26): 100010<br>RRE1 (25-21) </td>
 <td style="border: 1px solid black; border-collapse: collapse; border-style: dotted">  PC ← BR[RRE1] </td>
 <td style="border: 1px solid black; border-collapse: collapse; border-style: dotted">  Not updated </td>
 </tr>
-
 <tr style="border: 1px solid black; border-collapse: collapse; border-style: dotted">
 <td style="border: 1px solid black; border-collapse: collapse; border-style: dotted">  halt </td>
 <td style="border: 1px solid black; border-collapse: collapse; border-style: dotted">  CO (31-26): 100011 </td>
@@ -125,6 +115,7 @@ The values "S16/S10" indicate that sign extension must be made while in "U16" no
 
 The following is the mapping between RISC-V registers and WepSIM registers. This association must be indicated in the register section of the microcode of the requested instructions.
 
+<html>
 <table style="border: 1px solid black; border-collapse: collapse; border-style: dotted" cellpadding="5">
 <tr>
 <th colspan="2"> RISC-V </th>
@@ -213,7 +204,8 @@ For the main control registers:
  * The stack pointer register (sp) is the R2 register in the WepSIM elementary processor.
  * The status register is the SR register in the WepSIM processor.
  * The PC registry is the program counter register. 
-  WepSIM RT1, RT2, and RT3 registers are transparent to the assembler programmer.
+
+WepSIM RT1, RT2, and RT3 registers are transparent to the assembler programmer.
 
 In order to pass arguments to a subroutine in our RISC-V assembler, the a0... a7 registers will be used, and the a0 and a1 registers will be used to return results (one value in a0, and for two values a0 and a1). 
 In the case of our RISC-V, passing more than eight arguments to a subroutine, from ninth to last of the arguments would be passed on the stack.
