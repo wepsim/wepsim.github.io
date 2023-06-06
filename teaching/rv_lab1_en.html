@@ -166,16 +166,19 @@
 The main goal of the proposed laboratory is to understand the concepts related to assembly programming, but also the impact of power-consumption in security. For this purpose we are going to use the RISC-V assembler.
 In order to become familiar with assembly programming and simulator used, it is recommended to solve the examples available in the simulator.<br>
 <br>
-This laboratory consists of 3 exercises that you can develop and test in <a href="https://wepsim.github.io/wepsim/">WepSIM</a>.<br>
+This laboratory consists of 3 exercises that you can develop and test in <a href="https://wepsim.github.io/wepsim/">WepSIM</a>.
 
 
 <br><br>
 <h3><b>Exercise 1</b></h3>
 <hr>
-The goal of this exercise is to develop in RISC-V<sub>imf32</sub> assembler a function called <b>`string_compare`</b> to work with strings:<br><br>
+The goal of this exercise is to develop in RISC-V<sub>imf32</sub> assembler a function called <b>`string_compare`</b> to work with strings:
+<br><br>
+<ul>
 <pre>
 Function string_compare ( char A[], char B[] ) ;
 </pre>
+</ul>
 
 This function allows to compare two strings so that it is possible to know if the strings stored in memory are the same or not.<br>
 <br>
@@ -192,7 +195,9 @@ The function returns a single integer that takes one of these three possible val
   <li> If the two strings are different, it returns the integer 0 (zero).
 </ul>
 
-The following figure illustrates an example when the content of two strings is different:<br><br>
+The following figure illustrates an example when the content of two strings is different:
+<br><br>
+<ul>
 <pre>
 .data
   A: .string "uno"  # 'u', 'n', 'o', '\0'
@@ -211,9 +216,12 @@ The following figure illustrates an example when the content of two strings is d
        #      <-   a0 must be 0 at this point because are differente string
        ...
 </pre>
+</ul>
 
 
-The following figure illustrates an example when the content of two strings that are equals:<br><br>
+The following figure illustrates an example when the content of two strings that are equals:
+<br><br>
+<ul>
 <pre>
 .data
   A: .string "uno"  # 'u', 'n', 'o', '\0'
@@ -232,13 +240,16 @@ The following figure illustrates an example when the content of two strings that
        #      <-   a0 must be 1 at this point because are the same string
        ...
 </pre>
+</ul>
 
 The two possible errors to be considered in this function are that address A is null (zero value) and that address B is null (zero value).<br>
 <br>
 
 In the `string_compare` function, in case of finding an error, it must return only the value -1 without doing anything else. In the same way, the function must compare character by character and as soon as it is a different one it must return 0. <br>
 <br>
-The following figure illustrates an example when an error ocurr:<br><br>
+The following figure illustrates an example when an error ocurr:
+<br><br>
+<ul>
 <pre>
 .data
   A: .string "uno"  # 'u', 'n', 'o', '\0'
@@ -257,6 +268,7 @@ The following figure illustrates an example when an error ocurr:<br><br>
        #      <-   a0 must be -1 at this point because an error happens
        ...
 </pre>
+</ul>
 
 
 
@@ -264,25 +276,27 @@ The following figure illustrates an example when an error ocurr:<br><br>
 <h3><b>Exercise 2</b></h3>
 <hr>
 
-The goal of this exercise is to study the impact of number of clock cycles when using the `<b>string_compare</b>` function, especially its use for a possible side-channel attack:
+The goal of this exercise is to study the impact of number of clock cycles when using the <b>string_compare</b> function, especially its use for a possible side-channel attack:
 <ul>
-  <li> Because more clock cycles needed by a function should be directed related to the power consumption in a normal CPU, we can know the input, output and the related power consumption for `string_compare`.
-  <li> In this program, the `rdcycle rd` RISC-V pseudoinstruction is used.
+  <li> Because more clock cycles needed by a function should be directed related to the power consumption in a normal CPU, we can know the input, output and the related power consumption for <b>string_compare</b>.
+  <li> In this program, the <b>rdcycle rd</b> RISC-V pseudoinstruction is used.
 </ul>
-This instruction stores in `rd` the number of cycles that have been executed so far.<br>
+This instruction stores in "rd" the number of cycles that have been executed so far.<br>
 <br>
 
-Imagine that a security company uses the `<b>string_compare</b>` function of Exercise 1 to check if an user's stored key (`stored_key`) is the same as the key that the user enters on the keyboard to authenticate.<br>
+Imagine that a security company uses the <b>string_compare</b> function of Exercise 1 to check if an user's stored key ("stored_key") is the same as the key that the user enters on the keyboard to authenticate.<br>
 <br>
 
 To test such a function, design and implement a program that performs the following actions:
 <ol>
-  <li> The user introduces the key by keyboard and it is stored in `user_key`.
-  <li> The `string_compare` function is called to check that the key `user_key` entered by keyboard is valid by comparing it with the user's key that is stored in `stored_key`, so if it returns 1 it is valid and if it returns 0 it is an invalid key.
+  <li> The user introduces the key by keyboard and it is stored in "user_key".
+  <li> The <b>string_compare</b> function is called to check that the key "user_key" entered by keyboard is valid by comparing it with the user's key that is stored in "stored_key", so if it returns 1 it is valid and if it returns 0 it is an invalid key.
   <li> A valid or invalid message is printed on the screen.
 </ol>
 
-The following code fragment shows the skeleton of this program:<br><br>
+The following code fragment shows the skeleton of this program:
+<br><br>
+<ul>
 <pre>
 .data
     stored_key:     .string   "one"
@@ -293,7 +307,7 @@ The following code fragment shows the skeleton of this program:<br><br>
 .text
 main:     
             ...
-            # <- read the user key from keyboard and store in user_key
+            # <- at this point, read the user key from keyboard and store in user_key
 
             # call to string_compare(stored_key, user_key)
             ...
@@ -308,11 +322,14 @@ print_no:   la  a0 no_valid_msg
 end:        li  a7 4
             ecall
 </pre>
+</ul>
 
 As an internship student of this company, we suspect that when comparing the key "one" with a string "a" the function only makes one single comparison between letters ('o' versus 'a'), but when comparing "one" with the string "o" the function makes two comparisons ('o' is equal to 'o' and 'n' is not equal to the end of the string). This causes the number of cycles executed and, therefore, the power consumption when the first letter is matched to be higher.<br>
 <br>
 
-To demonstrate this hypothesis, we initially propose the following program skeleton:<br><br>
+To demonstrate this hypothesis, we initially propose the following program skeleton:
+<br><br>
+<ul>
 <pre>
 .data
     valid_msg:      .string   ":Valid:"
@@ -349,6 +366,7 @@ end:   li  a7 4
        ecall
        ...
 </pre>
+</ul>
 
 The objective of this exercise is to modify the previous program to calculate the number of cycles (power consumption) for letters 'a' to 'z' as the first character of the key. That is, it is to find out the power consumption (number of cycles) for the following values of possible_key: 'a', 'b' ... 'z'. Only the 27 lowercase letters of the alphabet.<br>
 <br>
@@ -357,9 +375,11 @@ The objective of this exercise is to modify the previous program to calculate th
 <br>
 
 For this purpose, the function has to be developed: <br><br>
+<ul>
 <pre>
 Function study_energy ( char password[], char dummy[] ) ;
 </pre>
+</ul>
 
 This function prints in each line, for each of the letters, the following information:<br><br>
 <pre>
