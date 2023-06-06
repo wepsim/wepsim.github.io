@@ -307,6 +307,9 @@ The following examples illustrate...
 </p>
 <div class="collapse" id="coll_e1_help">
   <div class="card card-body">
+<br>
+You can use this subrutine on the WepSIM <a href="https://acaldero.github.io/wepsim/ws_dist/?mode=ep&examples_set=RISCV&example=21">Example 21</a>.<br>
+
 <pre>
 .text
 strcmp2:   # save stack
@@ -529,14 +532,93 @@ For the development of this exercise, you can start with the ideas of Exercise 2
 Note that this is an exercise, in a real scenario the contents of the user's password would never be known. However, the principle used <a href="https://en.wikipedia.org/wiki/Side-channel_attack)">side-channel attack</a> is the same that has inspired attacks on current processors such as <a href="https://en.wikipedia.org/wiki/Spectre_(security_vulnerability)">spectre</a>.<br>
 
 
+<br>
+<span class="btn btn-secondary" data-bs-toggle="collapse" href="#coll_e3_help" role="button" aria-expanded="false" aria-controls="coll_e3_help">
+    Click here for some help on this exercise...
+</span>
+</p>
+<div class="collapse" id="coll_e3_help">
+  <div class="card card-body">
+<br>
+You can use this subrutine on the WepSIM <a href="https://acaldero.github.io/wepsim/ws_dist/?mode=ep&examples_set=RISCV&example=21">Example 21</a>.<br>
 
-<br><br>
-<h4><b>Extra material</b></h4>
-<hr>
+<pre>
+.data
+   guessing: .byte 's', 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0
+   password: .string "srt"
+   nopass:   .string "x"
 
-You can find extra material in this example within WepSIM: <a href="https://acaldero.github.io/wepsim/ws_dist/?mode=ep&examples_set=RISCV&example=21">Example 21</a>.
-<p>
+.text
+strcmp2: ... # see exercise 1
 
+main:    # save stack
+         addi sp sp -12
+         sw   ra 8(sp)
+         sw   s0 4(sp)
+         sw   s1 0(sp)
+         
+         # reference value to s1
+         la   a0 nopass
+         la   a1 password
+         rdcycle  s0
+         jal  ra strcmp2
+         rdcycle  s1
+         sub  s1 s1 s0        
+
+         # loop to guess keyword
+         la  t0 guessing
+         li  t3 -1
+         li  t4 1
+     l1: # for (offset=0; t3 != 1; offset++) {
+         beq t3 t4 e1
+       
+         li  t1 'a'   
+         li  t2 'z'
+     l2: # for (t1='a'; t1<'z'; t1++) {
+         beq t1 t2 e2
+       
+         # guessing[offset] = t1
+         sb  t1 0(t0)
+       
+         # t3 = strcpy(guessing, pass)
+         la   a0 guessing
+         la   a1 password
+         sub  t5 t0 a0
+         mv   a0 t0
+         add  a1 a1 t5
+         rdcycle  s0
+         jal  ra strcmp2
+         rdcycle  t3
+         sub  t3 t3 s0
+       
+         # if (a0 == 1) return
+         bne a0 x0 e1
+         bgt t3 s1 e2 # 2+ loops
+       
+         # }
+         addi t1 t1 1
+         beq  x0 x0 l2
+      
+     e2: # }
+         addi t0 t0 1
+         beq  x0 x0 l1
+       
+     e1: # print(guessing)
+         la a0 guessing
+         li a7 4
+         ecall
+
+         # restore stack
+         lw   s0 4(sp)
+         lw   s0 4(sp)
+         lw   ra 8(sp)
+         addi sp sp 12
+
+         # return
+         jr ra
+</pre>
+  </div>
+</div>
 
         </div>
     </section>
