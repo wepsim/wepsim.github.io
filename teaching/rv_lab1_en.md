@@ -1,6 +1,6 @@
 
-+ **Alejandro Calderón Mateos & Felix García Carballeira**
-+ Licencia [GPLv3.0](https://github.com/acaldero/uc3m_sd/blob/main/LICENSE)
++ Authors: **Alejandro Calderón Mateos & Felix García Carballeira**
++ License: [GPLv3.0](https://github.com/wepsim/wepsim.github.io/blob/master/LICENSE)
 
 
 # Laboratory 1: assembly, power-consumption and security
@@ -137,7 +137,7 @@ end:        li  a7 4
 
 As an internship student of this company, we suspect that when comparing the key "one" with a string "a" the function only makes one single comparison between letters ('o' versus 'a'), but when comparing "one" with the string "o" the function makes two comparisons ('o' is equal to 'o' and 'n' is not equal to the end of the string). This causes the number of cycles executed and, therefore, the power consumption when the first letter is matched to be higher. 
 
-To demonstrate this hypothesis, we initially propose the following program skeleton. 
+To demonstrate this hypothesis, we initially propose the following program skeleton:
 ```
 .data
     valid_msg:      .string   ":Valid:"

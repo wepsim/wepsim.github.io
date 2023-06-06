@@ -1,6 +1,6 @@
 
-+ **Alejandro Calderón Mateos & Felix García Carballeira**
-+ Licencia [GPLv3.0](https://github.com/acaldero/uc3m_sd/blob/main/LICENSE)
++ Authors: **Alejandro Calderón Mateos & Felix García Carballeira**
++ License: [GPLv3.0](https://github.com/wepsim/wepsim.github.io/blob/master/LICENSE)
 
 
 # Laboratory 2: microprogramming a compact instruction set
@@ -195,6 +195,7 @@ The following is the mapping between RISC-V registers and WepSIM registers. This
 <td style="border: 1px solid black; border-collapse: collapse; border-style: dotted">  Temporary Records (1/2)  </td>
 </tr>
 </table>
+</html>
 <br>
 <html><center><em>Table 2.- RISC-V registers</em></center></html>
 
