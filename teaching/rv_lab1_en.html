@@ -172,7 +172,7 @@ This laboratory consists of 3 exercises that you can develop and test in <a href
 <br><br>
 <h3><b>Exercise 1</b></h3>
 <hr>
-The goal of this exercise is to develop in RISC-V<sub>imf32</sub> assembler a function called <b>`string_compare`</b> to work with strings:
+The goal of this exercise is to develop in RISC-V<sub>imf32</sub> assembler a function called <b>"string_compare"</b> to work with strings:
 <br><br>
 <ul>
 <pre>
@@ -195,80 +195,163 @@ The function returns a single integer that takes one of these three possible val
   <li> If the two strings are different, it returns the integer 0 (zero).
 </ul>
 
-The following figure illustrates an example when the content of two strings is different:
-<br><br>
-<ul>
-<pre>
-.data
-  A: .string "uno"  # 'u', 'n', 'o', '\0'
-  B: .string "dos"  # 'd', 'o', 's', '\0'
-
-.text
-
- string_compare:
-       ...
-       jr ra
-
- main: 
-       la a0 A
-       la a1 B
-       jal ra string_compare
-       #      <-   a0 must be 0 at this point because are differente string
-       ...
-</pre>
-</ul>
-
-
-The following figure illustrates an example when the content of two strings that are equals:
-<br><br>
-<ul>
-<pre>
-.data
-  A: .string "uno"  # 'u', 'n', 'o', '\0'
-  B: .string "dos"  # 'u', 'n', 'o', '\0'
-
-.text
-
- string_compare:
-       ...
-       jr ra
-
- main: 
-       la a0 A
-       la a1 B
-       jal ra string_compare
-       #      <-   a0 must be 1 at this point because are the same string
-       ...
-</pre>
-</ul>
-
 The two possible errors to be considered in this function are that address A is null (zero value) and that address B is null (zero value).<br>
+In the <b>"string_compare"</b> function, in case of finding an error, it must return only the value -1 without doing anything else. In the same way, the function must compare character by character and as soon as it is a different one it must return 0. <br>
 <br>
 
-In the `string_compare` function, in case of finding an error, it must return only the value -1 without doing anything else. In the same way, the function must compare character by character and as soon as it is a different one it must return 0. <br>
-<br>
-The following figure illustrates an example when an error ocurr:
-<br><br>
-<ul>
+The following examples illustrate...
+<div class="table-responsive">
+<table class="table table-bordered table-hover">
+	<thead>
+	<tr>
+		<td class="col-auto">
+...when the content of two strings is <b class="text-success">different</b>:
+		</td>
+		<td class="col-auto">
+...when the content of two strings that are <b class="text-success">equals</b>:
+		</td>
+		<td class="col-auto">
+...when an <b class="text-danger">error</b> ocurrs:
+		</td>
+	</tr>
+	</thead>
+	<tbody>
+	<tr>
+		<td>
 <pre>
 .data
-  A: .string "uno"  # 'u', 'n', 'o', '\0'
-  B: .string "dos"  # 'u', 'n', 'o', '\0'
+      # 'u', 'n', 'o', '\0'
+  A: .string <b>"uno"</b>
+      # 'd', 'o', 's', '\0'
+  B: .string <b>"dos"</b>
 
 .text
 
  string_compare:
-       ...
-       jr ra
+    ...
+    jr ra
 
  main: 
-       li   a0 0
-       move a1 x0
-       jal ra string_compare
-       #      <-   a0 must be -1 at this point because an error happens
-       ...
+    la a0 A
+    la a1 B
+    jal ra string_compare
+
+    #  <- a0 must be 0
+    #     at this point 
+    #     because are 
+    #     differente string
+    ...
 </pre>
-</ul>
+		</td>
+		<td>
+<pre>
+.data
+      # 'u', 'n', 'o', '\0'
+  A: .string <b>"uno"</b> 
+      # 'u', 'n', 'o', '\0'
+  B: .string <b>"uno"</b>
+
+.text
+
+ string_compare:
+    ...
+    jr ra
+
+ main: 
+    la a0 A
+    la a1 B
+    jal ra string_compare
+
+    #  <- a0 must be 1
+    #     at this point 
+    #     because are 
+    #     the same string
+    ...
+</pre>
+		</td>
+		<td>
+<pre>
+.data
+      # 'u', 'n', 'o', '\0'
+  A: .string "uno"
+      # 'u', 'n', 'o', '\0'
+  B: .string "dos"
+
+.text
+
+ string_compare:
+    ...
+    jr ra
+
+ main: 
+    li   a0 <b>0</b>
+    move a1 <b>x0</b>
+    jal ra string_compare
+    #  <- a0 must be -1
+    #     at this point 
+    #     because 
+    #     an error happens
+    ...
+</pre>
+		</td>
+	</tr>
+	</tbody>
+</table>
+</div>
+
+
+<br>
+<span class="btn btn-secondary" data-bs-toggle="collapse" href="#coll_e1_help" role="button" aria-expanded="false" aria-controls="coll_e1_help">
+    Click here for some help on this exercise...
+</span>
+</p>
+<div class="collapse" id="coll_e1_help">
+  <div class="card card-body">
+<pre>
+.text
+strcmp2:   # save stack
+           addi sp sp -20
+           sw s0 16(sp)
+           sw s1 12(sp)
+           sw s2  8(sp)
+           sw s3  4(sp)
+           sw s4  0(sp)
+
+           # s3 -> 1 (found) | 0 (not found)
+           # s4 -> # iterations
+           li s3 0
+           li s4 0
+
+       l3: # s0 <- a0[s4]
+           add  s0 a0 s4
+           lb   s0 0(s0)
+           # s1 <- a1[s4]
+           add  s1 a1 s4
+           lb   s1 0(s1)
+           # (a0 == a1) ?
+           bne  s0 s1 no3
+           beq  s0 x0 yes3
+           addi s4 s4 1
+           beq  x0 x0 l3
+
+     yes3: li a0 1
+           beq x0 x0 e3
+      no3: li a0 0
+           beq x0 x0 e3
+
+       e3: # restore stack
+           lw  s4  0(sp)
+           lw  s3  4(sp)
+           lw  s2  8(sp)
+           lw  s1 12(sp)
+           lw  s0 16(sp)
+           addi sp sp 20
+
+           # return
+           jr ra
+</pre>
+  </div>
+</div>
 
 
 
@@ -428,7 +511,7 @@ Through <b>a brute-force attack</b>, we would <b>have to test up to 27<sup>8</su
 <br>
 <b>But with a side-channel attack</b>, it would be possible to detect by using the energy consumption (number of cycles executed) the first character of the key, and once this character is fixed, it would be possible to study the 27 possible characters for the second letter and so on. In other words, <b>possible combinations are reduced to 27*8 (216 possibilities), in case the key is just 8 characters long</b>.<br>
 <br>
-In Exercise 3, we have to implement in assembler RISC-V<sub>32IMF</sub> a function called `attack` to discover a possible key of up to 8 characters:<br><br>
+In Exercise 3, we have to implement in assembler RISC-V<sub>32IMF</sub> a function called "<b>attack</b>" to discover a possible key of up to 8 characters:<br><br>
 <pre>
 Function attack ( char password[], char dummy[] ) ;
 </pre>

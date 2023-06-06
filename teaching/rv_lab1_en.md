@@ -53,7 +53,7 @@ The following figure illustrates an example when the content of two strings that
 ```
 .data
   A: .string "uno"  # 'u', 'n', 'o', '\0'
-  B: .string "dos"  # 'u', 'n', 'o', '\0'
+  B: .string "uno"  # 'u', 'n', 'o', '\0'
 
 .text
 
@@ -73,7 +73,7 @@ The two possible errors to be considered in this function are that address A is 
 
 In the `string_compare` function, in case of finding an error, it must return only the value -1 without doing anything else. In the same way, the function must compare character by character and as soon as it is a different one it must return 0. 
 
-The following figure illustrates an example when an error ocurr:
+The following figure illustrates an example when an error ocurrs:
 ```
 .data
   A: .string "uno"  # 'u', 'n', 'o', '\0'
