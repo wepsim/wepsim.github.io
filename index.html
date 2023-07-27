@@ -149,12 +149,32 @@
           <div class="row d-flex align-content-center flex-wrap py-4">
 	     <div class="col text-black m-auto"
                   ><h3>The Web Elemental Processor SIMulator</h3></div>
-	     <a   class="col-auto btn btn-sm btn-primary  m-auto" role="button"
-                  data-bs-toggle="tooltip" data-placement="bottom" 
-		  title="You can run WepSIM directly from your web browser, please click here to use it."
-		 href="https://wepsim.github.io/wepsim/ws_dist/wepsim-classic.html?mode=ep&examples_set=MIPS&example=11&simulator=microcode:screen"
-	          ><strong>Link to <span style="font-size:110%">WepSIM</span></strong></a>
+
+	     <div class="btn-group col-auto btn btn-sm btn-primary p-0 m-auto">
+		  <a class="btn btn-sm btn-primary"
+		     href="https://wepsim.github.io/wepsim/ws_dist/wepsim-classic.html?mode=ep&examples_set=MIPS&example=11&simulator=assembly:screen"><strong>Link to <span style="font-size:110%">WepSIM</span></strong></a>
+		  <button type="button" class="btn btn-sm btn-primary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+		    <span class="visually-hidden">Toggle Dropdown</span>
+		  </button>
+		  <ul class="dropdown-menu">
+                    <h6 class="text-secondary mb-1">Processor view...</h6>
+		    <li><a class="dropdown-item" href="https://wepsim.github.io/wepsim/ws_dist/wepsim-classic.html?mode=ep&examples_set=MIPS&example=11&simulator=microcode:registers&notify=false">mips + registers</a></li>
+		    <li><a class="dropdown-item" href="https://wepsim.github.io/wepsim/ws_dist/wepsim-classic.html?mode=ep&examples_set=MIPS&example=11&simulator=microcode:screen&notify=false">mips + screen</a></li>
+		    <li><a class="dropdown-item" href="https://wepsim.github.io/wepsim/ws_dist/wepsim-classic.html?mode=ep&examples_set=RISCV&example=14&simulator=microcode:registers&notify=false">risc-v + registers</a></li>
+		    <li><a class="dropdown-item" href="https://wepsim.github.io/wepsim/ws_dist/wepsim-classic.html?mode=ep&examples_set=RISCV&example=14&simulator=microcode:screen&notify=false">risc-v + screen</a></li>
+
+		    <li><hr class="dropdown-divider"></li>
+                    <h6 class="text-secondary mb-1">Assembly view...</h6>
+		    <li><a class="dropdown-item" href="https://wepsim.github.io/wepsim/ws_dist/wepsim-classic.html?mode=ep&examples_set=MIPS&example=11&simulator=assembly:registers&notify=false">mips assembly + registers</a></li>
+		    <li><a class="dropdown-item" href="https://wepsim.github.io/wepsim/ws_dist/wepsim-classic.html?mode=ep&examples_set=MIPS&example=11&simulator=assembly:screen&notify=false">mips assembly + screen</a></li>
+		    <li><a class="dropdown-item" href="https://wepsim.github.io/wepsim/ws_dist/wepsim-classic.html?mode=ep&examples_set=RISCV&example=14&simulator=assembly:registers&notify=false">rv assembly + registers</a></li>
+		    <li><a class="dropdown-item" href="https://wepsim.github.io/wepsim/ws_dist/wepsim-classic.html?mode=ep&examples_set=RISCV&example=14&simulator=assembly:screen&notify=false">rv assembly + screen</a></li>
+		    <li><a class="dropdown-item" href="https://wepsim.github.io/wepsim/ws_dist/wepsim-classic.html?mode=ep&examples_set=RISCV&example=19&simulator=assembly:ledmatrix&notify=false">risc-v + led-matrix</a></li>
+		  </ul>
+	     </div>
+
 	  </div>
+
 
           <div class="row d-flex align-content-center flex-wrap">
                 <div class="col-12 pt-2 pb-xs-1 pb-md-4">
