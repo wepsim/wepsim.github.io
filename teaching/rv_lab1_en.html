@@ -372,44 +372,13 @@ This instruction stores in "rd" the number of cycles that have been executed so 
 <br>
 
 Imagine that a security company uses the <b>string_compare</b> function of Exercise 1 to check if an user's stored key ("stored_key") is the same as the key that the user enters on the keyboard to authenticate.<br>
-<br>
-
-To test such a function, design and implement a program that performs the following actions:
+To use <b>string_compare</b> the code used by this company performs the following steps:
 <ol>
   <li> The user introduces the key by keyboard and it is stored in "user_key".
   <li> The <b>string_compare</b> function is called to check that the key "user_key" entered by keyboard is valid by comparing it with the user's key that is stored in "stored_key", so if it returns 1 it is valid and if it returns 0 it is an invalid key.
   <li> A valid or invalid message is printed on the screen.
 </ol>
 
-The following code fragment shows the skeleton of this program:
-<br><br>
-<ul>
-<pre>
-.data
-    stored_key:     .string   "one"
-    user_key:       .zero     9    
-    valid_msg:      .string   "Valid"
-    no_valid_msg:   .string   "Invalid"
-
-.text
-main:     
-            ...
-            # <- at this point, read the user key from keyboard and store in user_key
-
-            # call to string_compare(stored_key, user_key)
-            ...
-            jal ra string_compare
-            mv  t1 a0         # t1: 1 ok and 0 not valid
-
-            
-            beq zero a0 print_no
-print_yes:  la  a0  valid_msg
-            j end
-print_no:   la  a0 no_valid_msg
-end:        li  a7 4
-            ecall
-</pre>
-</ul>
 
 As an internship student of this company, we suspect that when comparing the key "one" with a string "a" the function only makes one single comparison between letters ('o' versus 'a'), but when comparing "one" with the string "o" the function makes two comparisons ('o' is equal to 'o' and 'n' is not equal to the end of the string). This causes the number of cycles executed and, therefore, the power consumption when the first letter is matched to be higher.<br>
 <br>
